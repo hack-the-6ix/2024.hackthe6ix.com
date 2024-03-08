@@ -1,0 +1,55 @@
+@use "sass:color";
+
+// https://www.figma.com/file/SRti3LD5ssigQbVfbVBHu9/Design-System?type=design&node-id=1382-3098&mode=dev
+$_colors: (
+  neutral: #64748b,
+  primary: #00948c,
+  secondary: #0c82a2,
+  success: #10b981,
+  warning: #e79431,
+  error: #ef4444,
+);
+
+@function _generateScale($color) {
+  @return (
+    50: color.scale($color, $lightness: 95%),
+    100: color.scale($color, $lightness: 87%),
+    200: color.scale($color, $lightness: 75%),
+    300: color.scale($color, $lightness: 50%),
+    400: color.scale($color, $lightness: 25%),
+    500: $color,
+    600: color.scale($color, $lightness: -25%),
+    700: color.scale($color, $lightness: -50%),
+    800: color.scale($color, $lightness: -75%),
+    900: color.scale($color, $lightness: -87%)
+  );
+}
+
+$_defaultLevelOverride: (
+  secondary: 600,
+);
+
+@function map-get-default($map, $key, $default) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  } @else {
+    @return $default;
+  }
+}
+
+@function getVar($color, $scale: None) {
+  @if $scale == None {
+    $scale: map-get-default($_defaultLevelOverride, $color, 500);
+  }
+
+  @return --#{$color}-#{$scale};
+}
+
+@mixin init {
+  @each $tag, $color in $_colors {
+    $colorScale: _generateScale($color);
+    @each $level, $scaledColor in $colorScale {
+      #{getVar($tag, $level)}: $scaledColor;
+    }
+  }
+}

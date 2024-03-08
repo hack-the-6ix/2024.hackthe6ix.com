@@ -1,0 +1,11 @@
+@use "../styles/colors.module";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  @include colors.init;
+}
