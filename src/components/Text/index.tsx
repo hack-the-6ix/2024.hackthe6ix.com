@@ -1,8 +1,8 @@
-import { ComponentPropsWithoutRef, ElementType } from "react";
-import cn from "classnames";
-import * as R from "ramda";
-import { Colors, TextTypes, TextWeights } from "@/styles";
-import styles from "./Text.module.scss";
+import { ComponentPropsWithoutRef, ElementType } from 'react';
+import cn from 'classnames';
+import * as R from 'ramda';
+import { Colors, TextTypes, TextWeights } from '@/styles';
+import styles from './Text.module.scss';
 
 export type TextProps<T extends ElementType> = {
   textType: TextTypes;
@@ -11,26 +11,26 @@ export type TextProps<T extends ElementType> = {
   as?: T;
 } & ComponentPropsWithoutRef<T>;
 
-function Text<T extends ElementType = "span">({
+function Text<T extends ElementType = 'span'>({
   textType,
   textColor,
   textWeight,
   as,
   ...props
 }: TextProps<T>) {
-  const Component = as ?? "span";
+  const Component = as ?? 'span';
   return (
     <Component
       {...props}
       style={R.reject(R.isNil, {
         ...props.style,
-        "--text-color": textColor ? `var(--${textColor})` : null,
+        '--text-color': textColor ? `var(--${textColor})` : null,
       })}
       className={cn(
         `font--${textType}`,
         textWeight && `font--wght--${textWeight}`,
         props.className,
-        styles.text
+        styles.text,
       )}
     />
   );

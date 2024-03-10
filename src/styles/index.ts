@@ -1,19 +1,19 @@
 export type TextTypes =
-  | "display"
-  | "heading-lg"
-  | "heading-sm"
-  | "subtitle-lg"
-  | "subtitle-sm"
-  | "paragraph-lg"
-  | "paragraph-sm"
-  | "label";
+  | 'display'
+  | 'heading-lg'
+  | 'heading-sm'
+  | 'subtitle-lg'
+  | 'subtitle-sm'
+  | 'paragraph-lg'
+  | 'paragraph-sm'
+  | 'label';
 
 export type TextWeights =
-  | "normal"
-  | "medium"
-  | "semi-bold"
-  | "bold"
-  | "extra-bold";
+  | 'normal'
+  | 'medium'
+  | 'semi-bold'
+  | 'bold'
+  | 'extra-bold';
 
 export type ColorLevels =
   | 50
@@ -28,28 +28,28 @@ export type ColorLevels =
   | 900;
 
 export type Spacing =
-  | "2x-sm"
-  | "x-sm"
-  | "sm"
-  | "m"
-  | "big"
-  | "x-big"
-  | "2x-big"
-  | "3x-big"
-  | "4x-big"
-  | "lg"
-  | "x-lg"
-  | "2x-lg"
-  | "3x-lg"
-  | "huge"
-  | "x-huge";
+  | '2x-sm'
+  | 'x-sm'
+  | 'sm'
+  | 'm'
+  | 'big'
+  | 'x-big'
+  | '2x-big'
+  | '3x-big'
+  | '4x-big'
+  | 'lg'
+  | 'x-lg'
+  | '2x-lg'
+  | '3x-lg'
+  | 'huge'
+  | 'x-huge';
 
 export type ColorTypes =
-  | "neutral"
-  | "primary"
-  | "secondary"
-  | "success"
-  | "warning"
-  | "error";
+  | 'neutral'
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'warning'
+  | 'error';
 
 export type Colors = `${ColorTypes}-${ColorLevels}`;

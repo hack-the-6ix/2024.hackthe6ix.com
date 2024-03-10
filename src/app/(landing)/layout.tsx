@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Home | Hack the 6ix",
+  title: 'Home | Hack the 6ix',
 };
 
 export default function LandingLayout({

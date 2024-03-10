@@ -1,19 +1,20 @@
-import type { Metadata } from "next";
-import Script from "next/script";
-import { Inter } from "next/font/google";
-import "../styles/index.scss";
+import { ReactNode } from 'react';
+import type { Metadata } from 'next';
+import Script from 'next/script';
+import { Inter } from 'next/font/google';
+import '../styles/index.scss';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Hack the 6ix",
-  description: "owo",
+  title: 'Hack the 6ix',
+  description: 'owo',
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
