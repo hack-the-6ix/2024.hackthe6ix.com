@@ -6,7 +6,7 @@ import "../styles/index.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Home | Hack the 6ix",
+  title: "Hack the 6ix",
   description: "owo",
 };
 

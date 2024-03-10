@@ -1,0 +1,34 @@
+@use "./variables" as vars;
+
+@function map-get-default($map, $key, $default) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  } @else {
+    @return $default;
+  }
+}
+
+@mixin transition($props, $speed: normal) {
+  $res: ();
+  @each $prop in $props {
+    $res: append(
+      $res,
+      #{$prop} #{map-get(vars.$speeds, $speed)} ease-in-out 0s,
+      $separator: comma
+    );
+  }
+
+  @media screen and (prefers-reduced-motion: no-preference) {
+    :global(.animate) & {
+      transition: $res;
+    }
+  }
+}
+
+@function spacing($ref) {
+  @if map-has-key(vars.$spacing, $ref) {
+    @return map-get(vars.$spacing, $ref);
+  } @else {
+    @return $ref * 0.25rem;
+  }
+}

@@ -1,0 +1,36 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixins";
+
+.flex {
+  display: flex;
+}
+
+.flex-inline {
+  display: inline-flex;
+}
+
+@each $tag in (row column row-reverse column-reverse) {
+  .direction--#{$tag} {
+    flex-direction: #{$tag};
+  }
+}
+
+@each $tag
+  in (flex-start flex-end center space-between space-around space-evenly)
+{
+  .justify--#{$tag} {
+    justify-content: #{$tag};
+  }
+}
+
+@each $tag in (flex-start flex-end center stretch) {
+  .align--#{$tag} {
+    align-items: #{$tag};
+  }
+}
+
+@each $tag in map-keys(vars.$spacing) {
+  .gap--#{$tag} {
+    gap: mixins.spacing($tag);
+  }
+}

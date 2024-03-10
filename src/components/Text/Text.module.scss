@@ -1,0 +1,6 @@
+@use "../../styles/colors";
+
+.text {
+  color: var(--text-color, var(#{colors.getVar(secondary, 900)}));
+  margin: 0;
+}

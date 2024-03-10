@@ -1,3 +1,4 @@
+@use "./mixins";
 @use "sass:color";
 
 // https://www.figma.com/file/SRti3LD5ssigQbVfbVBHu9/Design-System?type=design&node-id=1382-3098&mode=dev
@@ -29,20 +30,16 @@ $_defaultLevelOverride: (
   secondary: 600,
 );
 
-@function map-get-default($map, $key, $default) {
-  @if map-has-key($map, $key) {
-    @return map-get($map, $key);
-  } @else {
-    @return $default;
-  }
-}
-
 @function getVar($color, $scale: None) {
   @if $scale == None {
-    $scale: map-get-default($_defaultLevelOverride, $color, 500);
+    $scale: mixins.map-get-default($_defaultLevelOverride, $color, 500);
   }
 
   @return --#{$color}-#{$scale};
+}
+
+@function getColor($color, $scale: None, $alpha: 1) {
+  @return rgba(var(#{getVar($color, $scale)}), $alpha);
 }
 
 @mixin init {
