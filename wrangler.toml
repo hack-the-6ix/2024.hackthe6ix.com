@@ -1,0 +1,4 @@
+name = "2024-hackthe6ix-com"
+compatibility_date = "2024-03-04"
+
+compatibility_flags = ["nodejs_compat"]
