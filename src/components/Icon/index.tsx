@@ -7,7 +7,7 @@ export interface IconProps extends Omit<ComponentProps<'span'>, 'children'> {
   icon: string;
 }
 
-function Icon({ icon, size = 'md', ...props }: IconProps) {
+function Icon({ icon, size = 'sm', ...props }: IconProps) {
   return (
     <span
       {...props}

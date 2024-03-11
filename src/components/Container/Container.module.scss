@@ -1,0 +1,14 @@
+.container {
+  box-sizing: border-box;
+  padding: 0 2rem;
+}
+
+.content {
+  box-sizing: border-box;
+  max-width: 91.25rem;
+  width: 100%;
+
+  .fluid & {
+    max-width: unset;
+  }
+}

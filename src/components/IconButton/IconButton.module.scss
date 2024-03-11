@@ -1,0 +1,6 @@
+@use '../../styles/mixins';
+
+.button {
+  padding: mixins.spacing(x-sm);
+  aspect-ratio: 1;
+}

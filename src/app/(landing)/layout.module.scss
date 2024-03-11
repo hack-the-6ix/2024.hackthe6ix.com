@@ -1,0 +1,11 @@
+@use '../../styles/mixins';
+
+.nav {
+  padding: mixins.spacing(x-big) 0;
+}
+
+.banner {
+  margin: -1 * mixins.spacing(x-big) 0 auto;
+  overflow-y: visible;
+  height: 1px;
+}

@@ -1,24 +1,25 @@
-@use "../../styles/colors";
-@use "../../styles/mixins";
+@use '../../styles/colors';
+@use '../../styles/mixins';
 
 .button {
-  @extend :global(.font--paragraph-sm);
-  @extend :global(.font--wght--semi-bold);
+  @include mixins.transition(background-color border-color color);
+  text-decoration: none;
 
   border-width: 0.0625rem;
   border-radius: 1000rem;
+  display: inline-flex;
   border-style: solid;
+  cursor: pointer;
 
   padding: mixins.spacing(3) mixins.spacing(6);
   appearance: none;
-  outline: none;
 }
 
 .type {
   &--primary {
     background-color: var(--button-color);
     border-color: var(--button-color);
-    color: white;
+    --text-color: white;
 
     &:hover {
       background-color: var(--button-color-hover);
@@ -35,32 +36,32 @@
   &--secondary {
     background-color: transparent;
     border-color: var(--button-color);
-    color: var(--button-color);
+    --text-color: : var(--button-color);
 
     &:hover {
       border-color: var(--button-color-hover);
-      color: var(--button-color-hover);
+      --text-color: var(--button-color-hover);
     }
 
     &:focus,
     &:active {
       border-color: var(--button-color-active);
-      color: var(--button-color-active);
+      --text-color: var(--button-color-active);
     }
   }
 
   &--tertiary {
     background-color: transparent;
     border-color: transparent;
-    color: var(--button-color);
+    --text-color: var(--button-color);
 
     &:hover {
-      color: var(--button-color-hover);
+      --text-color: var(--button-color-hover);
     }
 
     &:focus,
     &:active {
-      color: var(--button-color-active);
+      --text-color: var(--button-color-active);
     }
   }
 }

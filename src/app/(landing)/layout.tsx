@@ -1,7 +1,13 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
+import logo from '@/assets/logo.png';
 import mlhBanner from '@/assets/mlh-banner.svg';
+import Button from '@/components/Button';
+import Container from '@/components/Container';
+import Flex from '@/components/Flex';
+import styles from './layout.module.scss';
 
 export const metadata: Metadata = {
   title: 'Home | Hack the 6ix',
@@ -16,6 +22,30 @@ export interface LandingLayoutProps {
   why: ReactNode;
 }
 
+const navLinks = [
+  {
+    label: 'About',
+    hash: 'about',
+  },
+  {
+    label: 'Why',
+    hash: 'why',
+  },
+  {
+    label: 'Sponsors',
+    hash: 'sponsors',
+  },
+  {
+    label: 'FAQ',
+    hash: 'faq',
+  },
+  {
+    label: 'Contact Us',
+    hash: 'contact',
+    cta: true,
+  },
+] as { label: string; hash: string; cta?: boolean }[];
+
 export default function LandingLayout({
   about,
   contact,
@@ -26,15 +56,38 @@ export default function LandingLayout({
 }: LandingLayoutProps) {
   return (
     <>
-      <a
-        id="mlh-trust-badge"
-        style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000"
-        href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue"
-        target="_blank"
+      <Container
+        as="nav"
+        innerProps={{
+          as: Flex,
+          className: styles.nav,
+          justify: 'space-between',
+          gap: 'm',
+        }}
       >
-        <Image src={mlhBanner} alt="MLH 2024 season banner" />
-      </a>
-      <nav>Nav</nav>
+        <Image src={logo} alt="HT6 logo" width="40" />
+        <Flex justify="flex-end" gap="3x-lg">
+          <Flex gap="x-sm">
+            {navLinks.map(({ label, hash, cta }, i) => (
+              <Button
+                buttonType={cta ? 'primary' : 'tertiary'}
+                href={{ hash }}
+                as={Link}
+                key={i}
+              >
+                {label}
+              </Button>
+            ))}
+          </Flex>
+          <a
+            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue"
+            className={styles.banner}
+            target="_blank"
+          >
+            <Image width="60" src={mlhBanner} alt="MLH 2024 season banner" />
+          </a>
+        </Flex>
+      </Container>
       <main>
         {hero}
         {about}

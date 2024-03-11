@@ -1,8 +1,11 @@
 import { ComponentPropsWithoutRef, ElementType } from 'react';
+import { Inter } from 'next/font/google';
 import cn from 'classnames';
 import * as R from 'ramda';
 import { Colors, TextTypes, TextWeights } from '@/styles';
 import styles from './Text.module.scss';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export type TextProps<T extends ElementType> = {
   textType: TextTypes;
@@ -29,6 +32,7 @@ function Text<T extends ElementType = 'span'>({
       className={cn(
         `font--${textType}`,
         textWeight && `font--wght--${textWeight}`,
+        inter.className,
         props.className,
         styles.text,
       )}

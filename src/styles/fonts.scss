@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 
 $fonts: (
   display: (
@@ -43,10 +43,23 @@ $wgts: (
   extra-bold: 800,
 );
 
+@mixin fontStyles($type) {
+  $size: map-get($fonts, $type, size);
+  $wgt: map-get($fonts, $type, wgt);
+
+  $usize: $size / ($size * 0 + 1);
+  $height: $size * 1.25;
+  $tracking: $size * -0.022;
+
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $tracking;
+  @extend .font--wgt--#{$wgt};
+}
+
 @mixin init {
   font-size: 16px;
 
-  // To be shared everywhere
   @at-root {
     @each $tag in map-keys($fonts) {
       .font--#{$tag} {
@@ -60,18 +73,4 @@ $wgts: (
       }
     }
   }
-}
-
-@mixin fontStyles($type) {
-  $size: map-get($fonts, $type, size);
-  $wgt: map-get($fonts, $type, wgt);
-
-  $usize: $size / ($size * 0 + 1);
-  $height: round($size * 1.25 / 4) * 4;
-  $tracking: $size * -0.022;
-
-  font-size: $size;
-  line-height: $height;
-  letter-spacing: $tracking;
-  @extend .font--wgt--#{$wgt};
 }
