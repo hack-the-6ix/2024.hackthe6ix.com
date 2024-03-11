@@ -1,6 +1,6 @@
-import Text from '@/components/Text';
-import Icon from '@/components/Icon';
 import Flex from '@/components/Flex';
+import Icon from '@/components/Icon';
+import Text from '@/components/Text';
 
 function LandingPage() {
   return (

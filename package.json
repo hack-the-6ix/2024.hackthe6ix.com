@@ -8,7 +8,7 @@
     "build:pages": "npx @cloudflare/next-on-pages",
     "preview": "npm run build:pages && wrangler pages dev .vercel/output/static",
     "start": "next start",
-    "lint": "next lint -- --fix"
+    "lint": "next lint"
   },
   "dependencies": {
     "@material-symbols/font-400": "^0.16.0",
