@@ -31,7 +31,7 @@ function Text<T extends ElementType = 'span'>({
       })}
       className={cn(
         `font--${textType}`,
-        textWeight && `font--wght--${textWeight}`,
+        textWeight && `font--wgt--${textWeight}`,
         inter.className,
         props.className,
         styles.text,

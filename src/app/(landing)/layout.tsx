@@ -70,6 +70,7 @@ export default function LandingLayout({
           <Flex gap="x-sm">
             {navLinks.map(({ label, hash, cta }, i) => (
               <Button
+                buttonColor={cta ? 'primary' : 'secondary'}
                 buttonType={cta ? 'primary' : 'tertiary'}
                 href={{ hash }}
                 as={Link}
