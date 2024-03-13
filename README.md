@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hack the 6ix 2024 Landing page
 
-## Getting Started
+## Getting started
 
-First, run the development server:
+1. Install Nodejs 20 (I suggest using [nvm](https://github.com/nvm-sh/nvm) and also setting up [autoloading .nvmrc](https://github.com/nvm-sh/nvm) to ensure proper version is used)
+2. `cp .env.example .env.local` to make local copy of environment variables (Fill in any missing values from whatever secret manager)
+3. `npm ci` to install the goods
+4. `npm run dev` to start the goods
+5. Profit
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Commands
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Prefix all the commands below with `npm run` to use them
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Commands      | Description                                                                          |
+| ------------- | ------------------------------------------------------------------------------------ |
+| `dev`         | Starts development server                                                            |
+| `build`       | Builds site for production                                                           |
+| `build:pages` | For building on Cloudflare Pages                                                     |
+| `preview`     | For building and running production locally like Cloudfare Pages to debug prod stuff |
+| `start`       | For starting production server for the lambdas, SSGs, SSRs, SSDs, and the ABCs       |
+| `lint`        | For fixing your bad code                                                             |
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Deployment
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Automatically with Cloudflare Pages stalking our main branch 👀
