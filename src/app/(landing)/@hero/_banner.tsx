@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import Text from '@/components/Text';
 import styles from './banner.module.scss';
 
@@ -11,17 +11,29 @@ export default function Banner({ words }: BannerProps) {
   const wordsRef = useRef<(HTMLLIElement | null)[]>([]);
   const containerRef = useRef<HTMLUListElement>(null);
 
-  useEffect(() => {
-    const max = wordsRef.current.length;
-    let idx = 1;
-    const ref = window.setInterval(() => {
-      const ref = wordsRef.current[idx];
+  useLayoutEffect(() => {
+    const container = containerRef.current;
+    const items = wordsRef.current;
+    let timeout: number;
 
-      idx = (idx + 1) % max;
-    }, 1000);
+    if (!container || items.length === 0) return;
+    const action = (idx: number) => {
+      const ref = items[idx]!;
+      container.style.height = `${ref.offsetHeight}px`;
+      container.scrollTo({
+        top: ref.offsetTop - container.offsetTop,
+        behavior: idx ? 'smooth' : 'instant',
+      });
+
+      timeout = window.setTimeout(
+        () => action((idx + 1) % items.length),
+        idx && 2000,
+      );
+    };
+
+    action(0);
     return () => {
-      window.clearInterval(ref);
-      wordsRef.current = [];
+      window.clearTimeout(timeout);
     };
   }, []);
 

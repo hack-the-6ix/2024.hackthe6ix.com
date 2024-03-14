@@ -62,10 +62,11 @@ export default function LandingLayout({
           as: Flex,
           className: styles.nav,
           justify: 'space-between',
+          align: 'center',
           gap: 'm',
         }}
       >
-        <Image src={logo} alt="HT6 logo" width="40" />
+        <Image src={logo} alt="HT6 logo" height="48" />
         <Flex justify="flex-end" gap="3x-lg">
           <Flex gap="x-sm">
             {navLinks.map(({ label, hash, cta }, i) => (
