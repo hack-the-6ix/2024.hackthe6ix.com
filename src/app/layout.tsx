@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import '../styles/index.scss';
@@ -15,6 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <body>{children}</body>
+      <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_TAG!} />
       <Script strategy="lazyOnload" id="animate">
         {`
           window.setTimeout(() => {
@@ -24,7 +27,6 @@ export default function RootLayout({
           }, 50);
         `}
       </Script>
-      <body>{children}</body>
     </html>
   );
 }

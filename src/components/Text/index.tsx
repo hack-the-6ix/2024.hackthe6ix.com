@@ -1,4 +1,5 @@
-import { ComponentPropsWithoutRef, ElementType } from 'react';
+import { ComponentPropsWithoutRef, ElementType, forwardRef } from 'react';
+import { PolymorphicRef } from 'react';
 import { Inter } from 'next/font/google';
 import cn from 'classnames';
 import * as R from 'ramda';
@@ -14,17 +15,15 @@ export type TextProps<T extends ElementType> = {
   as?: T;
 } & ComponentPropsWithoutRef<T>;
 
-function Text<T extends ElementType = 'span'>({
-  textType,
-  textColor,
-  textWeight,
-  as,
-  ...props
-}: TextProps<T>) {
+function Text<T extends ElementType = 'span'>(
+  { textType, textColor, textWeight, as, ...props }: TextProps<T>,
+  ref: PolymorphicRef<T>,
+) {
   const Component = as ?? 'span';
   return (
     <Component
       {...props}
+      ref={ref}
       style={R.reject(R.isNil, {
         ...props.style,
         '--text-color': textColor ? `var(--${textColor})` : null,
@@ -40,4 +39,4 @@ function Text<T extends ElementType = 'span'>({
   );
 }
 
-export default Text;
+export default forwardRef(Text);
