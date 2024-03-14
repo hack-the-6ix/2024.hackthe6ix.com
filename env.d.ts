@@ -7,8 +7,3 @@ interface CloudflareEnv {
   // KV Example:
   // MY_KV: KVNamespace
 }
-
-declare module 'react' {
-  export type PolymorphicRef<T extends ElementType> =
-    ComponentPropsWithRef<T>['ref'];
-}
