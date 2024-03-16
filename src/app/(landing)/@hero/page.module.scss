@@ -13,6 +13,7 @@
 .container {
   max-width: 50rem;
   margin-right: auto;
+  position: relative;
   padding: 12rem 0;
   z-index: 1;
 }
@@ -37,10 +38,10 @@
   margin-left: auto;
 
   & img {
-    position: absolute;
-    right: -10rem;
+    position: relative;
     height: auto;
     width: 68rem;
+    left: -14rem;
   }
 }
 

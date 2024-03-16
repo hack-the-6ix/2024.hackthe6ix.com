@@ -76,12 +76,12 @@ function Hero() {
             ))}
           </Flex>
         </Flex>
-      </Flex>
-      <Flex align="center" className={styles.mainAsset}>
-        <Image
-          src={mainAssetUrl}
-          alt="A cluster of islands with a TV showing 2022 HT6 website"
-        />
+        <Flex align="center" className={styles.mainAsset}>
+          <Image
+            src={mainAssetUrl}
+            alt="A cluster of islands with a TV showing 2022 HT6 website"
+          />
+        </Flex>
       </Flex>
       <Flex align="center" className={styles.footerAsset}>
         <Image src={footerAssetUrl} alt="An island with two trees" />
