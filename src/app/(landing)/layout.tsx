@@ -58,6 +58,7 @@ export default function LandingLayout({
     <>
       <Container
         as="nav"
+        className={styles.container}
         innerProps={{
           as: Flex,
           className: styles.nav,
@@ -86,7 +87,7 @@ export default function LandingLayout({
             className={styles.banner}
             target="_blank"
           >
-            <Image width="60" src={mlhBanner} alt="MLH 2024 season banner" />
+            <Image width="64" src={mlhBanner} alt="MLH 2024 season banner" />
           </a>
         </Flex>
       </Container>

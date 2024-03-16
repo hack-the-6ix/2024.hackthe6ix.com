@@ -1,9 +1,13 @@
+import Image from 'next/image';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import IconButton from '@/components/IconButton';
+import Input from '@/components/Input';
 import Text from '@/components/Text';
 import config from '@/config';
+import footerAssetUrl from './_assets/lonely-island.png';
+import mainAssetUrl from './_assets/tv-island.png';
 import Banner from './_banner';
 import styles from './page.module.scss';
 
@@ -12,7 +16,7 @@ const words = [
   'learn.',
   'win.',
   'create a project.',
-  'collaborate',
+  'collaborate.',
 ];
 
 function Hero() {
@@ -22,7 +26,11 @@ function Hero() {
     year: 'numeric',
   }).formatRange(config.startAt, config.endAt);
   return (
-    <Container as="section">
+    <Container
+      className={styles.frame}
+      innerProps={{ className: styles.content }}
+      as="section"
+    >
       <Flex direction="column" className={styles.container} gap="2x-big">
         <Flex direction="column" gap="sm">
           <Text textType="paragraph-lg" textColor="neutral-600">
@@ -47,7 +55,7 @@ function Hero() {
             Applications opening soon! Receive the latest updates in your inbox.
           </Text>
           <Flex as="form" gap="x-sm">
-            <input />
+            <Input hideLabel label="Enter email" name="email" required />
             <Button type="submit" buttonColor="primary" buttonType="primary">
               Notify me
             </Button>
@@ -68,6 +76,15 @@ function Hero() {
             ))}
           </Flex>
         </Flex>
+      </Flex>
+      <Flex align="center" className={styles.mainAsset}>
+        <Image
+          src={mainAssetUrl}
+          alt="A cluster of islands with a TV showing 2022 HT6 website"
+        />
+      </Flex>
+      <Flex align="center" className={styles.footerAsset}>
+        <Image src={footerAssetUrl} alt="An island with two trees" />
       </Flex>
     </Container>
   );

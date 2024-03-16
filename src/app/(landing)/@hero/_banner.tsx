@@ -1,6 +1,7 @@
 'use client';
 
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
+import cn from 'classnames';
 import Text from '@/components/Text';
 import styles from './banner.module.scss';
 
@@ -10,6 +11,7 @@ export interface BannerProps {
 export default function Banner({ words }: BannerProps) {
   const wordsRef = useRef<(HTMLLIElement | null)[]>([]);
   const containerRef = useRef<HTMLUListElement>(null);
+  const [isReady, setIsReady] = useState(false);
 
   useLayoutEffect(() => {
     const container = containerRef.current;
@@ -27,11 +29,12 @@ export default function Banner({ words }: BannerProps) {
 
       timeout = window.setTimeout(
         () => action((idx + 1) % items.length),
-        idx && 2000,
+        idx ? 1500 : 0,
       );
     };
 
-    action(0);
+    setIsReady(true);
+    action(items.length - 1);
     return () => {
       window.clearTimeout(timeout);
     };
@@ -46,7 +49,11 @@ export default function Banner({ words }: BannerProps) {
       as="ul"
     >
       {words.map((word, i) => (
-        <li ref={(el) => (wordsRef.current[i] = el)} key={i}>
+        <li
+          className={cn(!isReady && styles.hidden)}
+          ref={(el) => (wordsRef.current[i] = el)}
+          key={i}
+        >
           {word}
         </li>
       ))}

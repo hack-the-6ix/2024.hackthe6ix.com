@@ -1,12 +1,57 @@
 @use '../../../styles/colors';
 @use '../../../styles/mixins';
 
+.frame {
+  background-color: colors.getColor(secondary, 50);
+}
+
+.content {
+  position: relative;
+  display: flex;
+}
+
 .container {
   max-width: 50rem;
   margin-right: auto;
   padding: 12rem 0;
+  z-index: 1;
 }
 
 .highlight {
   color: colors.getColor(warning, 400);
+}
+
+%assetFrame {
+  position: absolute;
+  overflow: visible;
+  margin: 0;
+  height: 0;
+  width: 0;
+  inset: 0;
+}
+
+.mainAsset {
+  @extend %assetFrame;
+  top: 11rem;
+  height: 100%;
+  margin-left: auto;
+
+  & img {
+    position: absolute;
+    right: -10rem;
+    height: auto;
+    width: 68rem;
+  }
+}
+
+.footerAsset {
+  @extend %assetFrame;
+  top: 100%;
+
+  & img {
+    position: relative;
+    left: -14rem;
+    height: auto;
+    width: 40rem;
+  }
 }
