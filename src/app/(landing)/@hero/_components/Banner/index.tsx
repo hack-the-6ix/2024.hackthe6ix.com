@@ -3,7 +3,7 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import cn from 'classnames';
 import Text from '@/components/Text';
-import styles from './banner.module.scss';
+import styles from './Banner.module.scss';
 
 export interface BannerProps {
   words: string[];

@@ -8,7 +8,8 @@ import Text from '@/components/Text';
 import config from '@/config';
 import footerAssetUrl from './_assets/lonely-island.png';
 import mainAssetUrl from './_assets/tv-island.png';
-import Banner from './_banner';
+import Banner from './_components/Banner';
+import MailingListForm from './_components/MailingListForm';
 import styles from './page.module.scss';
 
 const words = [
@@ -25,6 +26,7 @@ function Hero() {
     day: 'numeric',
     year: 'numeric',
   }).formatRange(config.startAt, config.endAt);
+
   return (
     <Container
       className={styles.frame}
@@ -54,12 +56,7 @@ function Hero() {
           >
             Applications opening soon! Receive the latest updates in your inbox.
           </Text>
-          <Flex as="form" gap="x-sm">
-            <Input hideLabel label="Enter email" name="email" required />
-            <Button type="submit" buttonColor="primary" buttonType="primary">
-              Notify me
-            </Button>
-          </Flex>
+          <MailingListForm />
           <Flex gap="2x-sm">
             {Object.entries(config.socials).map(([ref, social]) => (
               <IconButton

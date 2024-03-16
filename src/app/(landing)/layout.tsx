@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Toaster } from 'react-hot-toast';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -99,6 +100,7 @@ export default function LandingLayout({
         {faq}
         {contact}
       </main>
+      <Toaster />
     </>
   );
 }

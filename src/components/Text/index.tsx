@@ -18,7 +18,7 @@ export type TextProps<T extends ElementType> = _TextProps & {
   as?: T;
 } & ComponentProps<T>;
 
-const Button = forwardRefAs<'span', _TextProps>(
+const Text = forwardRefAs<'span', _TextProps>(
   ({ textType, textColor, textWeight, as, ...props }, ref) => {
     const Component = as ?? 'span';
     return (
@@ -41,4 +41,4 @@ const Button = forwardRefAs<'span', _TextProps>(
   },
 );
 
-export default Button;
+export default Text;
