@@ -1,5 +1,8 @@
 import { ComponentProps } from 'react';
+import cn from 'classnames';
 import InputLike, { InputLikePublicProps } from '../InputLike';
+import Text from '../Text';
+import styles from './Input.module.scss';
 
 export type InputProps = InputLikePublicProps & ComponentProps<'input'>;
 
@@ -19,7 +22,20 @@ function Input({
       required={props.required}
       status={status}
     >
-      {(inputProps) => <input {...props} {...inputProps} />}
+      {(inputProps) => (
+        <Text
+          {...props}
+          {...inputProps}
+          className={cn(
+            inputProps['aria-invalid'] && styles.error,
+            props.className,
+            styles.input,
+          )}
+          textColor="neutral-900"
+          textType="paragraph-sm"
+          as="input"
+        />
+      )}
     </InputLike>
   );
 }

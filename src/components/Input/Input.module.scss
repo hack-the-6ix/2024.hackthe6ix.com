@@ -1,0 +1,24 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+@use '../../styles/colors';
+
+.input {
+  @include mixins.transition(outline-color);
+  --input-color: var(#{colors.getVar(primary, 600)});
+  border: 0.0625rem solid rgb(var(--input-color));
+  outline: 0.0625rem solid transparent;
+  padding: mixins.spacing(sm) mixins.spacing(m);
+  border-radius: 9999rem;
+  background: white;
+
+  &:hover,
+  &:focus {
+    outline-color: rgb(var(--input-color));
+  }
+}
+
+.error {
+  --input-color: var(#{colors.getVar(error, 500)});
+  outline-color: rgb(var(--input-color));
+  outline-width: 0.125rem;
+}
