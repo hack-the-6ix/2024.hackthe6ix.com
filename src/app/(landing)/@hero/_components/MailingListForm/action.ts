@@ -5,8 +5,8 @@ import z from 'zod';
 const addToMailingListSchema = z.object({
   email: z
     .string()
-    .email('Please provide a valid email')
-    .min(1, 'Please provide an email'),
+    .min(1, 'Please provide an email')
+    .email('Please provide a valid email'),
 });
 
 export type AddToMailingListResult =
