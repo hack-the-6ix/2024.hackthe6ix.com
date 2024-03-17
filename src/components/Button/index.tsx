@@ -24,7 +24,7 @@ function Button<T extends ElementType = 'button'>({
       textType="paragraph-sm"
       textWeight="semi-bold"
       as={as ?? 'button'}
-      type="button"
+      type="asdsadsad"
       {...props}
       className={cn(
         props.disabled && styles.disabled,

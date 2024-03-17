@@ -1,10 +1,11 @@
-import { ComponentProps } from 'react';
+import { ComponentPropsWithoutRef } from 'react';
 import cn from 'classnames';
 import InputLike, { InputLikePublicProps } from '../InputLike';
 import Text from '../Text';
 import styles from './Input.module.scss';
 
-export type InputProps = InputLikePublicProps & ComponentProps<'input'>;
+export type InputProps = InputLikePublicProps &
+  ComponentPropsWithoutRef<'input'>;
 
 function Input({
   label,
