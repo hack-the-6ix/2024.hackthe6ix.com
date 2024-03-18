@@ -1,6 +1,8 @@
 import { NextResponse, NextRequest } from 'next/server';
 import z, { ZodError } from 'zod';
 
+export const runtime = 'edge';
+
 const schema = z.object({
   email: z
     .string()
