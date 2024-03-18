@@ -26,22 +26,22 @@
   position: absolute;
   overflow: visible;
   margin: 0;
-  height: 0;
-  width: 0;
+  max-height: 0;
+  max-width: 0;
   inset: 0;
 }
 
 .mainAsset {
   @extend %assetFrame;
-  top: 11rem;
-  height: 100%;
+  top: 24rem;
+  max-height: 100%;
   margin-left: auto;
 
   & img {
     position: relative;
     height: auto;
     width: 68rem;
-    left: -14rem;
+    right: 16rem;
   }
 }
 
@@ -51,7 +51,7 @@
 
   & img {
     position: relative;
-    left: -14rem;
+    left: -8rem;
     height: auto;
     width: 40rem;
   }

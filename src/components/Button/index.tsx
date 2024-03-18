@@ -1,4 +1,4 @@
-import { ComponentProps, ElementType } from 'react';
+import { ComponentPropsWithoutRef, ElementType } from 'react';
 import cn from 'classnames';
 import { ColorTypes } from '@/styles';
 import Text from '../Text';
@@ -9,7 +9,7 @@ export type ButtonProps<T extends ElementType> = {
   buttonColor?: ColorTypes;
   buttonDarker?: boolean;
   as?: T;
-} & ComponentProps<T>;
+} & ComponentPropsWithoutRef<T>;
 
 function Button<T extends ElementType = 'button'>({
   buttonColor = 'neutral',
