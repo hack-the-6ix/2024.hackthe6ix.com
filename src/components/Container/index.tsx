@@ -4,7 +4,7 @@ import Flex from '../Flex';
 import styles from './Container.module.scss';
 
 export type ContainerProps<T extends ElementType, F extends ElementType> = {
-  innerProps?: Omit<ComponentPropsWithoutRef<F> & { as?: F }, 'children'>;
+  innerProps?: Omit<ComponentPropsWithoutRef<F>, 'children'> & { as?: F };
   fluid?: boolean;
   as?: T;
 } & ComponentPropsWithoutRef<T>;
@@ -25,7 +25,6 @@ function Container<
       <InnerElement
         {...innerProps}
         className={cn(innerProps?.className, styles.content)}
-        as={undefined}
       >
         {children}
       </InnerElement>
