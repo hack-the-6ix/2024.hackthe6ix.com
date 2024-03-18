@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Toaster } from 'react-hot-toast';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -58,14 +59,16 @@ export default function LandingLayout({
     <>
       <Container
         as="nav"
+        className={styles.container}
         innerProps={{
           as: Flex,
           className: styles.nav,
           justify: 'space-between',
+          align: 'center',
           gap: 'm',
         }}
       >
-        <Image src={logo} alt="HT6 logo" width="40" />
+        <Image src={logo} alt="HT6 logo" height="48" />
         <Flex justify="flex-end" gap="3x-lg">
           <Flex gap="x-sm">
             {navLinks.map(({ label, hash, cta }, i) => (
@@ -85,7 +88,7 @@ export default function LandingLayout({
             className={styles.banner}
             target="_blank"
           >
-            <Image width="60" src={mlhBanner} alt="MLH 2024 season banner" />
+            <Image width="64" src={mlhBanner} alt="MLH 2024 season banner" />
           </a>
         </Flex>
       </Container>
@@ -97,6 +100,7 @@ export default function LandingLayout({
         {faq}
         {contact}
       </main>
+      <Toaster />
     </>
   );
 }

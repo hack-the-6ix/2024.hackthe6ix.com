@@ -1,5 +1,5 @@
-@use "./mixins";
-@use "sass:color";
+@use './mixins';
+@use 'sass:color';
 
 // https://www.figma.com/file/SRti3LD5ssigQbVfbVBHu9/Design-System?type=design&node-id=1382-3098&mode=dev
 $_colors: (
@@ -11,18 +11,27 @@ $_colors: (
   error: #ef4444,
 );
 
+@function _generateScaleColor($color, $lightness) {
+  $scaledColor: color.scale($color, $lightness: $lightness);
+  @return (
+    color.red($scaledColor),
+    color.green($scaledColor),
+    color.blue($scaledColor)
+  );
+}
+
 @function _generateScale($color) {
   @return (
-    50: color.scale($color, $lightness: 95%),
-    100: color.scale($color, $lightness: 87%),
-    200: color.scale($color, $lightness: 75%),
-    300: color.scale($color, $lightness: 50%),
-    400: color.scale($color, $lightness: 25%),
-    500: $color,
-    600: color.scale($color, $lightness: -25%),
-    700: color.scale($color, $lightness: -50%),
-    800: color.scale($color, $lightness: -75%),
-    900: color.scale($color, $lightness: -87%)
+    50: _generateScaleColor($color, $lightness: 95%),
+    100: _generateScaleColor($color, $lightness: 87%),
+    200: _generateScaleColor($color, $lightness: 75%),
+    300: _generateScaleColor($color, $lightness: 50%),
+    400: _generateScaleColor($color, $lightness: 25%),
+    500: _generateScaleColor($color, 0%),
+    600: _generateScaleColor($color, $lightness: -25%),
+    700: _generateScaleColor($color, $lightness: -50%),
+    800: _generateScaleColor($color, $lightness: -75%),
+    900: _generateScaleColor($color, $lightness: -87%)
   );
 }
 

@@ -1,25 +1,30 @@
-import { ComponentProps } from 'react';
+import { IconType } from 'react-icons';
 import cn from 'classnames';
 import styles from './Icon.module.scss';
 
-export interface IconProps extends Omit<ComponentProps<'span'>, 'children'> {
+export type IconProps = {
   size?: 'sm' | 'md' | 'lg';
-  icon: string;
-}
+  icon: IconType | string;
+  className?: string;
+};
 
-function Icon({ icon, size = 'sm', ...props }: IconProps) {
-  return (
-    <span
-      {...props}
-      className={cn(
-        styles['material-symbols-rounded'],
-        styles[`size--${size}`],
-        props.className,
-      )}
-    >
-      {icon}
-    </span>
-  );
+function Icon({ icon: Icon, size = 'sm', ...props }: IconProps) {
+  if (typeof Icon === 'string') {
+    return (
+      <span
+        {...props}
+        className={cn(
+          styles['material-symbols-rounded'],
+          styles[`size--${size}`],
+          props.className,
+        )}
+      >
+        {Icon}
+      </span>
+    );
+  } else {
+    return <Icon className={cn(styles[`size--${size}`], props.className)} />;
+  }
 }
 
 export default Icon;

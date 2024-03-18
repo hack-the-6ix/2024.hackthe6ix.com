@@ -1,0 +1,14 @@
+@use '../../styles/colors';
+
+.hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  top: 999999rem;
+  left: 999999rem;
+}
+
+.required {
+  color: colors.getColor(error, 500);
+}

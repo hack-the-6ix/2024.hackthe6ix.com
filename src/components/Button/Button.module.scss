@@ -17,35 +17,35 @@
 
 .type {
   &--primary {
-    background-color: var(--button-color);
-    border-color: var(--button-color);
-    --text-color: white;
+    background-color: rgb(var(--button-color));
+    border-color: rgb(var(--button-color));
+    --text-color: 255, 255, 255;
 
     &:hover {
-      background-color: var(--button-color-hover);
-      border-color: var(--button-color-hover);
+      background-color: rgb(var(--button-color-hover));
+      border-color: rgb(var(--button-color-hover));
     }
 
     &:focus,
     &:active {
-      background-color: var(--button-color-active);
-      border-color: var(--button-color-active);
+      background-color: rgb(var(--button-color-active));
+      border-color: rgb(var(--button-color-active));
     }
   }
 
   &--secondary {
     background-color: transparent;
-    border-color: var(--button-color);
+    border-color: rgb(var(--button-color));
     --text-color: : var(--button-color);
 
     &:hover {
-      border-color: var(--button-color-hover);
+      border-color: rgb(var(--button-color-hover));
       --text-color: var(--button-color-hover);
     }
 
     &:focus,
     &:active {
-      border-color: var(--button-color-active);
+      border-color: rgb(var(--button-color-active));
       --text-color: var(--button-color-active);
     }
   }
