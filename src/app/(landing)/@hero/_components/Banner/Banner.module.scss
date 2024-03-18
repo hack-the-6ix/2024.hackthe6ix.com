@@ -1,0 +1,13 @@
+@use '../../../../../styles/mixins';
+
+.banner {
+  @include mixins.transition(height);
+  list-style-type: none;
+  overflow-y: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}

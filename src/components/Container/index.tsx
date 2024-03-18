@@ -1,13 +1,13 @@
-import { ElementType, ComponentProps } from 'react';
+import { ElementType, ComponentPropsWithoutRef } from 'react';
 import cn from 'classnames';
 import Flex from '../Flex';
 import styles from './Container.module.scss';
 
 export type ContainerProps<T extends ElementType, F extends ElementType> = {
-  innerProps?: Omit<ComponentProps<F> & { as?: F }, 'children'>;
+  innerProps?: Omit<ComponentPropsWithoutRef<F>, 'children'> & { as?: F };
   fluid?: boolean;
   as?: T;
-} & ComponentProps<T>;
+} & ComponentPropsWithoutRef<T>;
 
 function Container<
   T extends ElementType = 'div',
@@ -25,7 +25,6 @@ function Container<
       <InnerElement
         {...innerProps}
         className={cn(innerProps?.className, styles.content)}
-        as={undefined}
       >
         {children}
       </InnerElement>

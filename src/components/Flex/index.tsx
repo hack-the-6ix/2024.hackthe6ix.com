@@ -1,4 +1,4 @@
-import { CSSProperties, ComponentProps, ElementType } from 'react';
+import { CSSProperties, ComponentPropsWithoutRef, ElementType } from 'react';
 import cn from 'classnames';
 import { Spacing } from '@/styles';
 import styles from './Flex.module.scss';
@@ -10,7 +10,7 @@ export type FlexProps<T extends ElementType> = {
   gap?: Spacing;
   inline?: boolean;
   as?: T;
-} & ComponentProps<T>;
+} & ComponentPropsWithoutRef<T>;
 
 function Flex<T extends ElementType = 'div'>({
   direction,
