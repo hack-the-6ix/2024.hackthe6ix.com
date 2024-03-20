@@ -31,13 +31,14 @@ function Hero() {
       innerProps={{ className: styles.content }}
       as="section"
     >
+      <h1 className="hidden">Hack the 6ix 2024 landing page</h1>
       <Flex direction="column" className={styles.container} gap="2x-big">
         <Flex direction="column" gap="sm">
-          <Text textType="paragraph-lg" textColor="neutral-600">
+          <Text textType="paragraph-lg" textColor="neutral-600" as="p">
             {range.replace('–', ' – ').toUpperCase()} • In-person event
           </Text>
           <Flex direction="column">
-            <Text textType="display" textColor="secondary-900">
+            <Text textType="display" textColor="secondary-900" as="p">
               Hack the 6ix is Toronto&apos;s{' '}
               <span className={styles.highlight}>largest</span> summer
               hackathon, where <span className={styles.highlight}>anyone</span>{' '}
@@ -51,6 +52,7 @@ function Hero() {
             textType="paragraph-lg"
             textColor="secondary-900"
             textWeight="medium"
+            as="p"
           >
             Applications opening soon! Receive the latest updates in your inbox.
           </Text>
