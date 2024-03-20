@@ -46,7 +46,7 @@ function InputLike({
     <Flex direction="column" gap="2x-sm" inline>
       <Text
         htmlFor={id}
-        className={cn(hideLabel && styles.hidden)}
+        className={cn(hideLabel && 'hidden')}
         textType="paragraph-sm"
         textWeight="semi-bold"
         as="label"

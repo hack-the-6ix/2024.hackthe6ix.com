@@ -16,3 +16,12 @@ html {
 :root {
   @include colors.init;
 }
+
+.hidden {
+  top: -99999rem;
+  left: -99999rem;
+  position: fixed;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
