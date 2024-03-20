@@ -11,10 +11,11 @@ export type TextProps = {
   textType: TextTypes;
   textColor?: Colors;
   textWeight?: TextWeights;
+  textAlign?: 'start' | 'center' | 'end';
 };
 
 const Text = forwardRefAs<'span', TextProps>(
-  ({ textType, textColor, textWeight, as, ...props }, ref) => {
+  ({ textType, textColor, textWeight, textAlign, as, ...props }, ref) => {
     const Component = as ?? 'span';
     return (
       <Component
@@ -26,6 +27,7 @@ const Text = forwardRefAs<'span', TextProps>(
         })}
         className={cn(
           `font--${textType}`,
+          textAlign && styles[`align--${textAlign}`],
           textWeight && `font--wgt--${textWeight}`,
           inter.className,
           props.className,
