@@ -1,10 +1,13 @@
 import { ReactNode } from 'react';
 import Image from 'next/image';
+import cn from 'classnames';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
+import shark from './_assets/shark.png';
 import submarine from './_assets/submarine.png';
+import turtle from './_assets/turtle.png';
 import styles from './layout.module.scss';
 
 interface SponsorsLayoutProps {
@@ -63,7 +66,10 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
           {companies}
         </Flex>
       </Container>
-      <Container as="section" innerProps={{ className: styles.testimonies }}>
+      <Container
+        as="section"
+        innerProps={{ className: cn(styles.testimonies, styles.anchor) }}
+      >
         <Flex direction="column" align="center" gap="x-lg">
           <Flex direction="column" align="center" gap="m">
             <Text
@@ -95,6 +101,13 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
             </Text>
           </Flex>
           {testimonies}
+          <Image width="200" src={shark} alt="shark" className={styles.shark} />
+          <Image
+            width="200"
+            src={turtle}
+            alt="turtle"
+            className={styles.turtle}
+          />
         </Flex>
       </Container>
     </>

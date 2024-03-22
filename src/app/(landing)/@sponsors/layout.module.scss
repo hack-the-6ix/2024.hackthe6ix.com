@@ -28,3 +28,17 @@
   height: 16rem;
   width: auto;
 }
+
+.shark {
+  @extend %assets;
+  height: auto;
+  width: 22rem;
+  top: -10rem;
+  left: -18rem;
+}
+
+.turtle {
+  @extend %assets;
+  margin: auto -15rem 0 auto;
+  left: 7.5rem;
+}
