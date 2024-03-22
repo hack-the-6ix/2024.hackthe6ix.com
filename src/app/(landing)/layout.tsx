@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ElementType, ReactNode } from 'react';
 import { Toaster } from 'react-hot-toast';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -61,7 +61,7 @@ export default function LandingLayout({
         as="nav"
         className={styles.container}
         innerProps={{
-          as: Flex,
+          as: Flex as ElementType,
           className: styles.nav,
           justify: 'space-between',
           align: 'center',

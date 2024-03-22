@@ -3,6 +3,7 @@ import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
+import styles from './layout.module.scss';
 
 interface SponsorsLayoutProps {
   companies: ReactNode;
@@ -25,7 +26,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
               Sponsor an{' '}
               <Text
                 textType="heading-lg"
-                textColor="warning-300"
+                textColor="warning-400"
                 textWeight="extra-bold"
               >
                 exclusive weekend
@@ -49,7 +50,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
           {companies}
         </Flex>
       </Container>
-      <Container as="section">
+      <Container as="section" innerProps={{ className: styles.testimonies }}>
         <Flex direction="column" align="center" gap="x-lg">
           <Flex direction="column" align="center" gap="m">
             <Text
@@ -62,7 +63,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
               Ready to make a{' '}
               <Text
                 textType="heading-lg"
-                textColor="warning-300"
+                textColor="warning-400"
                 textWeight="extra-bold"
               >
                 difference?

@@ -18,9 +18,9 @@ function Container<
     <Flex
       {...props}
       className={cn(props.className, styles.container, fluid && styles.fluid)}
+      as={(as ?? 'div') as ElementType}
       direction="column"
       align="center"
-      as={as ?? 'div'}
     >
       <InnerElement
         {...innerProps}
