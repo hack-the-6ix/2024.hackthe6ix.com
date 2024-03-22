@@ -24,10 +24,19 @@ $_triangle-size: 32rem;
   }
 }
 
+.logo {
+  &,
+  img {
+    height: inherit;
+  }
+
+  img {
+    width: auto;
+  }
+}
+
 .footer {
   margin-top: auto;
-  position: relative;
-  bottom: -2rem;
 
   img {
     position: relative;

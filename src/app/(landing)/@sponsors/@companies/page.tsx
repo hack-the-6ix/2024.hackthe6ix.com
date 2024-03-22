@@ -18,10 +18,10 @@ type Sponsor = {
 const sponsors: Sponsor[] = R.repeat(
   {
     logo: logos.bmoLogo,
-    url: 'https://meraki.cisco.com',
-    name: 'Cisco Meraki',
+    url: 'https://www.bmo.com',
+    name: 'Bank of Montreal',
   },
-  10,
+  8,
 );
 
 const getTriangleWidth = (adjacent: number, angle: number) => {
@@ -29,18 +29,23 @@ const getTriangleWidth = (adjacent: number, angle: number) => {
   return opposite * 2;
 };
 
-const arrangeSponsors = (
-  rows: number[],
-  angle: number,
-  height: number,
-  gap: number,
-) => {
-  const rowSpecs = rows.map((rowHeight, i) => {
-    const ii = i + 1;
-    const adjacent = height - R.sum(R.take(ii, rows)) - ii * gap;
-    return { height: rowHeight, width: getTriangleWidth(adjacent, angle) };
-  });
+const rowHeights = [7, 6, 5, 4];
+const height = 40;
+const angle = 42 * (Math.PI / 180);
+const gap = 2;
 
+const rowWidths = rowHeights.map((_, i) => {
+  const ii = i + 1;
+  const adjacent = height - R.sum(R.take(i, rowHeights)) - ii * gap;
+  return getTriangleWidth(adjacent, angle);
+});
+
+const arrangeSponsors = () => {
+  const rowSpecs = R.zipWith(
+    (height, width) => ({ height, width }),
+    rowHeights,
+    rowWidths,
+  );
   return sponsors.reduce(
     (acc, sponsor) => {
       if (!rowSpecs.length) {
@@ -71,20 +76,13 @@ const arrangeSponsors = (
   );
 };
 
-const rowHeights = [7, 6, 5, 4, 3];
-const height = 40;
-const angle = 50 * (Math.PI / 180);
-
 function Companies() {
-  const arrangedSponsors = useMemo(
-    () => arrangeSponsors(rowHeights, angle, height, 1),
-    [],
-  );
+  const arrangedSponsors = useMemo(arrangeSponsors, []);
   return (
     <Flex
       direction="column"
       align="center"
-      gap="m"
+      gap="3x-big"
       style={
         {
           height: `${height}rem`,
@@ -94,14 +92,30 @@ function Companies() {
       className={styles.container}
     >
       {arrangedSponsors.map((row, j) => (
-        <Flex align="center" key={j} gap="m">
+        <Flex
+          justify="space-evenly"
+          align="center"
+          key={j}
+          style={
+            {
+              maxHeight: `${rowHeights[j]}rem`,
+              height: `${rowHeights[j]}rem`,
+              maxWidth: `${rowWidths[j]}rem`,
+              width: `${rowWidths[j]}rem`,
+              gap: 0,
+            } as CSSProperties
+          }
+        >
           {row.map((item, i) => (
-            <Image
-              src={item.logo}
-              height={rowHeights[j] * 16}
-              key={i}
-              alt={`${item.name} logo`}
-            />
+            <Flex key={i} as="a" className={styles.logo}>
+              <Image
+                className={styles.logo}
+                alt={`${item.name} logo`}
+                src={item.logo}
+                height={100}
+                key={i}
+              />
+            </Flex>
           ))}
         </Flex>
       ))}
