@@ -1,8 +1,10 @@
 import { ReactNode } from 'react';
+import Image from 'next/image';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
+import submarine from './_assets/submarine.png';
 import styles from './layout.module.scss';
 
 interface SponsorsLayoutProps {
@@ -15,7 +17,12 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
     <>
       <Container as="section" innerProps={{ className: styles.sponsors }}>
         <Flex direction="column" align="center" gap="2x-lg">
-          <Flex direction="column" align="center" gap="m">
+          <Flex
+            direction="column"
+            align="center"
+            gap="m"
+            className={styles.anchor}
+          >
             <Text
               textColor="secondary-900"
               textType="heading-lg"
@@ -46,6 +53,12 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
             <Button buttonColor="primary" buttonType="primary">
               Become a Sponsor
             </Button>
+            <Image
+              src={submarine}
+              className={styles.submarine}
+              height="200"
+              alt="submarine"
+            />
           </Flex>
           {companies}
         </Flex>

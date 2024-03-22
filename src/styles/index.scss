@@ -10,6 +10,10 @@ body {
   padding: 0;
 }
 
+body * {
+  z-index: 1;
+}
+
 html {
   @include fonts.init;
 }
