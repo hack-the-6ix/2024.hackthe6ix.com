@@ -13,7 +13,7 @@ interface SponsorsLayoutProps {
 function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
   return (
     <>
-      <Container as="section">
+      <Container as="section" innerProps={{ className: styles.sponsors }}>
         <Flex direction="column" align="center" gap="2x-lg">
           <Flex direction="column" align="center" gap="m">
             <Text

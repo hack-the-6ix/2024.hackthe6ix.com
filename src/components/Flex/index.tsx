@@ -10,10 +10,11 @@ export type FlexProps = {
   align?: CSSProperties['alignItems'];
   gap?: Spacing;
   inline?: boolean;
+  wrap?: boolean;
 };
 
 const Flex = forwardRefAs<'div', FlexProps>(
-  ({ direction, justify, align, gap, inline, as, ...props }, ref) => {
+  ({ direction, justify, align, gap, inline, wrap, as, ...props }, ref) => {
     const Component = as ?? 'div';
     return (
       <Component
@@ -25,6 +26,7 @@ const Flex = forwardRefAs<'div', FlexProps>(
           justify && styles[`justify--${justify}`],
           align && styles[`align--${align}`],
           gap && styles[`gap--${gap}`],
+          wrap && styles.wrap,
           props.className,
         )}
       />

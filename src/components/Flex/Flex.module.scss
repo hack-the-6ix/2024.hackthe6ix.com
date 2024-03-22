@@ -1,5 +1,5 @@
-@use "../../styles/variables" as vars;
-@use "../../styles/mixins";
+@use '../../styles/variables' as vars;
+@use '../../styles/mixins';
 
 .flex {
   display: flex;
@@ -7,6 +7,10 @@
 
 .flex-inline {
   display: inline-flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 @each $tag in (row column row-reverse column-reverse) {
