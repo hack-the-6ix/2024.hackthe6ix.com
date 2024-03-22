@@ -3,6 +3,7 @@
 
 html,
 body {
+  background-color: colors.getColor(secondary, 50);
   overflow-x: hidden;
   height: 100%;
   margin: 0;

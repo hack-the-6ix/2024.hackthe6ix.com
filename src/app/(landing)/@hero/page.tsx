@@ -26,11 +26,7 @@ function Hero() {
   }).formatRange(config.startAt, config.endAt);
 
   return (
-    <Container
-      className={styles.frame}
-      innerProps={{ className: styles.content }}
-      as="section"
-    >
+    <Container innerProps={{ className: styles.content }} as="section">
       <h1 className="hidden">Hack the 6ix 2024 landing page</h1>
       <Flex direction="column" className={styles.container} gap="2x-big">
         <Flex direction="column" gap="sm">

@@ -1,10 +1,6 @@
 @use '../../../styles/colors';
 @use '../../../styles/mixins';
 
-.frame {
-  background-color: colors.getColor(secondary, 50);
-}
-
 .content {
   position: relative;
   display: flex;

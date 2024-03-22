@@ -2,7 +2,6 @@
 @use '../../styles/colors';
 
 .container {
-  background-color: colors.getColor(secondary, 50);
   position: sticky;
   top: 0;
 }
