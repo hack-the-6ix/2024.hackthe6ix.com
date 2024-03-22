@@ -107,7 +107,14 @@ function Companies() {
           }
         >
           {row.map((item, i) => (
-            <Flex key={i} as="a" className={styles.logo}>
+            <Flex
+              key={i}
+              as="a"
+              className={styles.logo}
+              href={item.url}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <Image
                 className={styles.logo}
                 alt={`${item.name} logo`}
