@@ -1,0 +1,15 @@
+@use '../../../styles/colors';
+@use '../../../styles/mixins';
+
+.frame {
+    background-color: colors.getColor(secondary, 50);
+  }
+
+  .container {
+    max-width: 50rem;
+    margin-right: auto;
+    position: relative;
+    padding: 12rem 0;
+    z-index: 1;
+  }
+  
