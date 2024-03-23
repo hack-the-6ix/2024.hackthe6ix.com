@@ -23,3 +23,16 @@
     align-items: center;
     text-align: center;
   }
+
+  .footerAsset {
+    @extend %assetFrame;
+    top: 100%;
+  
+    & img {
+      position: relative;
+      left: -8rem;
+      height: auto;
+      width: 40rem;
+    }
+  }
+  
