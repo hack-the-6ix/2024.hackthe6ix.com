@@ -1,8 +1,13 @@
 import React from 'react';
+import Image from 'next/image';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
 import styles from './about.module.scss';
+import footerAssetUrl from './assets/green-sailboat.png';
+import mainAssetUrl from './assets/tree.png';
+
+
 
 function AboutPage() {
   return (
@@ -23,6 +28,10 @@ function AboutPage() {
           player in the Toronto tech ecosystem. We provide an outlet for
           students to present their ideas of the future.
         </Text>
+      </Flex>
+
+      <Flex align="center" className={styles.footerAsset}>
+        <Image src={footerAssetUrl} alt="An island with two trees" />
       </Flex>
     </Container>
   );
