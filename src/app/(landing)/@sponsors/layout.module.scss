@@ -1,0 +1,44 @@
+.testimonies {
+  padding: 4.75rem 0;
+  max-width: 60rem;
+}
+
+.sponsors {
+  padding: 7.25rem 0;
+  max-width: 68rem;
+}
+
+.anchor {
+  position: relative;
+}
+
+%assets {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  margin: 0;
+}
+
+.submarine {
+  @extend %assets;
+  margin: auto 0 auto auto;
+  top: calc(-100% + 2rem);
+  right: -12rem;
+  height: 16rem;
+  width: auto;
+}
+
+.shark {
+  @extend %assets;
+  height: auto;
+  width: 22rem;
+  top: -10rem;
+  left: -18rem;
+}
+
+.turtle {
+  @extend %assets;
+  margin: auto -15rem 0 auto;
+  left: 7.5rem;
+}
