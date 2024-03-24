@@ -7,8 +7,6 @@ import styles from './about.module.scss';
 import footerAssetUrl from './assets/green-sailboat.png';
 import mainAssetUrl from './assets/tree.png';
 
-
-
 function AboutPage() {
   return (
     <Container className={styles.frame}>
@@ -32,6 +30,10 @@ function AboutPage() {
 
       <Flex align="center" className={styles.footerAsset}>
         <Image src={footerAssetUrl} alt="An island with two trees" />
+      </Flex>
+
+      <Flex align="center" className={styles.mainAsset}>
+        <Image src={mainAssetUrl} alt="An island with two trees" />
       </Flex>
     </Container>
   );
