@@ -24,29 +24,4 @@
     text-align: center;
   }
 
-  .footerAsset {
-    @extend %assetFrame !optional;
-    top: 100%;
-  
-    & img {
-      position: relative;
-      left: -8rem;
-      height: auto;
-      width: 40rem;
-    }
-  }
-
-  .mainAsset {
-    @extend %assetFrame !optional;
-    top: 24rem;
-    max-height: 100%;
-    margin-left: auto;
-  
-    & img {
-      position: relative;
-      height: auto;
-      width: 68rem;
-      
-    }
-  }
   

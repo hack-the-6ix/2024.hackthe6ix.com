@@ -27,14 +27,6 @@ function AboutPage() {
           students to present their ideas of the future.
         </Text>
       </Flex>
-
-      <Flex align="center" className={styles.footerAsset}>
-        <Image src={footerAssetUrl} alt="An island with two trees" />
-      </Flex>
-
-      <Flex align="center" className={styles.mainAsset}>
-        <Image src={mainAssetUrl} alt="An island with two trees" />
-      </Flex>
     </Container>
   );
 }
