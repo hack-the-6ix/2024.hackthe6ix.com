@@ -11,9 +11,9 @@ function AboutPage() {
   return (
     <Container className={styles.frame}>
       <Flex direction="column" className={styles.container} gap="2x-big">
-        <Text textType="heading-lg" textColor="secondary-900">
+        <Text textType="heading-lg" textColor="secondary-900" textWeight="bold">
           <span className={styles.yellow}>Join us </span>
-          for a weekend of memories
+          <Text textWeight="semi-bold">for a weekend of memories</Text>
         </Text>
         <Text
           className={styles.textBox}
