@@ -11,14 +11,15 @@ function AboutPage() {
   return (
     <Container className={styles.frame}>
       <Flex direction="column" className={styles.container} gap="2x-big">
-        <Text textType="heading-sm" textColor="secondary-900">
+        <Text textType="heading-lg" textColor="secondary-900">
           <span className={styles.yellow}>Join us </span>
           for a weekend of memories
         </Text>
         <Text
           className={styles.textBox}
-          textType="paragraph-sm"
+          textType="paragraph-lg"
           textColor="secondary-900"
+          textWeight="medium"
         >
           Hack the 6ix is the largest summer student-run, not-for-profit
           hackathon now in its tenth iteration, based in Toronto. We take pride
