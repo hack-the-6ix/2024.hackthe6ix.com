@@ -1,11 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
 import styles from './about.module.scss';
-import footerAssetUrl from './assets/green-sailboat.png';
-import mainAssetUrl from './assets/tree.png';
 
 function AboutPage() {
   return (
