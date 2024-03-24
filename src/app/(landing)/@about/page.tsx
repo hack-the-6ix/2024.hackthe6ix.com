@@ -13,8 +13,15 @@ function AboutPage() {
       <Flex direction="column" className={styles.container} gap="2x-big">
         <Text textType="heading-lg" textColor="secondary-900" textWeight="bold">
           <span className={styles.yellow}>Join us </span>
-          <Text textWeight="semi-bold">for a weekend of memories</Text>
+          <Text
+            textType="heading-lg"
+            textColor="secondary-900"
+            textWeight="semi-bold"
+          >
+            for a weekend of memories
+          </Text>
         </Text>
+
         <Text
           className={styles.textBox}
           textType="paragraph-lg"
