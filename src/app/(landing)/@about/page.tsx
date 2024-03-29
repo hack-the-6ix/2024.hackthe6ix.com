@@ -7,13 +7,24 @@ import styles from './about.module.scss';
 function AboutPage() {
   return (
     <Container className={styles.frame}>
-      <Flex direction="column" className={styles.container} gap="2x-big">
-        <Text textType="heading-lg" textColor="secondary-900" textWeight="bold">
+      <Flex
+        align="center"
+        direction="column"
+        className={styles.container}
+        gap="2x-big"
+      >
+        <Text
+          textType="heading-lg"
+          textColor="secondary-900"
+          textWeight="bold"
+          textAlign="center"
+        >
           <span className={styles.yellow}>Join us </span>
           <Text
             textType="heading-lg"
             textColor="secondary-900"
             textWeight="semi-bold"
+            textAlign="center"
           >
             for a weekend of memories
           </Text>
@@ -23,6 +34,7 @@ function AboutPage() {
             textType="paragraph-lg"
             textColor="secondary-900"
             textWeight="medium"
+            textAlign="center"
           >
             Hack the 6ix is the largest summer student-run, not-for-profit
             hackathon now in its tenth iteration, based in Toronto. We take
