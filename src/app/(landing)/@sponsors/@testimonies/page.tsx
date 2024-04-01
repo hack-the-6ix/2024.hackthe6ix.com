@@ -20,10 +20,10 @@ interface Testimony {
 const data: Testimony[] = [
   {
     image: images.ianKorvinsky,
-    name: 'Ian Korvinsky',
+    name: 'Ian Korovinsky',
     role: 'Hacker',
     content:
-      "Attending Hack The 6ix was one of the best hackathon experiences I've ever had. From the intense hacking to the side-quests along the way, every step of the journey was memorable thanks to the incredible hackers there, as well as the hard-working organizers who made this an event to remember!",
+      "Attending Hack the 6ix was one of the best hackathon experiences I've ever had. From the intense hacking to the side-quests along the way, every step of the journey was memorable thanks to the incredible hackers there, as well as the hard-working organizers who made this an event to remember!",
   },
   {
     image: images.danielYe,
