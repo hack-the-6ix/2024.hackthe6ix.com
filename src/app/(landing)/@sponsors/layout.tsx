@@ -9,6 +9,7 @@ import shark from './_assets/shark.png';
 import submarine from './_assets/submarine.png';
 import turtle from './_assets/turtle.png';
 import styles from './layout.module.scss';
+import Link from 'next/link';
 
 interface SponsorsLayoutProps {
   companies: ReactNode;
@@ -53,7 +54,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
               and the incubation of big ideas. Want to help us make it even
               better?
             </Text>
-            <Button buttonColor="primary" buttonType="primary">
+            <Button buttonColor="primary" buttonType="primary" href={'https://go.hackthe6ix.com/sponsor'} as={Link} target='_blank' rel='noreferrer'>
               Become a Sponsor
             </Button>
             <Image
