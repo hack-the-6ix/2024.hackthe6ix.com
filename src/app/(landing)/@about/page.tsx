@@ -15,6 +15,10 @@ import twentyOne from './assets/2021.png';
 import twentyTwo from './assets/2022.png';
 import twentyThree from './assets/2023.png';
 import twentyFour from './assets/2023.png';
+import notepad from './assets/notepad.png';
+import tv from './assets/tv.png';
+
+// Ask design team
 
 function AboutPage() {
   return (
@@ -111,6 +115,16 @@ function AboutPage() {
         <Image src={twentyThree} alt="2014" className={styles.years} />
 
         <Image src={twentyThree} alt="2014" className={styles.years} />
+      </Flex>
+
+      <Flex
+        direction="row"
+        align="center"
+        justify="center"
+        className={styles.imageContainer}
+      >
+        <Image src={tv} alt="2014" className={styles.tv} />
+        <Image src={notepad} alt="2014" className={styles.notepad} />
       </Flex>
     </Container>
   );
