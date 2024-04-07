@@ -19,11 +19,15 @@
   
   .years{
    
-    
     position: relative;
     z-index: 0;
     inset: 0;
     margin: 0;
     height: auto;
+    transition: transform 0.3s;
    
+  }
+
+  .years:hover{
+    transform: scale(1.5);
   }

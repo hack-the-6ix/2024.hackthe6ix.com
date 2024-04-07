@@ -4,7 +4,17 @@ import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
 import styles from './about.module.scss';
-import years from './assets/years.png';
+import fourteen from './assets/2014.png';
+import fifteen from './assets/2015.png';
+import sixteen from './assets/2016.png';
+import seventeen from './assets/2017.png';
+import eighteen from './assets/2018.png';
+import nineteen from './assets/2019.png';
+import twenty from './assets/2020.png';
+import twentyOne from './assets/2021.png';
+import twentyTwo from './assets/2022.png';
+import twentyThree from './assets/2023.png';
+import twentyFour from './assets/2023.png';
 
 function AboutPage() {
   return (
@@ -89,7 +99,18 @@ function AboutPage() {
         justify="center"
         className={styles.imageContainer}
       >
-        <Image width="1000" src={years} alt="years" className={styles.years} />
+        <Image src={fourteen} alt="2014" className={styles.years} />
+        <Image src={fifteen} alt="2014" className={styles.years} />
+        <Image src={sixteen} alt="2014" className={styles.years} />
+        <Image src={seventeen} alt="2014" className={styles.years} />
+        <Image src={eighteen} alt="2014" className={styles.years} />
+        <Image src={nineteen} alt="2014" className={styles.years} />
+        <Image src={twenty} alt="2014" className={styles.years} />
+        <Image src={twentyOne} alt="2014" className={styles.years} />
+        <Image src={twentyTwo} alt="2014" className={styles.years} />
+        <Image src={twentyThree} alt="2014" className={styles.years} />
+
+        <Image src={twentyThree} alt="2014" className={styles.years} />
       </Flex>
     </Container>
   );
