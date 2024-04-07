@@ -87,7 +87,6 @@ function AboutPage() {
         direction="row"
         align="center"
         justify="center"
-        gap="2x-lg"
         className={styles.imageContainer}
       >
         <Image width="1000" src={years} alt="years" className={styles.years} />
