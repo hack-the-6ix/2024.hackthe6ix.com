@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '@/assets/logo.png';
-import mlhBanner from '@/assets/mlh-banner.svg';
+import mlhBanner from '@/assets/mlh-banner.svg?url';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
