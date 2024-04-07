@@ -6,7 +6,7 @@ import styles from './about.module.scss';
 
 function AboutPage() {
   return (
-    <Container className={styles.frame}>
+    <Container as="section" className={styles.frame}>
       <Flex
         align="center"
         direction="column"
