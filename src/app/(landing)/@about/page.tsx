@@ -131,3 +131,7 @@ function AboutPage() {
 }
 
 export default AboutPage;
+
+// add text to notepad
+// move tv alignt right
+// move notepad bottom left
