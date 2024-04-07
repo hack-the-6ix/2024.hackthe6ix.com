@@ -11,7 +11,7 @@ function AboutPage() {
         align="center"
         direction="column"
         className={styles.container}
-        gap="2x-big"
+        gap="2x-lg"
       >
         <Text
           textType="heading-lg"
@@ -43,6 +43,41 @@ function AboutPage() {
           in the diversity and talent of our hackers, who help us become a key
           player in the Toronto tech ecosystem. We provide an outlet for
           students to present their ideas of the future.
+        </Text>
+      </Flex>
+
+      <Flex
+        direction="column"
+        align="center"
+        gap="2x-lg"
+        className={styles.container}
+      >
+        <Text
+          textColor="secondary-900"
+          textType="heading-lg"
+          textWeight="semi-bold"
+          textAlign="center"
+          as="h2"
+        >
+          Decade of
+          <Text
+            textType="heading-lg"
+            textColor="warning-400"
+            textWeight="extra-bold"
+          >
+            innovation
+          </Text>
+        </Text>
+        <Text
+          textColor="secondary-900"
+          textType="paragraph-lg"
+          textWeight="medium"
+          textAlign="center"
+          as="p"
+        >
+          Hack the 6ix is celebrating a decade of breakthroughs! Let's walk down
+          memory lane to revisit our past events. Each year, filled with
+          innovation, collaboration, and unforgettable moments.
         </Text>
       </Flex>
     </Container>
