@@ -1,8 +1,10 @@
 import React from 'react';
+import Image from 'next/image';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
 import styles from './about.module.scss';
+import years from './assets/years.png';
 
 function AboutPage() {
   return (
@@ -59,11 +61,11 @@ function AboutPage() {
           textAlign="center"
           as="h2"
         >
-          Decade of
+          <span>Decade of </span>
           <Text
             textType="heading-lg"
             textColor="warning-400"
-            textWeight="extra-bold"
+            textWeight="semi-bold"
           >
             innovation
           </Text>
@@ -79,6 +81,16 @@ function AboutPage() {
           memory lane to revisit our past events. Each year, filled with
           innovation, collaboration, and unforgettable moments.
         </Text>
+      </Flex>
+
+      <Flex
+        direction="row"
+        align="center"
+        justify="center"
+        gap="2x-lg"
+        className={styles.imageContainer}
+      >
+        <Image width="1000" src={years} alt="years" className={styles.years} />
       </Flex>
     </Container>
   );
