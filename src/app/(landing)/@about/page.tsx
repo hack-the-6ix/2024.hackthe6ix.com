@@ -18,7 +18,7 @@ function AboutPage() {
           textColor="secondary-900"
           textWeight="bold"
           textAlign="center"
-          as="p"
+          as="h2"
         >
           <span className={styles.yellow}>Join us </span>
           <Text
