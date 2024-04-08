@@ -1,5 +1,5 @@
 .contact {
-    padding: 5.4375rem 0;
+    padding: 5.4375rem 0 5.75rem 0;
     position: relative;
     overflow:visible;
 
@@ -28,5 +28,18 @@
         flex-grow: 1;
         position: relative;
         z-index: 1;
+    }
+
+    .footer {
+        padding: 0.75rem 0;
+        
+        & > * {
+          z-index: 3;
+          width: 50%;  
+        }
+
+        .copyright {
+            padding-top: 0.25rem;
+        }
     }
 }

@@ -43,6 +43,34 @@ function Contact() {
             <Image src={shipwreck} alt="" fill objectPosition="center" />
           </Flex>
         </Flex>
+        <Flex direction="row" className={styles.footer} align="flex-end">
+          <Flex
+            direction="column"
+            align="left"
+            gap="m"
+            className={styles.copyright}
+          >
+            <Text
+              textColor="primary-50"
+              textType="paragraph-lg"
+              textWeight="bold"
+              as="p"
+              textAlign="start"
+            >
+              HACK THE 6IX
+            </Text>
+            <Text
+              textColor="primary-50"
+              textType="paragraph-lg"
+              textWeight="bold"
+              as="p"
+              textAlign="start"
+            >
+              &nbsp;© Copyright 2024 Hack the 6ix | Made with ♡ in Toronto
+            </Text>
+          </Flex>
+          <Flex direction="column" align="left"></Flex>
+        </Flex>
       </Container>
     </>
   );
