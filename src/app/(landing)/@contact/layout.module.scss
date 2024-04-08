@@ -41,5 +41,15 @@
         .copyright {
             padding-top: 0.25rem;
         }
+
+        .socials {
+            padding: 0 1.5rem;
+            a {
+                padding: 0.125rem;
+                svg{
+                    font-size: 1.25rem;
+                }
+            }
+        }
     }
 }

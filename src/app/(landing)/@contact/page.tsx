@@ -2,8 +2,10 @@ import Image from 'next/image';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
+import IconButton from '@/components/IconButton';
 import Input from '@/components/Input';
 import Text from '@/components/Text';
+import config from '@/config';
 import bedBackground from './_assets/bed_background.svg?url';
 import bedForeground from './_assets/bed_foreground.svg?url';
 import shipwreck from './_assets/shipwreck.svg?url';
@@ -69,7 +71,28 @@ function Contact() {
               &nbsp;© Copyright 2024 Hack the 6ix | Made with ♡ in Toronto
             </Text>
           </Flex>
-          <Flex direction="column" align="left"></Flex>
+          <Flex direction="column" align="left">
+            <Flex direction="row"></Flex>
+            <Flex
+              direction="row"
+              align="space-between"
+              className={styles.socials}
+              gap="sm"
+            >
+              {Object.entries(config.socialsFooter).map(([ref, social]) => (
+                <IconButton
+                  buttonType="tertiary"
+                  buttonDarker
+                  rel="noopener noreferrer"
+                  icon={social.icon}
+                  href={social.link}
+                  target="_blank"
+                  key={ref}
+                  as="a"
+                />
+              ))}
+            </Flex>
+          </Flex>
         </Flex>
       </Container>
     </>

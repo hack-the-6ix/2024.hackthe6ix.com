@@ -26,4 +26,22 @@ export default {
       icon: FaTwitter,
     },
   },
+  socialsFooter: {
+    instagram: {
+      link: 'https://instagram.com/hackthe6ix',
+      icon: FaInstagram,
+    },
+    twitter: {
+      link: 'https://twitter.com/hackthe6ix',
+      icon: FaTwitter,
+    },
+    facebook: {
+      link: 'https://facebook.com/HackThe6ix',
+      icon: FaFacebook,
+    },
+    linkedin: {
+      link: 'https://linkedin.com/company/hackthe6ixofficial',
+      icon: FaLinkedinIn,
+    },
+  },
 } as const;
