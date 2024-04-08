@@ -5,6 +5,7 @@ import Flex from '@/components/Flex';
 import Input from '@/components/Input';
 import Text from '@/components/Text';
 import bed from './_assets/bed.svg?url';
+import shipwreck from './_assets/shipwreck.svg?url';
 import styles from './layout.module.scss';
 
 function Contact() {
@@ -15,19 +16,21 @@ function Contact() {
           src={bed}
           alt=""
           fill
-          objectPosition="center top"
+          objectPosition="center bottom"
           className={styles.bgForeground}
         />
-        <Flex direction="column" align="start" gap="2x-lg">
-          <Text
-            textColor="secondary-900"
-            textType="heading-lg"
-            textWeight="semi-bold"
-            textAlign="start"
-            as="h2"
-          >
-            Contact Us
-          </Text>
+        <Flex direction="row" align="start" justify="space-between">
+          <Flex direction="column" align="start">
+            <Text
+              textColor="secondary-900"
+              textType="heading-lg"
+              textWeight="semi-bold"
+              textAlign="start"
+              as="h2"
+            >
+              Contact Us
+            </Text>
+          </Flex>
         </Flex>
       </Container>
     </>

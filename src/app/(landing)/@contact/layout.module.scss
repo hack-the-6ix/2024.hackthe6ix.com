@@ -1,5 +1,5 @@
 .contact {
-    padding: 7.25rem 0;
+    padding: 5.4375rem 0;
     position: relative;
     overflow:visible;
 
@@ -7,7 +7,10 @@
         width: 100vw !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
-        top: inherit !important;
         object-fit: cover !important;
+    }
+
+    .shipColumn{
+        width: 50%;
     }
 }
