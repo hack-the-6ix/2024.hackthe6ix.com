@@ -4,7 +4,7 @@ import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Input from '@/components/Input';
 import Text from '@/components/Text';
-import bedForeground from './_assets/bed-foreground.svg?url';
+import bed from './_assets/bed.svg?url';
 import styles from './layout.module.scss';
 
 function Contact() {
@@ -12,10 +12,9 @@ function Contact() {
     <>
       <Container as="section" innerProps={{ className: styles.contact }}>
         <Image
-          src={bedForeground}
+          src={bed}
           alt=""
-          layout="fill"
-          objectFit="cover"
+          fill
           objectPosition="center top"
           className={styles.bgForeground}
         />
