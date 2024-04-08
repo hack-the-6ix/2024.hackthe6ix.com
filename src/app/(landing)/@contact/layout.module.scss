@@ -1,0 +1,12 @@
+.contact {
+    padding: 7.25rem 0;
+    position: relative;
+    overflow:visible;
+    
+    .bgForeground{
+        width: 100vw !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: inherit !important;
+    }
+}
