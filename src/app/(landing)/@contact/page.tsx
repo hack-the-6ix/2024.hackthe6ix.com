@@ -13,14 +13,21 @@ function Contact() {
   return (
     <>
       <Container as="section" innerProps={{ className: styles.contact }}>
+        <Image
+          src={bedBackground}
+          alt=""
+          fill
+          objectPosition="center bottom"
+          className={[styles.bgBackground, styles.bg].join(' ')}
+        />
+        <Image
+          src={bedForeground}
+          alt=""
+          fill
+          objectPosition="center bottom"
+          className={[styles.bgForeground, styles.bg].join(' ')}
+        />
         <Flex direction="row" justify="space-between" align="stretch">
-          <Image
-            src={bedBackground}
-            alt=""
-            fill
-            objectPosition="center bottom"
-            className={[styles.bgBackground, styles.bg].join(' ')}
-          />
           <Flex direction="column" align="start" className={styles.emailForm}>
             <Text
               textColor="secondary-900"

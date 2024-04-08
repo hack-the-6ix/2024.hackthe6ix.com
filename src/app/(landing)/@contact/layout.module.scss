@@ -14,13 +14,19 @@
         z-index: 0;
     }
 
+    .bgForeground{
+        z-index: 2;
+    }
+
     .emailForm{
         width: 50%;
+        z-index: 3;
     }
 
     .shipColumn{
         width: 50%;
         flex-grow: 1;
         position: relative;
+        z-index: 1;
     }
 }
