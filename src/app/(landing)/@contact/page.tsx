@@ -4,7 +4,8 @@ import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Input from '@/components/Input';
 import Text from '@/components/Text';
-import bed from './_assets/bed.svg?url';
+import bedBackground from './_assets/bed_background.svg?url';
+import bedForeground from './_assets/bed_foreground.svg?url';
 import shipwreck from './_assets/shipwreck.svg?url';
 import styles from './layout.module.scss';
 
@@ -12,15 +13,15 @@ function Contact() {
   return (
     <>
       <Container as="section" innerProps={{ className: styles.contact }}>
-        <Image
-          src={bed}
-          alt=""
-          fill
-          objectPosition="center bottom"
-          className={styles.bgForeground}
-        />
-        <Flex direction="row" align="start" justify="space-between">
-          <Flex direction="column" align="start">
+        <Flex direction="row" justify="space-between" align="stretch">
+          <Image
+            src={bedBackground}
+            alt=""
+            fill
+            objectPosition="center bottom"
+            className={[styles.bgBackground, styles.bg].join(' ')}
+          />
+          <Flex direction="column" align="start" className={styles.emailForm}>
             <Text
               textColor="secondary-900"
               textType="heading-lg"
@@ -30,6 +31,9 @@ function Contact() {
             >
               Contact Us
             </Text>
+          </Flex>
+          <Flex direction="column" align="end" className={styles.shipColumn}>
+            <Image src={shipwreck} alt="" fill objectPosition="center" />
           </Flex>
         </Flex>
       </Container>

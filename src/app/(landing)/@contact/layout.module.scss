@@ -3,14 +3,24 @@
     position: relative;
     overflow:visible;
 
-    .bgForeground{
+    .bg{
         width: 100vw !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         object-fit: cover !important;
     }
 
+    .bgBackground{
+        z-index: 0;
+    }
+
+    .emailForm{
+        width: 50%;
+    }
+
     .shipColumn{
         width: 50%;
+        flex-grow: 1;
+        position: relative;
     }
 }
