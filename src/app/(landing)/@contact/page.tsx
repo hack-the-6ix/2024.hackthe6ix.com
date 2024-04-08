@@ -131,8 +131,22 @@ function Contact() {
               &nbsp;© Copyright 2024 Hack the 6ix | Made with ♡ in Toronto
             </Text>
           </Flex>
-          <Flex direction="column" align="left">
-            <Flex direction="row"></Flex>
+          <Flex direction="column" align="left" gap="2x-sm">
+            <Flex direction="row" gap="m" className={styles.footerLinks}>
+              {Object.entries(config.footerLinks).map(([ref, link]) => (
+                <Text
+                  textColor="primary-50"
+                  textType="label"
+                  textWeight="semi-bold"
+                  as="a"
+                  href={link.link}
+                  target="_blank"
+                  key={ref}
+                >
+                  {link.text}
+                </Text>
+              ))}
+            </Flex>
             <Flex
               direction="row"
               align="space-between"
