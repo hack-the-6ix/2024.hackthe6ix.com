@@ -1,3 +1,6 @@
+@use '../../../styles/colors';
+@use '../../../styles/mixins';
+
 .contact {
     padding: 5.4375rem 0 5.75rem 0;
     position: relative;
@@ -17,18 +20,45 @@
     .bgForeground{
         z-index: 2;
     }
+    
+    .contactRow{
+        padding-bottom: 7.6875rem;
+        .emailForm{
+            flex-grow: 1;
+            max-width: 50%;
+            padding-bottom: 16.1875rem;
 
-    .emailForm{
-        width: 50%;
-        z-index: 3;
-    }
+            &, & > * {
+                z-index: 3;
+            }
 
-    .shipColumn{
-        width: 50%;
-        flex-grow: 1;
-        position: relative;
-        z-index: 1;
-    }
+            .highlight{
+                color: colors.getColor(warning, 400);
+            }
+
+            .contactFields{
+                max-width: 35.125rem;
+
+                .contactFirstRow *{
+                    flex-grow: 1;
+                }
+
+                .contactSubmit {
+                    flex-grow: 0;
+                    width: fit-content;
+                    padding: 0.75rem 3.125rem;
+                }
+            }
+        }
+
+        .shipColumn{
+            flex-grow: 1;
+            max-width: 50%;
+            position: relative;
+            z-index: 1;
+        }
+    }   
+
 
     .footer {
         padding: 0.75rem 0;

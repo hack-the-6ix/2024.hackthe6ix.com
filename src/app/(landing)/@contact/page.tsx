@@ -29,17 +29,77 @@ function Contact() {
           objectPosition="center bottom"
           className={[styles.bgForeground, styles.bg].join(' ')}
         />
-        <Flex direction="row" justify="space-between" align="stretch">
-          <Flex direction="column" align="start" className={styles.emailForm}>
-            <Text
-              textColor="secondary-900"
-              textType="heading-lg"
-              textWeight="semi-bold"
-              textAlign="start"
-              as="h2"
+        <Flex
+          direction="row"
+          justify="space-between"
+          align="stretch"
+          className={styles.contactRow}
+        >
+          <Flex
+            direction="column"
+            align="start"
+            className={styles.emailForm}
+            gap="x-big"
+          >
+            <Flex direction="column" align="start" gap="sm">
+              <Text
+                textColor="primary-600"
+                textType="heading-lg"
+                textWeight="semi-bold"
+                textAlign="start"
+                as="h2"
+              >
+                Still have <span className={styles.highlight}>questions?</span>
+              </Text>
+              <Text
+                textColor="primary-600"
+                textType="paragraph-lg"
+                textWeight="medium"
+                textAlign="start"
+                as="p"
+              >
+                Send your question our way and we'll get back to you!
+              </Text>
+            </Flex>
+            <Flex
+              direction="column"
+              align="start"
+              className={styles.contactFields}
+              gap="sm"
             >
-              Contact Us
-            </Text>
+              <Flex
+                direction="row"
+                align="start"
+                gap="sm"
+                className={styles.contactFirstRow}
+              >
+                <Input
+                  label="Name"
+                  required
+                  placeholder="Enter Name"
+                  width="50%"
+                />
+                <Input
+                  label="Email"
+                  required
+                  placeholder="Enter Email"
+                  width="50%"
+                />
+              </Flex>
+              <Input
+                label="Enter your question"
+                required
+                placeholder="Send us your questions here!"
+                width="100%"
+              />
+              <Button
+                buttonType="primary"
+                buttonColor="primary"
+                className={styles.contactSubmit}
+              >
+                Submit
+              </Button>
+            </Flex>
           </Flex>
           <Flex direction="column" align="end" className={styles.shipColumn}>
             <Image src={shipwreck} alt="" fill objectPosition="center" />
