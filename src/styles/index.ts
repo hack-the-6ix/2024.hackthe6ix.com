@@ -51,6 +51,10 @@ export type ColorTypes =
   | 'active'
   | 'success'
   | 'warning'
-  | 'error';
+  | 'error'
+  | 'shade';
 
-export type Colors = `${ColorTypes}-${ColorLevels}`;
+export type Colors =
+  | `${Exclude<ColorTypes, 'shade'>}-${ColorLevels}`
+  | 'shade-0'
+  | 'shade-100';
