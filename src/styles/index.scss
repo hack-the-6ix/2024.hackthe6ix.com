@@ -1,3 +1,4 @@
+@use '../styles/mixins';
 @use '../styles/colors';
 @use '../styles/fonts';
 
@@ -5,6 +6,7 @@ html,
 body {
   background-color: colors.getColor(secondary, 50);
   overflow-x: hidden;
+  font-size: 16px;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -16,6 +18,15 @@ body * {
 
 html {
   @include fonts.init;
+  font-size: 16px;
+
+  @include mixins.media(tablet) {
+    font-size: 14px;
+  }
+
+  @include mixins.media(mobile) {
+    font-size: 13px;
+  }
 }
 
 :root {
