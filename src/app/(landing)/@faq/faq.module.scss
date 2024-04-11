@@ -5,17 +5,16 @@
 }
 
 .buttonsContainer {
-  margin: 48px 0;
+  margin: 4rem 0;
 }
 
 .buttons {
-  background-color: #00948c; // idk how to use the color vars
+  background-color: colors.getColor('primary');
   border-radius: 32px;
 
   button {
-
     &:not(:first-child) {
-      margin-left: 48px;
+      margin-left: 4rem;
     }
   }
 }
@@ -23,13 +22,4 @@
 .questions {
   max-width: 872px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-
-  .question {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
 }
