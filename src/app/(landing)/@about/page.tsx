@@ -97,12 +97,7 @@ function AboutPage() {
         </Text>
       </Flex>
 
-      <Flex
-        direction="row"
-        align="center"
-        justify="center"
-        className={styles.imageContainer}
-      >
+      <Flex direction="row" align="center" justify="center">
         <Image src={fourteen} alt="2014" className={styles.years} />
         <Image src={fifteen} alt="2014" className={styles.years} />
         <Image src={sixteen} alt="2014" className={styles.years} />
@@ -119,13 +114,13 @@ function AboutPage() {
 
       <Flex
         direction="row"
-        align="center"
-        justify="center"
+        justify="flex-end"
         className={styles.imageContainer}
       >
         <Image src={tv} alt="2014" className={styles.tv} />
-        <Image src={notepad} alt="2014" className={styles.notepad} />
       </Flex>
+
+      <Image src={notepad} alt="2014" className={styles.notepad} />
     </Container>
   );
 }
