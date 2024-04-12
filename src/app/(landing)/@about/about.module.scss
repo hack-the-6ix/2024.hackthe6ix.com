@@ -40,6 +40,8 @@
     position: relative;
     right: 0;
     z-index: 1;
+    width: 50%; /* Adjust this value to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
   }
 
   .notepad{
@@ -48,3 +50,17 @@
     margin-right: 100rem; 
     z-index: 0;
   }
+
+  .overlay {
+    position: absolute; /* Position the overlay absolutely relative to its container */
+    top: 50px; /* Adjust the top position according to your design */
+    left: 50px; /* Adjust the left position according to your design */
+    width: 200px; /* Adjust the width of the square */
+    height: 200px; /* Adjust the height of the square */
+    background: rgba(255, 255, 255, 0.5); /* Add background color with opacity */
+    pointer-events: none; /* Ensure the overlay doesn't capture pointer events */
+    border: 2px solid black; /* Add a border to the overlay */
+    box-sizing: border-box; /* Include the border in the element's total width and height */
+  }
+
+ 

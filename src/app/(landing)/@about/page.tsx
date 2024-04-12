@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
@@ -17,6 +17,8 @@ import twentyThree from './assets/2023.png';
 import twentyFour from './assets/2023.png';
 import notepad from './assets/notepad.png';
 import tv from './assets/tv.png';
+import Slideshow from './Slideshow'; // Import Slideshow component
+
 
 // Ask design team
 
@@ -118,9 +120,8 @@ function AboutPage() {
         className={styles.imageContainer}
       >
         <Image src={tv} alt="2014" className={styles.tv} />
+        <div className={styles.overlay}></div>
       </Flex>
-
-      <Image src={notepad} alt="2014" className={styles.notepad} />
     </Container>
   );
 }
