@@ -38,26 +38,25 @@
 .tvContainer {
   display: flex;
   position: relative;
-  width: 80%; 
-  height: auto; 
-  margin-left: auto; 
+  width: 80%; /* relative to parent container */
+  height: auto; /* adjust height automatically */
+  margin-left: auto; /* center horizontally */
 }
 
 .tv {
   z-index: 1;
-  width: 100%;
-  height: auto;
+  width: 100%; 
+  height: auto; 
 }
 
 .overlay {
   z-index: 2;
   position: absolute;
-  top: 20rem;
-  left: 8.4375rem; 
+  top: 35%; 
+  left: 10%; 
 }
 
 .overlayImage {
-  width: 33.792rem;
-  height: 24.72rem;
+  width: 55%; 
+  height: 35%; 
 }
-
