@@ -129,7 +129,8 @@ function Faq() {
           {faqQuestions.map(({ label }, idx) => (
             <Button
               onClick={() => setActive(idx)}
-              buttonColor={active === idx ? 'active' : 'primary'}
+              buttonDarker={active === idx}
+              buttonColor="primary"
               key={idx}
             >
               {label}

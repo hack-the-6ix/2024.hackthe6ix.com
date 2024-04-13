@@ -5,7 +5,7 @@
 }
 
 .buttons {
-  background-color: colors.getColor('primary');
+  background-color: colors.getColor('primary', 500);
   border-radius: 99999rem;
 }
 
