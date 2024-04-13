@@ -48,6 +48,7 @@ export type ColorTypes =
   | 'neutral'
   | 'primary'
   | 'secondary'
+  | 'active'
   | 'success'
   | 'warning'
   | 'error';
