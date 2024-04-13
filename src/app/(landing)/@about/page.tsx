@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
+import Slideshow from './Slideshow';
 import styles from './about.module.scss';
 import fourteen from './assets/2014.png';
 import fifteen from './assets/2015.png';
@@ -14,11 +15,11 @@ import twenty from './assets/2020.png';
 import twentyOne from './assets/2021.png';
 import twentyTwo from './assets/2022.png';
 import twentyThree from './assets/2023.png';
-import twentyFour from './assets/2023.png';
 import notepad from './assets/notepad.png';
+import placeholder from './assets/placeholder.png'
 import tv from './assets/tv.png';
-import Slideshow from './Slideshow'; // Import Slideshow component
 
+// Import Slideshow component
 
 // Ask design team
 
@@ -119,8 +120,16 @@ function AboutPage() {
         justify="flex-end"
         className={styles.imageContainer}
       >
-        <Image src={tv} alt="2014" className={styles.tv} />
-        <div className={styles.overlay}></div>
+        <div className={styles.tvContainer}>
+          <Image src={tv} alt="TV" className={styles.tv} />
+          <div className={styles.overlay}>
+            <Image
+              src={placeholder}
+              alt="Overlay Image"
+              className={styles.overlayImage}
+            />
+          </div>
+        </div>
       </Flex>
     </Container>
   );

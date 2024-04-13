@@ -35,32 +35,29 @@
     position: relative;
 }
 
+.tvContainer {
+  display: flex;
+  position: relative;
+  width: 80%; 
+  height: auto; 
+  margin-left: auto; 
+}
 
-  .tv{
-    position: relative;
-    right: 0;
-    z-index: 1;
-    width: 50%; /* Adjust this value to make the image smaller */
-    height: auto; /* Maintain aspect ratio */
-  }
+.tv {
+  z-index: 1;
+  width: 100%;
+  height: auto;
+}
 
-  .notepad{
-    position: relative;
-    margin-top: -20rem; 
-    margin-right: 100rem; 
-    z-index: 0;
-  }
+.overlay {
+  z-index: 2;
+  position: absolute;
+  top: 20rem;
+  left: 8.4375rem; 
+}
 
-  .overlay {
-    position: absolute; /* Position the overlay absolutely relative to its container */
-    top: 50px; /* Adjust the top position according to your design */
-    left: 50px; /* Adjust the left position according to your design */
-    width: 200px; /* Adjust the width of the square */
-    height: 200px; /* Adjust the height of the square */
-    background: rgba(255, 255, 255, 0.5); /* Add background color with opacity */
-    pointer-events: none; /* Ensure the overlay doesn't capture pointer events */
-    border: 2px solid black; /* Add a border to the overlay */
-    box-sizing: border-box; /* Include the border in the element's total width and height */
-  }
+.overlayImage {
+  width: 33.792rem;
+  height: 24.72rem;
+}
 
- 
