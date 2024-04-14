@@ -1,6 +1,6 @@
 'use client';
 
-import { ElementType, useState } from 'react';
+import { ElementType, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import cn from 'classnames';
@@ -38,10 +38,22 @@ const navLinks = [
 
 function Navigation() {
   const [showNav, setShowNav] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handler = () => setScrolled(document.body.scrollTop !== 0);
+    window.addEventListener('scroll', handler, true);
+    handler();
+
+    return () => {
+      window.removeEventListener('scroll', handler, true);
+    };
+  }, []);
+
   return (
     <Container
       as="nav"
-      className={styles.container}
+      className={cn(scrolled && styles.scrolled, styles.container)}
       innerProps={{
         as: Flex as ElementType,
         className: styles.nav,

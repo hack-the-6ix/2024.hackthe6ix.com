@@ -3,9 +3,14 @@
 @use '@/styles/fonts';
 
 .container {
+  @include mixins.transition(background-color);
   position: sticky;
   z-index: 2;
   top: 0;
+}
+
+.scrolled {
+  background-color: colors.getColor(secondary, 50);
 }
 
 .nav {
