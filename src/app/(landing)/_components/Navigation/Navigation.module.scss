@@ -1,0 +1,65 @@
+@use '@/styles/mixins';
+@use '@/styles/colors';
+@use '@/styles/fonts';
+
+.container {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+}
+
+.nav {
+  padding: mixins.spacing(x-big) 0;
+}
+
+.banner {
+  margin: -1 * mixins.spacing(x-big) 0 auto;
+  overflow-y: visible;
+  height: 1px;
+}
+
+@include mixins.media(tablet) {
+  .links {
+    @include mixins.transition(backdrop-filter opacity);
+    pointer-events: none;
+    opacity: 0;
+
+    inset: 0;
+    margin: 0;
+    position: fixed;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: mixins.spacing(m);
+    z-index: 3;
+
+    padding: mixins.spacing(lg);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+
+  .link {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  .show {
+    backdrop-filter: blur(1rem);
+    pointer-events: all;
+    opacity: 1;
+  }
+}
+
+.menu {
+  display: none;
+  @include mixins.media(tablet) {
+    display: flex;
+  }
+}
+
+.content {
+  @include mixins.media(tablet) {
+    gap: mixins.spacing(big);
+  }
+}

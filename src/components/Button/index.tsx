@@ -23,6 +23,7 @@ function Button<T extends ElementType = 'button'>({
     <Text
       textType="paragraph-sm"
       textWeight="semi-bold"
+      textAlign="center"
       as={as ?? 'button'}
       type="button"
       {...props}
