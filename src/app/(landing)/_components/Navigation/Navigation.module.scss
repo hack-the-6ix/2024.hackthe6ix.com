@@ -54,17 +54,15 @@
     pointer-events: all;
     opacity: 1;
   }
+
+  .content {
+    gap: mixins.spacing(big);
+  }
 }
 
 .menu {
   display: none;
   @include mixins.media(tablet) {
     display: flex;
-  }
-}
-
-.content {
-  @include mixins.media(tablet) {
-    gap: mixins.spacing(big);
   }
 }
