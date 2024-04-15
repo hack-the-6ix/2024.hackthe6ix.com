@@ -1,4 +1,4 @@
-import { ReactNode, useId } from 'react';
+import { ComponentPropsWithoutRef, ReactNode, useId } from 'react';
 import cn from 'classnames';
 import Flex from '../Flex';
 import Text from '../Text';
@@ -13,7 +13,7 @@ export type InputLikePublicProps = {
     type: 'error';
     msg?: ReactNode;
   };
-};
+} & Omit<ComponentPropsWithoutRef<'div'>, 'children'>;
 
 export type InputLikeProps = InputLikePublicProps & {
   disabled?: boolean;
@@ -39,11 +39,12 @@ function InputLike({
   description,
   status,
   children,
+  ...props
 }: InputLikeProps) {
   const id = useId();
   const descriptor = description || status?.msg;
   return (
-    <Flex direction="column" gap="2x-sm" inline>
+    <Flex direction="column" gap="2x-sm" {...props} inline>
       <Text
         htmlFor={id}
         className={cn(hideLabel && 'hidden')}

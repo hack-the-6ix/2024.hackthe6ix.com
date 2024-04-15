@@ -1,17 +1,20 @@
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, ReactNode } from 'react';
 import cn from 'classnames';
 import InputLike, { InputLikePublicProps } from '../InputLike';
 import Text from '../Text';
 import styles from './Input.module.scss';
 
-export type InputProps = InputLikePublicProps &
-  ComponentPropsWithoutRef<'input'>;
+export type InputProps = InputLikePublicProps & {
+  inputProps: ComponentPropsWithoutRef<'input'>;
+};
 
 function Input({
   label,
   description,
   hideLabel,
+  className,
   status,
+  inputProps = {},
   ...props
 }: InputProps) {
   return (
@@ -19,17 +22,17 @@ function Input({
       label={label}
       hideLabel={hideLabel}
       description={description}
-      disabled={props.disabled}
-      required={props.required}
+      disabled={inputProps.disabled}
+      required={inputProps.required}
+      className={className}
       status={status}
     >
-      {(inputProps) => (
+      {(ariaProps) => (
         <Text
-          {...props}
           {...inputProps}
+          {...ariaProps}
           className={cn(
             inputProps['aria-invalid'] && styles.error,
-            props.className,
             styles.input,
           )}
           textColor="neutral-900"

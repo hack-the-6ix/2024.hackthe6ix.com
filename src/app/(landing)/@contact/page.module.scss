@@ -1,0 +1,19 @@
+@use '@/styles/colors';
+@use '@/styles/mixins';
+
+.container {
+  padding-top: mixins.spacing(lg);
+  margin-top: mixins.spacing(3x-lg);
+  background-image: url('./_assets/sea-bed.png');
+  background-position: bottom center;
+  background-size: cover;
+  aspect-ratio: 965/423;
+
+  & > * {
+    margin-top: 14%;
+  }
+}
+
+.form {
+  max-width: 36rem;
+}
