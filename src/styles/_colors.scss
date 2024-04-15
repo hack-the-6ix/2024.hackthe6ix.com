@@ -1,48 +1,104 @@
 @use './mixins';
 @use 'sass:color';
 
+// Utils
+@function _toRGB($color) {
+  @return (color.red($color), color.green($color), color.blue($color));
+}
+
 // https://www.figma.com/file/SRti3LD5ssigQbVfbVBHu9/Design-System?type=design&node-id=1382-3098&mode=dev
 $_colors: (
-  neutral: #64748b,
-  primary: #00948c,
-  secondary: #0c82a2,
-  active: #03675F,
-  success: #10b981,
-  warning: #e79431,
-  error: #ef4444,
+  neutral: (
+    50: #f7f8f9,
+    100: #ced5de,
+    200: #b0b9c6,
+    300: #919daf,
+    400: #7b889c,
+    500: #64748b,
+    600: #57667a,
+    700: #465364,
+    800: #37404e,
+    900: #252c37,
+  ),
+  primary: (
+    50: #e6faf9,
+    100: #abdfdd,
+    200: #71cac7,
+    300: #23b5b0,
+    400: #00a59e,
+    500: #00948c,
+    600: #00887e,
+    700: #00786d,
+    800: #00685e,
+    900: #004c40,
+  ),
+  secondary: (
+    50: #edfafe,
+    100: #aedaea,
+    200: #8dbdd1,
+    300: #68a1b8,
+    400: #4c8ca5,
+    500: #2a7892,
+    600: #1c6981,
+    700: #08566b,
+    800: #004356,
+    900: #002e3f,
+  ),
+  success: (
+    50: #ecfdf5,
+    100: #bae6d1,
+    200: #8bd5b4,
+    300: #54c596,
+    400: #10b981,
+    500: #00ac6b,
+    600: #009d60,
+    700: #008b53,
+    800: #007a46,
+    900: #005b30,
+  ),
+  warning: (
+    50: #fdf4ea,
+    100: #fedcb4,
+    200: #fdc584,
+    300: #fcae55,
+    400: #fb9d36,
+    500: #fa8d20,
+    600: #f58120,
+    700: #ee721e,
+    800: #e7621d,
+    900: #dd471a,
+  ),
+  error: (
+    50: #fef2f2,
+    100: #ffc9ce,
+    200: #f09493,
+    300: #e6696a,
+    400: #ef4444,
+    500: #f32e26,
+    600: #e42027,
+    700: #d31121,
+    800: #c6011a,
+    900: #b7000c,
+  ),
+  shade: (
+    0: #ffffff,
+    100: #000000,
+  ),
 );
 
-@function _generateScaleColor($color, $lightness) {
-  $scaledColor: color.scale($color, $lightness: $lightness);
-  @return (
-    color.red($scaledColor),
-    color.green($scaledColor),
-    color.blue($scaledColor)
-  );
-}
-
-@function _generateScale($color) {
-  @return (
-    50: _generateScaleColor($color, $lightness: 95%),
-    100: _generateScaleColor($color, $lightness: 87%),
-    200: _generateScaleColor($color, $lightness: 75%),
-    300: _generateScaleColor($color, $lightness: 50%),
-    400: _generateScaleColor($color, $lightness: 25%),
-    500: _generateScaleColor($color, 0%),
-    600: _generateScaleColor($color, $lightness: -25%),
-    700: _generateScaleColor($color, $lightness: -50%),
-    800: _generateScaleColor($color, $lightness: -75%),
-    900: _generateScaleColor($color, $lightness: -87%)
-  );
-}
-
-$_defaultLevelOverride: (
-  secondary: 600,
+$_defaultLevel: (
+  primary: 300,
+  secondary: 700,
+  success: 400,
+  warning: 300,
+  error: 400,
+  neutral: 500,
+  shade: 0,
 );
 
 @function getVar($color, $scale: None) {
   @if $scale == None {
-    $scale: mixins.map-get-default($_defaultLevelOverride, $color, 500);
+    $scale: mixins.map-get-default($_defaultLevel, $color, 500);
   }
 
   @return --#{$color}-#{$scale};
@@ -53,10 +109,9 @@ $_defaultLevelOverride: (
 }
 
 @mixin init {
-  @each $tag, $color in $_colors {
-    $colorScale: _generateScale($color);
-    @each $level, $scaledColor in $colorScale {
-      #{getVar($tag, $level)}: $scaledColor;
+  @each $tag, $config in $_colors {
+    @each $level, $color in $config {
+      #{getVar($tag, $level)}: #{_toRGB($color)};
     }
   }
 }

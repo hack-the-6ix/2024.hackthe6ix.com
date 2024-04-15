@@ -52,6 +52,7 @@ function MailingListForm() {
         query(new FormData(e.currentTarget));
         return false;
       }}
+      wrap
     >
       <Input
         description={

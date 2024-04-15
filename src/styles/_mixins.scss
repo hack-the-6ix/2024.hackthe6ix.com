@@ -8,6 +8,12 @@
   }
 }
 
+@mixin media($bp) {
+  @media screen and (max-width: map-get(vars.$media, $bp)) {
+    @content;
+  }
+}
+
 @mixin transition($props, $speed: normal) {
   $res: ();
   @each $prop in $props {
