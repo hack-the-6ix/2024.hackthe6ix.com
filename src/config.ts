@@ -26,22 +26,49 @@ export default {
       icon: FaTwitter,
     },
   },
-  footerLinks: {
-    privacyPolicy: {
-      link: 'https://cdn.hackthe6ix.com/privacy-policy.pdf',
-      text: 'Privacy Policy',
-    },
-    mlhCodeOfConduct: {
-      link: 'https://static.mlh.io/docs/mlh-code-of-conduct.pdf',
-      text: 'MLH Code of Conduct',
-    },
-    prevWebsite: {
-      link: 'https://2023.hackthe6ix.com',
-      text: '2023 Website',
-    },
-    covid: {
-      link: 'https://google.com',
-      text: 'COVID-19 Safety',
-    },
+  nav: {
+    links: [
+      {
+        label: 'About',
+        hash: 'about',
+      },
+      {
+        label: 'Why',
+        hash: 'why',
+      },
+      {
+        label: 'Sponsors',
+        hash: 'sponsors',
+      },
+      {
+        label: 'FAQ',
+        hash: 'faq',
+      },
+      {
+        label: 'Contact Us',
+        hash: 'contact',
+        cta: true,
+      },
+    ] as { label: string; hash: string; cta?: boolean }[],
+  },
+  footer: {
+    links: [
+      {
+        link: 'https://cdn.hackthe6ix.com/privacy-policy.pdf',
+        text: 'Privacy Policy',
+      },
+      {
+        link: 'https://static.mlh.io/docs/mlh-code-of-conduct.pdf',
+        text: 'MLH Code of Conduct',
+      },
+      {
+        link: 'https://2023.hackthe6ix.com',
+        text: '2023 Website',
+      },
+      {
+        link: 'https://google.com',
+        text: 'COVID-19 Safety',
+      },
+    ] as const,
   },
 } as const;

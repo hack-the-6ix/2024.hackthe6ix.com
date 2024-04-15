@@ -5,36 +5,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import cn from 'classnames';
 import logo from '@/assets/logo.png';
-import mlhBanner from '@/assets/mlh-banner.svg';
+import mlhBanner from '@/assets/mlh-banner.svg?url';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Icon from '@/components/Icon';
+import config from '@/config';
 import styles from './Navigation.module.scss';
-
-const navLinks = [
-  {
-    label: 'About',
-    hash: 'about',
-  },
-  {
-    label: 'Why',
-    hash: 'why',
-  },
-  {
-    label: 'Sponsors',
-    hash: 'sponsors',
-  },
-  {
-    label: 'FAQ',
-    hash: 'faq',
-  },
-  {
-    label: 'Contact Us',
-    hash: 'contact',
-    cta: true,
-  },
-] as { label: string; hash: string; cta?: boolean }[];
 
 function Navigation() {
   const [showNav, setShowNav] = useState(false);
@@ -69,7 +46,7 @@ function Navigation() {
           className={cn(showNav && styles.show, styles.links)}
           gap="x-sm"
         >
-          {navLinks.map(({ label, hash, cta }, i) => (
+          {config.nav.links.map(({ label, hash, cta }, i) => (
             <Button
               buttonColor={cta ? 'primary' : 'secondary'}
               buttonType={cta ? 'primary' : 'tertiary'}

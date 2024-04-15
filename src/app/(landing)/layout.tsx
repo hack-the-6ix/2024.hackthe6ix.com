@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { Toaster } from 'react-hot-toast';
 import type { Metadata } from 'next';
+import Footer from './_components/Footer';
 import Navigation from './_components/Navigation';
 
 export const metadata: Metadata = {
@@ -35,6 +36,7 @@ export default function LandingLayout({
         {faq}
         {contact}
       </main>
+      <Footer />
       <Toaster />
     </>
   );

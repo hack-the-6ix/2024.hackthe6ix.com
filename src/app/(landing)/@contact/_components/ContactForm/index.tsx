@@ -63,7 +63,7 @@ function ContactForm() {
         }}
       />
       <Flex>
-        <Button type="submit" disabled={loading}>
+        <Button buttonColor="primary" type="submit" disabled={loading}>
           {loading ? 'Sending...' : 'Send'}
         </Button>
       </Flex>

@@ -20,6 +20,8 @@
 .banner {
   margin: -1 * mixins.spacing(x-big) 0 auto;
   overflow-y: visible;
+  position: relative;
+  top: -1px;
   height: 1px;
 }
 
