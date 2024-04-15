@@ -16,7 +16,7 @@ import twentyOne from './assets/2021.png';
 import twentyTwo from './assets/2022.png';
 import twentyThree from './assets/2023.png';
 import notepad from './assets/notepad.png';
-import placeholder from './assets/placeholder.png'
+import placeholder from './assets/placeholder.png';
 import tv from './assets/tv.png';
 
 // Import Slideshow component
