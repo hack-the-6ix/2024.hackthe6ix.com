@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
-import Slideshow from './Slideshow';
 import styles from './about.module.scss';
 import fourteen from './assets/2014.png';
 import fifteen from './assets/2015.png';
@@ -15,8 +14,7 @@ import twenty from './assets/2020.png';
 import twentyOne from './assets/2021.png';
 import twentyTwo from './assets/2022.png';
 import twentyThree from './assets/2023.png';
-import notepad from './assets/notepad.png';
-import placeholder from './assets/placeholder.png'
+import placeholder from './assets/placeholder.png';
 import tv from './assets/tv.png';
 
 // Import Slideshow component
@@ -94,8 +92,8 @@ function AboutPage() {
           textAlign="center"
           as="p"
         >
-          Hack the 6ix is celebrating a decade of breakthroughs! Let's walk down
-          memory lane to revisit our past events. Each year, filled with
+          Hack the 6ix is celebrating a decade of breakthroughs! Let&apos;s walk
+          down memory lane to revisit our past events. Each year, filled with
           innovation, collaboration, and unforgettable moments.
         </Text>
       </Flex>
