@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
@@ -134,7 +134,3 @@ function AboutPage() {
 }
 
 export default AboutPage;
-
-// add text to notepad
-// move tv alignt right
-// move notepad bottom left
