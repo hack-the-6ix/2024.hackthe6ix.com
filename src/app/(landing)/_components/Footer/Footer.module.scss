@@ -1,0 +1,19 @@
+@use '@/styles/mixins';
+@use '@/styles/colors';
+
+.container {
+  // One off color for matching sea bed
+  background-color: #33617a;
+}
+
+.content {
+  padding: mixins.spacing(lg) 0 mixins.spacing(3x-big);
+}
+
+.link {
+  padding: 0;
+}
+
+.socials {
+  margin-left: -1 * mixins.spacing(x-sm);
+}

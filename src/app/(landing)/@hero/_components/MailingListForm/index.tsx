@@ -52,6 +52,7 @@ function MailingListForm() {
         query(new FormData(e.currentTarget));
         return false;
       }}
+      wrap
     >
       <Input
         description={
@@ -59,10 +60,15 @@ function MailingListForm() {
             'Thank you for subscribing to our updates!'
           : undefined
         }
-        readOnly={loading || result?.status === 'success'}
+        inputProps={{
+          readOnly: loading || result?.status === 'success',
+          placeholder: 'Enter email',
+          autoComplete: 'email',
+          required: true,
+          name: 'email',
+          type: 'email',
+        }}
         className={styles.input}
-        placeholder="Enter email"
-        autoComplete="email"
         label="Enter email"
         status={
           !loading && result?.status === 'error' ?
@@ -72,10 +78,7 @@ function MailingListForm() {
             }
           : undefined
         }
-        name="email"
-        type="email"
         hideLabel
-        required
       />
       <Button
         className={styles.button}

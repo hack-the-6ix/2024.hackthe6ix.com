@@ -1,0 +1,14 @@
+@use '../../../styles/colors';
+
+.container {
+  max-width: 60rem;
+}
+
+.buttons {
+  background-color: colors.getColor('primary', 500);
+  border-radius: 99999rem;
+}
+
+.item {
+  margin-bottom: 0.5rem;
+}

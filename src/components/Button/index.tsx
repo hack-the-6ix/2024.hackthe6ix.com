@@ -23,6 +23,7 @@ function Button<T extends ElementType = 'button'>({
     <Text
       textType="paragraph-sm"
       textWeight="semi-bold"
+      textAlign="center"
       as={as ?? 'button'}
       type="button"
       {...props}
@@ -36,10 +37,10 @@ function Button<T extends ElementType = 'button'>({
         props.disabled ?
           props.style
         : {
-            ...props.style,
             '--button-color': `var(--${buttonColor}-${level})`,
             '--button-color-hover': `var(--${buttonColor}-${level + 100})`,
             '--button-color-active': `var(--${buttonColor}-${level + 200})`,
+            ...props.style,
           }
       }
     />
