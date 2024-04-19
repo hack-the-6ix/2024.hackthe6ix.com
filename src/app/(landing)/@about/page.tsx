@@ -109,7 +109,6 @@ function AboutPage() {
         <Image src={twentyOne} alt="2014" className={styles.years} />
         <Image src={twentyTwo} alt="2014" className={styles.years} />
         <Image src={twentyThree} alt="2014" className={styles.years} />
-
         <Image src={twentyThree} alt="2014" className={styles.years} />
       </Flex>
 
