@@ -3,60 +3,57 @@
 
 .frame {
     background-color: colors.getColor(secondary, 50);
-  }
+}
 
-  .container {
+.container {
     margin-right: auto;
     position: relative;
     padding: 12rem 0;
     z-index: 1;
-  }
-  
-  .yellow {
-    color: colors.getColor(warning, 400);
-  }
+}
 
-  
-  .years{
-   
+.yellow {
+    color: colors.getColor(warning, 400);
+}
+
+.years {
     position: relative;
     inset: 0;
     margin: 0;
     height: auto;
     transition: transform 0.3s;
-   
-  }
+}
 
-  .years:hover{
+.years:hover {
     transform: scale(1.5);
-  }
+}
 
-  .imageContainer {
+.imageContainer {
     position: relative;
 }
 
 .tvContainer {
-  display: flex;
-  position: relative;
-  width: 80%; 
-  height: auto; 
-  margin-left: auto;
+    display: flex;
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
 }
 
 .tv {
-  z-index: 1;
-  width: 100%; 
-  height: auto; 
+    z-index: 1;
+    width: 100%;
+    height: auto;
 }
 
 .overlay {
-  z-index: 2;
-  position: absolute;
-  top: 35%; 
-  left: 10%; 
+    z-index: 2;
+    position: absolute;
+    top: 35%;
+    left: 10%;
 }
 
 .overlayImage {
-  width: 55%; 
-  height: 35%; 
+    width: 55%;
+    height: 35%;
 }

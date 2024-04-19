@@ -8,7 +8,7 @@ import styles from './Text.module.scss';
 const inter = Inter({ subsets: ['latin'] });
 
 export type TextProps = {
-  textType: TextTypes;
+  textType?: TextTypes;
   textColor?: Colors;
   textWeight?: TextWeights;
   textAlign?: 'start' | 'center' | 'end';
@@ -26,10 +26,9 @@ const Text = forwardRefAs<'span', TextProps>(
           '--text-color': textColor ? `var(--${textColor})` : null,
         })}
         className={cn(
-          `font--${textType}`,
+          textType && [`font--${textType}`, inter.className],
           textAlign && styles[`align--${textAlign}`],
           textWeight && `font--wgt--${textWeight}`,
-          inter.className,
           props.className,
           styles.text,
         )}
