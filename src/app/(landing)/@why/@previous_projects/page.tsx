@@ -11,7 +11,7 @@ import styles from './page.module.scss';
 
 function PreviousProjects() {
   return (
-    <Container innerProps={{ className: styles.content }} as="section">
+    <Flex direction="column" className={styles.content}>
       <Flex direction="column" align="center" className={styles.text} gap="sm">
         <Text
           textColor="secondary-900"
@@ -79,7 +79,7 @@ function PreviousProjects() {
           </Link>
         </Flex>
       </Flex>
-    </Container>
+    </Flex>
   );
 }
 

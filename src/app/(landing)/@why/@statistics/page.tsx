@@ -6,17 +6,24 @@ import Flex from '@/components/Flex';
 import Text from '@/components/Text';
 import bubbles_left from '../_assets/bubbles_left.png';
 import bubbles_right from '../_assets/bubbles_right.png';
+import top_bubble from '../_assets/top_bubble.png';
 import styles from './page.module.scss';
 
 function Statistics() {
   return (
-    <Container innerProps={{ className: styles.content }} as="section">
+    <Flex direction="column" className={styles.content}>
+      <Image
+        src={top_bubble}
+        className={styles.top_bubble}
+        alt="bubbles on the right"
+      />
       <Text
         textColor="secondary-900"
         textType="heading-lg"
         textWeight="semi-bold"
-        textAlign="center"
+        textAlign="start"
         as="h2"
+        className={styles.header}
       >
         Our previous year in <span className={styles.highlight}>numbers</span>
         ...
@@ -93,7 +100,7 @@ function Statistics() {
           />
         </div>
       </Flex>
-    </Container>
+    </Flex>
   );
 }
 
