@@ -1,9 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import Button from '@/components/Button';
-import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
+import bottom_left_bubble from '../_assets/bottom_left_bubble.png';
 import bubbles_left from '../_assets/bubbles_left.png';
 import bubbles_right from '../_assets/bubbles_right.png';
 import top_bubble from '../_assets/top_bubble.png';
@@ -12,11 +10,7 @@ import styles from './page.module.scss';
 function Statistics() {
   return (
     <Flex direction="column" className={styles.content}>
-      <Image
-        src={top_bubble}
-        className={styles.top_bubble}
-        alt="bubbles on the right"
-      />
+      <Image src={top_bubble} className={styles.top_bubble} alt="" />
       <Text
         textColor="secondary-900"
         textType="heading-lg"
@@ -100,6 +94,11 @@ function Statistics() {
           />
         </div>
       </Flex>
+      <Image
+        src={bottom_left_bubble}
+        className={styles.bottom_left_bubble}
+        alt=""
+      />
     </Flex>
   );
 }
