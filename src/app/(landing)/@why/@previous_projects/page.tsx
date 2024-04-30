@@ -4,12 +4,12 @@ import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
-import polaroid1 from './_assets/polaroid_first_place.png';
-import polaroid2 from './_assets/polaroid_second_place.png';
-import polaroid3 from './_assets/polaroid_third_place.png';
+import polaroid1 from '../_assets/polaroid_first_place.png';
+import polaroid2 from '../_assets/polaroid_second_place.png';
+import polaroid3 from '../_assets/polaroid_third_place.png';
 import styles from './page.module.scss';
 
-function Why() {
+function PreviousProjects() {
   return (
     <Container innerProps={{ className: styles.content }} as="section">
       <Flex direction="column" align="center" className={styles.text} gap="sm">
@@ -83,4 +83,4 @@ function Why() {
   );
 }
 
-export default Why;
+export default PreviousProjects;
