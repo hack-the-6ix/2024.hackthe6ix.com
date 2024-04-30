@@ -4,7 +4,6 @@
 .content {
     display:flex;
     flex-wrap:wrap;
-    padding: 8rem 0;
     align-items: center;
 }
 
@@ -66,5 +65,5 @@
 }
 
 .polaroid1:hover, .polaroid2:hover, .polaroid3:hover {
-    transform: scale(1.3); 
+    transform: scale(1.35); 
 }
