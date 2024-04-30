@@ -99,17 +99,39 @@ function AboutPage() {
       </Flex>
 
       <Flex direction="row" align="center" justify="center">
-        <Image src={fourteen} alt="2014" className={styles.years} />
-        <Image src={fifteen} alt="2014" className={styles.years} />
-        <Image src={sixteen} alt="2014" className={styles.years} />
-        <Image src={seventeen} alt="2014" className={styles.years} />
-        <Image src={eighteen} alt="2014" className={styles.years} />
-        <Image src={nineteen} alt="2014" className={styles.years} />
-        <Image src={twenty} alt="2014" className={styles.years} />
-        <Image src={twentyOne} alt="2014" className={styles.years} />
-        <Image src={twentyTwo} alt="2014" className={styles.years} />
-        <Image src={twentyThree} alt="2014" className={styles.years} />
-        <Image src={twentyThree} alt="2014" className={styles.years} />
+        <div className={styles.card}>
+          <div className={styles.cardContent}>
+            <Image src={fourteen} alt="2014" className={styles.years} />
+            {/* <Text className={styles.cardText}>2014</Text> */}
+          </div>
+        </div>
+        <div className={styles.card}>
+          <Image src={fifteen} alt="2015" className={styles.years} />
+        </div>
+        <div className={styles.card}>
+          <Image src={sixteen} alt="2016" className={styles.years} />
+        </div>
+        <div className={styles.card}>
+          <Image src={seventeen} alt="2017" className={styles.years} />
+        </div>
+        <div className={styles.card}>
+          <Image src={eighteen} alt="2018" className={styles.years} />
+        </div>
+        <div className={styles.card}>
+          <Image src={nineteen} alt="2019" className={styles.years} />
+        </div>
+        <div className={styles.card}>
+          <Image src={twenty} alt="2020" className={styles.years} />
+        </div>
+        <div className={styles.card}>
+          <Image src={twentyOne} alt="2021" className={styles.years} />
+        </div>
+        <div className={styles.card}>
+          <Image src={twentyTwo} alt="2022" className={styles.years} />
+        </div>
+        <div className={styles.card}>
+          <Image src={twentyThree} alt="2023" className={styles.years} />
+        </div>
       </Flex>
 
       <Flex
