@@ -16,6 +16,7 @@
 // text
 .header {
     padding-left: 10%;
+    max-width: 100%;
 }
 
 .highlight_bold {
@@ -77,12 +78,6 @@
     padding: 1rem 14%;
 }
 
-.bottom_left_bubble{
-    height: 9.5rem;
-    width: 9.5rem;
-    padding: 1rem 4%;
-}
-
 %assets {
     height: 27rem;
     width: auto;
@@ -90,4 +85,11 @@
 
 .bubbles_left, .bubbles_right{
     @extend %assets;
+}
+
+.bubbles_bottom{
+    object-fit: cover;
+    height: 9.5rem;
+    width: 40rem;
+    align-self: center;
 }

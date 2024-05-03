@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
-import bottom_left_bubble from '../_assets/bottom_left_bubble.png';
+import bubbles_bottom from '../_assets/bubbles_bottom.png';
 import bubbles_left from '../_assets/bubbles_left.png';
 import bubbles_right from '../_assets/bubbles_right.png';
 import top_bubble from '../_assets/top_bubble.png';
@@ -95,9 +95,9 @@ function Statistics() {
         </div>
       </Flex>
       <Image
-        src={bottom_left_bubble}
-        className={styles.bottom_left_bubble}
-        alt=""
+        src={bubbles_bottom}
+        className={styles.bubbles_bottom}
+        alt="bubbles on the bottom"
       />
     </Flex>
   );

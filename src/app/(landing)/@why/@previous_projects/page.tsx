@@ -11,7 +11,7 @@ import styles from './page.module.scss';
 
 function PreviousProjects() {
   return (
-    <Flex direction="column" className={styles.content}>
+    <Flex direction="column" className={styles.content} gap="lg">
       <Flex direction="column" align="center" className={styles.text} gap="sm">
         <Text
           textColor="secondary-900"
