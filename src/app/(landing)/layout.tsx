@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Toaster } from 'react-hot-toast';
 import type { Metadata } from 'next';
 import Footer from './_components/Footer';
 import Navigation from './_components/Navigation';
@@ -37,7 +36,6 @@ export default function LandingLayout({
         {contact}
       </main>
       <Footer />
-      <Toaster />
     </>
   );
 }

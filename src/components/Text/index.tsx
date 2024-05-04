@@ -29,8 +29,8 @@ const Text = forwardRefAs<'span', TextProps>(
           textType && [`font--${textType}`, inter.className],
           textAlign && styles[`align--${textAlign}`],
           textWeight && `font--wgt--${textWeight}`,
-          props.className,
           styles.text,
+          props.className,
         )}
       />
     );

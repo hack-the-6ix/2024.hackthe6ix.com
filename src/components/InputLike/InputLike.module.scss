@@ -1,4 +1,4 @@
-@use '../../styles/colors';
+@use '@/styles/colors';
 
 .required {
   color: colors.getColor(error, 500);
