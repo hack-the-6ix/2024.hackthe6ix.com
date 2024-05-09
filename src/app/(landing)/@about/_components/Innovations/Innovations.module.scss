@@ -1,0 +1,71 @@
+@use '@/styles/colors';
+@use '@/styles/mixins';
+
+.container {
+  padding: 1rem;
+}
+
+.content {
+  max-width: 54rem;
+}
+
+.active {
+  transform: scale(1.2);
+}
+
+.button {
+  @include mixins.transition(transform);
+  box-shadow: 0 0.5rem 1rem 0 colors.getColor(shade, 100, $alpha: 0.1);
+  background-color: colors.getColor(shade, 0);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+  padding: 1.75rem 1.25rem;
+}
+
+%abs {
+  position: absolute;
+  margin: 0;
+  inset: 0;
+}
+
+.tv,
+.frame {
+  position: relative;
+}
+
+.tv {
+  margin-right: -12.75%;
+}
+
+.notepad {
+  @extend %abs;
+  inset: auto 0 10% -12.75%;
+  width: 35%;
+  z-index: 2;
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.text {
+  @extend %abs;
+  transform: skewX(-11deg);
+  font-style: italic !important;
+  align-items: center;
+  display: flex;
+  left: 11.75%;
+  top: 26%;
+  height: 60%;
+  width: 61%;
+}
+
+.asset {
+  @extend %abs;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 26.25% 0 0 10%;
+  width: 49.75%;
+}

@@ -1,4 +1,3 @@
-import React from 'react';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
@@ -28,6 +27,7 @@ function AboutPage() {
             for a weekend of memories
           </Text>
           <Text
+            className={styles.content}
             textType="paragraph-lg"
             textColor="secondary-900"
             textWeight="medium"

@@ -1,10 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
+import cn from 'classnames';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
+import notepad from './assets/notepad.png';
 import placeholder from './assets/placeholder.png';
+import tv from './assets/tv.png';
 import styles from './Innovations.module.scss';
 
 const SINCE = 2014;
@@ -19,11 +23,11 @@ const data = [
     image: placeholder,
   },
   {
-    text: 'Determined to leave a lasting impact, we return even stronger helded two event at Wealthsimple and MaRS Discovery District.',
+    text: 'Determined to leave a lasting impact, we return even stronger with 2 event at Wealthsimple & MaRS Discovery District.',
     image: placeholder,
   },
   {
-    text: 'We embrace challenges, soaring to new heights, pushing boundaries, and unlocking unprecedented growth at the Centre for Social Innovation.',
+    text: 'We embrace challenges, soar to new heights, and unlock unprecedented growth at the Centre for Social Innovation.',
     image: placeholder,
   },
   {
@@ -31,7 +35,7 @@ const data = [
     image: placeholder,
   },
   {
-    text: 'We organized the Exploding Watermelon Challenge along with numerous other thrilling activities held at the Bahen Centre for Information Technology.',
+    text: 'We ran the Exploding Watermelon Challenge and other fun activities at the Bahen Centre for Information Technology.',
     image: placeholder,
   },
   {
@@ -54,11 +58,11 @@ const data = [
 
 function Innovations() {
   const [selected, setSelected] = useState(9);
-  const activeText = data[selected].text;
+  const activeItem = data[selected];
 
   return (
-    <Container>
-      <Flex direction="column" align="center">
+    <Container className={styles.container}>
+      <Flex gap="lg" direction="column" align="center">
         <Text
           textColor="secondary-900"
           textAlign="center"
@@ -69,6 +73,7 @@ function Innovations() {
           Decade of <Text textColor="warning-400">Innovation</Text>
         </Text>
         <Text
+          className={styles.content}
           textColor="secondary-900"
           textAlign="center"
           textType="paragraph-lg"
@@ -78,9 +83,11 @@ function Innovations() {
           down memory lane to revisit our past events. Each year, filled with
           innovation, collaboration, and unforgettable moments.
         </Text>
-        <Flex>
-          {data.map(({ image }, idx) => (
+        <Flex gap="2x-big">
+          {data.map((_, idx) => (
             <Text
+              onClick={() => setSelected(idx)}
+              className={cn(idx === selected && styles.active, styles.button)}
               textColor="secondary-900"
               textType="paragraph-lg"
               textWeight="semi-bold"
@@ -90,6 +97,27 @@ function Innovations() {
               {SINCE + idx}
             </Text>
           ))}
+        </Flex>
+        <Flex justify="flex-end" className={styles.frame}>
+          <div className={styles.notepad}>
+            <Image width="400" src={notepad} alt="notepad" />
+            <Text
+              className={styles.text}
+              textColor="secondary-900"
+              textType="paragraph-lg"
+              textWeight="semi-bold"
+            >
+              {activeItem.text}
+            </Text>
+          </div>
+          <div className={styles.tv}>
+            <Image
+              src={activeItem.image}
+              alt={`Showing moment during ${SINCE + selected} of HT6`}
+              className={styles.asset}
+            />
+            <Image src={tv} width="1000" alt="tv" />
+          </div>
         </Flex>
       </Flex>
     </Container>
