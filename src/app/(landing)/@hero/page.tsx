@@ -36,9 +36,8 @@ function Hero() {
           <Flex direction="column">
             <Text textType="display" textColor="secondary-900" as="p">
               Hack the 6ix is Toronto&apos;s{' '}
-              <span className={styles.highlight}>largest</span> summer
-              hackathon, where <span className={styles.highlight}>anyone</span>{' '}
-              can hack to
+              <Text textColor="warning-400">largest</Text> summer hackathon,
+              where <Text textColor="warning-400">anyone</Text> can hack to
             </Text>
             <Banner words={words} />
           </Flex>
