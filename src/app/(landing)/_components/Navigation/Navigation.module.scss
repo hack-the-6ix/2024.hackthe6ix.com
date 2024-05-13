@@ -2,14 +2,16 @@
 @use '@/styles/colors';
 
 .container {
-  @include mixins.transition(background-color);
-  position: sticky;
+  @include mixins.transition(background-color box-shadow);
+  position: fixed;
   z-index: 2;
   top: 0;
+  width: 100vw;
 }
 
 .scrolled {
-  background-color: colors.getColor(secondary, 50);
+  background-color: colors.getColor("primary", 50);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
 .nav {
