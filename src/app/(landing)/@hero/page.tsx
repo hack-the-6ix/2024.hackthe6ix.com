@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
-import IconButton from '@/components/IconButton';
+import Icon from '@/components/Icon';
 import Text from '@/components/Text';
 import config from '@/config';
 import footerAssetUrl from './_assets/lonely-island.png';
@@ -52,19 +52,17 @@ function Hero() {
             Applications opening soon! Receive the latest updates in your inbox.
           </Text>
           <MailingListForm />
-          <Flex gap="2x-sm">
+          <Flex gap="m">
             {Object.entries(config.socials).map(([ref, social]) => (
-              <IconButton
-                buttonType="tertiary"
-                buttonColor="secondary"
-                buttonDarker
-                rel="noopener noreferrer"
-                icon={social.icon}
+              <a
                 href={social.link}
+                className={styles.socialIcon}
                 target="_blank"
+                rel="noreferrer"
                 key={ref}
-                as="a"
-              />
+              >
+                <Icon icon={social.icon} size="sm" />
+              </a>
             ))}
           </Flex>
         </Flex>

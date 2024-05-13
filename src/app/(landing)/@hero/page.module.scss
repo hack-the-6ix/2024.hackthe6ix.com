@@ -14,6 +14,10 @@
   z-index: 1;
 }
 
+.socialIcon {
+  color: colors.getColor('primary', 800);
+}
+
 %assetFrame {
   position: absolute;
   overflow: visible;

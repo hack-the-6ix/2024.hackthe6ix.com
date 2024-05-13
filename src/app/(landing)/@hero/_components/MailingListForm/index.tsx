@@ -82,7 +82,7 @@ function MailingListForm() {
       />
       <Button
         className={styles.button}
-        disabled={loading || result?.status === 'success'}
+        disabled={loading}
         buttonColor="primary"
         buttonType="primary"
         type="submit"
