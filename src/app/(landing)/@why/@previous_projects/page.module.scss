@@ -2,75 +2,84 @@
 @use '../../../../styles/mixins';
 
 .content {
-    display:flex;
-    flex-wrap:wrap;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10rem;
 }
 
 .text {
-    max-width: 56.25rem;
+  max-width: 56.25rem;
 }
 
 .highlight {
-    color: colors.getColor(warning, 400);
+  color: colors.getColor(warning, 400);
 }
 
-.container{
-    display: flex;
-    flex-wrap: wrap;
+.container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container > * {
-    flex:calc(80% / 3);
-    align-items: center;
-    position: relative;
+  flex: calc(80% / 3);
+  align-items: center;
+  position: relative;
 }
 
 %assets {
-    position: relative;
-    height: 16rem;
+  position: relative;
+  height: 16rem;
+  width: auto;
+  transition: .3s ease;
+}
+
+.polaroid1,
+.polaroid2,
+.polaroid3 {
+  @extend %assets;
+}
+
+.polaroid2 {
+  top: 0.5rem;
+}
+
+.polaroid1:hover,
+.polaroid2:hover,
+.polaroid3:hover {
+  transform: scale(1.15);
+}
+
+@media (max-width: 1136px) {
+  .container > *:nth-child(1) {
+    padding-top: 10rem;
+  }
+  .container > *:nth-child(2) {
+    padding-right: 3rem;
+  }
+  .container > *:nth-child(3) {
+    padding-left: 5rem;
+  }
+}
+
+@media (max-width: 824px) {
+  .container > *:nth-child(1),
+  .container > *:nth-child(2),
+  .container > *:nth-child(3) {
+    padding-top: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .container > *:nth-child(2) {
+    order: -1;
+  }
+}
+
+@media (max-width: 440px) {
+  .polaroid1,
+  .polaroid2,
+  .polaroid3 {
+    height: 11.5rem;
     width: auto;
-}
-
-.polaroid1, .polaroid2, .polaroid3{
-    @extend %assets;
-}
-
-.polaroid2{
-    top: 0.5rem;
-}
-
-.polaroid1:hover, .polaroid2:hover, .polaroid3:hover {
-    transform: scale(1.35); 
-}
-
-
-@media (max-width:1136px) {
-    .container > *:nth-child(1) {
-        padding-top: 10rem;
-    }
-    .container > *:nth-child(2) {
-        padding-right: 3rem;
-    }
-    .container > *:nth-child(3) {
-        padding-left: 5rem;
-    }
-}
-
-@media (max-width:824px) {
-    .container > *:nth-child(1), .container > *:nth-child(2), .container > *:nth-child(3) {
-        padding-top: 0rem;
-        padding-left: 0rem;
-        padding-right: 0rem;
-    }
-    .container > *:nth-child(2) {
-        order:-1;
-    }
-}
-
-@media (max-width:440px) {
-    .polaroid1, .polaroid2, .polaroid3{
-        height: 11.5rem;
-        width: auto;
-    }
+  }
 }

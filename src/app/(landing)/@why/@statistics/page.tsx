@@ -26,7 +26,7 @@ function Statistics() {
         <div className={styles.img_container}>
           <div className={styles.hackers}>
             <Text
-              textColor="secondary-900"
+              textColor="primary-700"
               textType="subtitle-lg"
               textWeight="medium"
               textAlign="center"
@@ -37,7 +37,7 @@ function Statistics() {
           </div>
           <div className={styles.projects}>
             <Text
-              textColor="secondary-900"
+              textColor="primary-700"
               textType="subtitle-lg"
               textWeight="medium"
               textAlign="center"
@@ -56,7 +56,7 @@ function Statistics() {
         <div className={styles.img_container}>
           <div className={styles.mentors}>
             <Text
-              textColor="secondary-900"
+              textColor="primary-700"
               textType="subtitle-lg"
               textWeight="medium"
               textAlign="center"
@@ -67,7 +67,7 @@ function Statistics() {
           </div>
           <div className={styles.prizes}>
             <Text
-              textColor="secondary-900"
+              textColor="primary-700"
               textType="subtitle-lg"
               textWeight="medium"
               textAlign="center"
@@ -78,7 +78,7 @@ function Statistics() {
           </div>
           <div className={styles.schools}>
             <Text
-              textColor="secondary-900"
+              textColor="primary-700"
               textType="subtitle-lg"
               textWeight="medium"
               textAlign="center"
