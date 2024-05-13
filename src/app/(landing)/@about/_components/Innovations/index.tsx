@@ -87,7 +87,7 @@ function Innovations() {
           down memory lane to revisit our past events. Each year, filled with
           innovation, collaboration, and unforgettable moments.
         </Text>
-        <Flex gap="2x-big">
+        <div className={styles.tvGrid}>
           {data.map((_, idx) => (
             <Text
               onClick={() => setSelected(idx)}
@@ -101,7 +101,7 @@ function Innovations() {
               {SINCE + idx}
             </Text>
           ))}
-        </Flex>
+        </div>
         <Flex justify="flex-end" className={styles.frame}>
           <div className={styles.notepad}>
             <Image width="400" src={notepad} alt="notepad" />

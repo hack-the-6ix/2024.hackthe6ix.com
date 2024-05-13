@@ -28,6 +28,19 @@
   }
 }
 
+.tvGrid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@include mixins.media(laptop) {
+  .tvGrid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
 %abs {
   position: absolute;
   margin: 0;
