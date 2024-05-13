@@ -6,11 +6,8 @@ import cn from 'classnames';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
-
 import notepad from './assets/notepad.png';
 import tv from './assets/tv.png';
-import styles from './Innovations.module.scss';
-
 import tv2015 from './assets/tv/2015.png';
 import tv2016 from './assets/tv/2016.png';
 import tv2017 from './assets/tv/2017.png';
@@ -20,12 +17,13 @@ import tv2020 from './assets/tv/2020.png';
 import tv2021 from './assets/tv/2021.png';
 import tv2022 from './assets/tv/2022.png';
 import tv2023 from './assets/tv/2023.png';
+import styles from './Innovations.module.scss';
 
 const SINCE = 2015;
 
 const data = [
   {
-    text: "The first ever Hack the 6ix, hosted at Top Hat HQ.",
+    text: 'The first ever Hack the 6ix, hosted at Top Hat HQ.',
     image: tv2015,
   },
   {
