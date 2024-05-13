@@ -31,7 +31,7 @@ export default function LandingLayout({
         {hero}
         {about}
         {why}
-        {sponsors}
+        {/* {sponsors} */}
         {faq}
         {contact}
       </main>

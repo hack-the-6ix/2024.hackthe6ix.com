@@ -62,7 +62,7 @@ function MailingListForm() {
         }
         inputProps={{
           readOnly: loading || result?.status === 'success',
-          placeholder: 'Enter email',
+          placeholder: 'hacker@hackthe6ix.com',
           autoComplete: 'email',
           required: true,
           name: 'email',

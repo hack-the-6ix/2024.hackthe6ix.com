@@ -14,13 +14,18 @@
 }
 
 .button {
-  @include mixins.transition(transform);
+  @include mixins.transition(transform background-color opacity);
   box-shadow: 0 0.5rem 1rem 0 colors.getColor(shade, 100, $alpha: 0.1);
   background-color: colors.getColor(shade, 0);
   border-radius: 0.5rem;
   cursor: pointer;
   border: none;
   padding: 1.75rem 1.25rem;
+
+  &:hover {
+    background-color: colors.getColor(neutral, 50);
+    opacity: 0.7;
+  }
 }
 
 %abs {
