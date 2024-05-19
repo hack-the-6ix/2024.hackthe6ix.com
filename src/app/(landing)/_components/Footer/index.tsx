@@ -46,8 +46,8 @@ function Footer() {
           © Copyright 2024 Hack the 6ix | Made with ♡ in Toronto
         </Text>
       </Flex>
-      <Flex direction="column" gap="x-sm">
-        <Flex gap="lg" align="center">
+      <Flex direction="column" gap="m">
+        <Flex gap="lg" align="center" className={styles.links} wrap>
           {config.footer.links.map(({ text, link }, idx) => (
             <Button
               style={buttonOverride}
@@ -63,9 +63,10 @@ function Footer() {
             </Button>
           ))}
         </Flex>
-        <Flex gap="2x-sm" className={styles.socials}>
+        <Flex gap="big">
           {Object.entries(config.socials).map(([ref, social]) => (
             <IconButton
+              className={styles.social}
               buttonType="tertiary"
               style={buttonOverride}
               rel="noopener noreferrer"

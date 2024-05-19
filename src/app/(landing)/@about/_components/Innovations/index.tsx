@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { CSSProperties, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import cn from 'classnames';
+import * as R from 'ramda';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
@@ -19,6 +20,7 @@ import tv2022 from './assets/tv/2022.png';
 import tv2023 from './assets/tv/2023.png';
 import styles from './Innovations.module.scss';
 
+const MAX_WIDTH = 1000;
 const SINCE = 2015;
 
 const data = [
@@ -62,11 +64,26 @@ const data = [
 
 function Innovations() {
   const [selected, setSelected] = useState(0);
+  const [ratio, setRatio] = useState(1);
   const activeItem = data[selected];
+  const el = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const target = el.current;
+    if (!target) return;
+    const handler = () => {
+      setRatio(R.min(target.offsetWidth - 200, MAX_WIDTH) / MAX_WIDTH);
+    };
+    window.addEventListener('resize', handler, true);
+    handler();
+    return () => {
+      window.removeEventListener('resize', handler, true);
+    };
+  }, []);
 
   return (
     <Container className={styles.container}>
-      <Flex gap="lg" direction="column" align="center">
+      <Flex gap="lg" direction="column" align="center" ref={el}>
         <Text
           textColor="secondary-900"
           textAlign="center"
@@ -102,7 +119,11 @@ function Innovations() {
             </Text>
           ))}
         </div>
-        <Flex justify="flex-end" className={styles.frame}>
+        <Flex
+          style={{ '--ratio': ratio } as CSSProperties}
+          justify="flex-end"
+          className={styles.frame}
+        >
           <div className={styles.notepad}>
             <Image width="400" src={notepad} alt="notepad" />
             <Text
@@ -120,7 +141,7 @@ function Innovations() {
               alt={`Showing moment during ${SINCE + selected} of HT6`}
               className={styles.asset}
             />
-            <Image src={tv} width="1000" alt="tv" />
+            <Image src={tv} width={MAX_WIDTH * ratio} alt="tv" />
           </div>
         </Flex>
       </Flex>

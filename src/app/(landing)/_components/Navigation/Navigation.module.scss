@@ -10,7 +10,7 @@
 }
 
 .scrolled {
-  background-color: colors.getColor("primary", 50);
+  background-color: colors.getColor('primary', 50);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
@@ -59,7 +59,7 @@
   }
 
   .content {
-    gap: mixins.spacing(big);
+    gap: mixins.spacing(big) !important;
   }
 }
 

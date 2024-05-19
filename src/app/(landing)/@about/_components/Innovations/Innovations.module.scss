@@ -1,5 +1,6 @@
 @use '@/styles/colors';
 @use '@/styles/mixins';
+@use '@/styles/fonts';
 
 .container {
   padding: 1rem;
@@ -69,6 +70,15 @@
 }
 
 .text {
+  // copied logic for fonts for scaling with calc
+  $size: map-get(fonts.$fonts, paragraph-lg, size);
+  $height: $size * 1.25;
+  $tracking: $size * -0.022;
+
+  font-size: calc($size * var(--ratio, 1));
+  line-height: calc($height * var(--ratio, 1));
+  letter-spacing: calc($tracking * var(--ratio, 1));
+
   @extend %abs;
   transform: skewX(-11deg);
   font-style: italic !important;

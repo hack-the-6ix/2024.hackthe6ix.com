@@ -48,7 +48,6 @@ $wgts: (
   $size: map-get($fonts, $type, size);
   $wgt: map-get($fonts, $type, wgt);
 
-  $usize: $size / ($size * 0 + 1);
   $height: $size * 1.25;
   $tracking: $size * -0.022;
 
