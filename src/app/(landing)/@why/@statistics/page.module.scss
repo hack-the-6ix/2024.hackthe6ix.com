@@ -1,5 +1,6 @@
 @use '../../../../styles/colors';
 @use '../../../../styles/mixins';
+@use '../../../../styles/variables';
 
 .content {
   display: flex;
@@ -12,11 +13,12 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-right: auto;
 }
 
 // text
 .header {
-  padding-left: 10%;
+  // padding-left: 10%;
   max-width: 100%;
 }
 
@@ -79,14 +81,26 @@
   padding: 1rem 14%;
 }
 
-%assets {
-  height: 27rem;
-  width: auto;
+@include mixins.media(tablet) {
+  .bubbles_left,
+  .bubbles_right {
+    height: 18rem !important;
+    width: auto;
+  }
+  .highlight_bold {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .subtitle {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
 }
 
 .bubbles_left,
 .bubbles_right {
-  @extend %assets;
+  height: 27rem;
+  width: auto;
 }
 
 .bubbles_bottom {

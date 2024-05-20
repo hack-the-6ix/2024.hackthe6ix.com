@@ -34,7 +34,7 @@ function ContactForm() {
       gap="sm"
       as="form"
     >
-      <Flex gap="sm">
+      <Flex gap="sm" className={styles.nameForm}>
         <Input
           label="Name"
           inputProps={{

@@ -1,3 +1,15 @@
+@use '@/styles/mixins';
+
 .grow {
   flex-grow: 1;
+}
+
+.nameForm {
+  flex-direction: row;
+}
+
+@include mixins.media(tablet) {
+  .nameForm {
+    flex-direction: column;
+  }
 }

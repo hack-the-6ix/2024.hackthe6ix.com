@@ -87,24 +87,14 @@ const faqQuestions: FaqQuestionSection[] = [
           'Absolutely nothing! Hack the 6ix is a completely free event run by a non-profit organization. All food, resources, and accommodations for hacking for the entire event will be provided free of charge.',
       },
     ],
-  },
-  {
-    label: 'Health and Safety',
-    items: [
-      {
-        question: 'What COVID-19 precautions will be in place at the event?',
-        answer:
-          'We will be following the guidance put forth by the Ontario Government for large events at the time of the event. More details will follow closer to the event and any major changes to guidelines or precautions will be communicated to event participants.',
-      },
-    ],
-  },
+  }
 ];
 
 function Faq() {
   const [active, setActive] = useState(0);
 
   return (
-    <Container as="section" innerProps={{ className: styles.container }}>
+    <Container as="section" innerProps={{ className: styles.container }} id="faq">
       <Flex align="center" direction="column" gap="x-lg">
         <Text
           textColor="secondary-900"

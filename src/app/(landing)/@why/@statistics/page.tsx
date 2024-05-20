@@ -32,7 +32,13 @@ function Statistics() {
               textAlign="center"
               as="h2"
             >
-              <span className={styles.highlight_bold}>440+</span> Hackers
+              <Flex
+                direction="column"
+                align="center"
+              >
+                <span className={styles.highlight_bold}>350+</span> 
+                <span className={styles.subtitle}>Hackers</span>
+              </Flex>
             </Text>
           </div>
           <div className={styles.projects}>
@@ -43,8 +49,13 @@ function Statistics() {
               textAlign="center"
               as="h2"
             >
-              <span className={styles.highlight_bold}>50+</span> Projects
-              Submitted
+              <Flex
+                direction="column"
+                align="center"
+              >
+                <span className={styles.highlight_bold}>50+</span> 
+                <span className={styles.subtitle}>Projects Submitted</span>
+              </Flex>
             </Text>
           </div>
           <Image
@@ -62,7 +73,13 @@ function Statistics() {
               textAlign="center"
               as="h2"
             >
-              <span className={styles.highlight_bold}>15</span> Mentors
+              <Flex
+                direction="column"
+                align="center"
+              >
+                <span className={styles.highlight_bold}>15</span>
+                <span className={styles.subtitle}>Mentors</span>
+              </Flex>
             </Text>
           </div>
           <div className={styles.prizes}>
@@ -73,7 +90,13 @@ function Statistics() {
               textAlign="center"
               as="h2"
             >
-              <span className={styles.highlight_bold}>$15k</span> in Prizes
+              <Flex
+                direction="column"
+                align="center"
+              >
+                <span className={styles.highlight_bold}>$15k</span>
+                <span className={styles.subtitle}>in Prizes</span>
+              </Flex>
             </Text>
           </div>
           <div className={styles.schools}>
@@ -84,7 +107,13 @@ function Statistics() {
               textAlign="center"
               as="h2"
             >
-              <span className={styles.highlight_bold}>78</span> Schools
+              <Flex
+                direction="column"
+                align="center"
+              >
+                <div className={styles.highlight_bold}>78</div>
+                <div className={styles.subtitle}>Schools</div>
+              </Flex>
             </Text>
           </div>
           <Image

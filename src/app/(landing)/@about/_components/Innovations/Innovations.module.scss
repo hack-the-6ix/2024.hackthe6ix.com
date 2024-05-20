@@ -69,6 +69,16 @@
   }
 }
 
+@include mixins.media(mobile) {
+  .notepad {
+    display: none;
+  }
+  .tv {
+    transform: scale(2.5);
+    margin-top: 5rem;  
+  }
+}
+
 .text {
   // copied logic for fonts for scaling with calc
   $size: map-get(fonts.$fonts, paragraph-lg, size);
