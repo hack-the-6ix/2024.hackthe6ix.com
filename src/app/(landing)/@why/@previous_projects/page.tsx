@@ -29,7 +29,7 @@ function PreviousProjects() {
           textAlign="center"
           as="p"
         >
-          At our previous hackathon, teams brought outstanding projects to life,
+          In 2023, <strong>51 teams</strong> brought outstanding projects to life,
           showcasing their creativity and problem-solving skills.
         </Text>
         <Button

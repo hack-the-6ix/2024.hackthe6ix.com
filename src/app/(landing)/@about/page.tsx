@@ -21,10 +21,11 @@ function AboutPage() {
             textAlign="center"
             as="h2"
           >
+            Join us for an {' '}
             <Text textColor="warning-400" textWeight="bold">
-              Join us
+              unforgettable
             </Text>{' '}
-            for a weekend of memories
+            weekend
           </Text>
           <Text
             className={styles.content}
@@ -34,10 +35,9 @@ function AboutPage() {
             textAlign="center"
             as="p"
           >
-            Hack the 6ix is the largest summer student-run, not-for-profit
-            hackathon now in its tenth iteration, based in Toronto. We take
-            pride in the diversity and talent of our hackers, who help us become
-            a key player in the Toronto tech ecosystem. We provide an outlet for
+            Hack the 6ix is Toronto's largest summer student-run, not-for-profit
+            hackathon now in its <strong>tenth iteration</strong>! With a diverse and talented community of hackers, Hack the 6ix is
+            a key player in the Toronto tech ecosystem. We're empowering
             students to present their ideas of the future.
           </Text>
         </Flex>

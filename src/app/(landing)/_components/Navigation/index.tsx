@@ -39,8 +39,10 @@ function Navigation() {
         gap: 'm',
       }}
     >
-      <Image src={logo} alt="HT6 logo" height="48" />
-      <Flex className={styles.content} justify="flex-end" gap="3x-lg">
+      <a href="#hero">
+        <Image src={logo} alt="HT6 logo" height="48" />
+      </a>
+      <Flex className={styles.content} justify="flex-end" gap="lg">
         <Flex
           onClickCapture={() => setShowNav(false)}
           className={cn(showNav && styles.show, styles.links)}

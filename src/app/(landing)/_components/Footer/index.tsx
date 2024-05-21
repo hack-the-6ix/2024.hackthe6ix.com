@@ -27,6 +27,7 @@ function Footer() {
         gap: 'big',
       }}
       as="footer"
+      id="contact"
     >
       <Flex direction="column" gap="m">
         <Text

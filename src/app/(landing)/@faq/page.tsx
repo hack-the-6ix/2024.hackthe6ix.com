@@ -6,6 +6,7 @@ import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
+import Accordion from '@/components/Accordion';
 import styles from './faq.module.scss';
 
 interface FaqQuestionSection {
@@ -23,7 +24,7 @@ const faqQuestions: FaqQuestionSection[] = [
       {
         question: 'What is Hack the 6ix?',
         answer:
-          'Hack the 6ix is an in-person hackathon where “hackers” (participants) design, develop, and pitch a software, hardware, or any kind of tech project built from scratch over the course of 36 hours. Over the course of the weekend, hackers will have opportunities to network, learn, and collaborate through workshops, panels, activities, and more.',
+          'Hack the 6ix is an in-person hackathon where “hackers” (participants) design, develop, and pitch an innovative project built from scratch over the course of 36 hours. Over the course of the weekend, hackers will have opportunities to network, learn, and collaborate through workshops, panels, activities, and more.',
       },
       {
         question:
@@ -34,8 +35,17 @@ const faqQuestions: FaqQuestionSection[] = [
       {
         question: 'Do I need to know how to code?',
         answer:
-          'Nope! Our mentors and workshops make sure that even if you’re new to coding, you’ll definitely pick up enough skills at the event to make a project. In addition, if you’re a designer or business student, your design and pitching skills are also very valuable!',
+          'Nope! Our mentors and workshops will help you develop the skills required to create something big. Regardless of where your strengths lie, our team is here to guide and help you throughout your project.',
       },
+      {
+        question: "What if my question isn't answered here?",
+        answer: (
+          <>
+            If you have any other questions, feel free to reach out to us {' '}
+            <Link href="#contact">here</Link>! Our team would be happy to help you out.
+          </>
+        )
+      }
     ],
   },
   {
@@ -51,6 +61,7 @@ const faqQuestions: FaqQuestionSection[] = [
           </>
         ),
       },
+
       {
         question: 'Am I eligible to participate?',
         answer:
@@ -59,17 +70,17 @@ const faqQuestions: FaqQuestionSection[] = [
       {
         question: 'What if I don’t have a team or idea?',
         answer:
-          'Don’t worry, you will have a chance to form or join a team by messaging the participant groups/chats that we’ll put you in during the weeks leading up to the weekend, as well as through team formation activities during the event.',
+        'Don\'t sweat it - we will be coordinating team formation and idea generation events leading up to, as well as during the event.',
       },
     ],
   },
   {
-    label: 'Preparation',
+    label: 'In-Person',
     items: [
       {
         question: 'How do I get to Hack the 6ix?',
         answer:
-          'Venue and location details will be given to attendees closer to the date of the event.',
+          'For logistical reasons, venue and location details will be released to attendees closer to the date of the event. As per tradition, Hack the 6ix will take place in Downtown Toronto.',
       },
       {
         question: 'What should I bring?',
@@ -84,7 +95,7 @@ const faqQuestions: FaqQuestionSection[] = [
       {
         question: 'How much does it cost to attend?',
         answer:
-          'Absolutely nothing! Hack the 6ix is a completely free event run by a non-profit organization. All food, resources, and accommodations for hacking for the entire event will be provided free of charge.',
+          'Absolutely nothing! Hack the 6ix is a completely free event run by a non-profit organization. All food, resources, and accommodations for hacking for the entire event will be provided free of charge. Information about travel reimbursement will be provided closer to the date of the event.',
       },
     ],
   }
@@ -103,10 +114,7 @@ function Faq() {
           textAlign="center"
           as="h2"
         >
-          Frequently asked{' '}
-          <Text textType="heading-lg" textColor="warning-400" textWeight="bold">
-            questions
-          </Text>
+          Frequently asked questions
         </Text>
         <Flex
           className={styles.buttons}

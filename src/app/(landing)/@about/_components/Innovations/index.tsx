@@ -25,7 +25,7 @@ const SINCE = 2015;
 
 const data = [
   {
-    text: 'The first ever Hack the 6ix, hosted at Top Hat HQ.',
+    text: 'The first ever Hack the 6ix, hosted at Top Hat HQ!',
     image: tv2015,
   },
   {
@@ -49,15 +49,15 @@ const data = [
     image: tv2020,
   },
   {
-    text: 'Continuing the virtual event, we have connect with hackers on a larger scale.',
+    text: 'Continuing the virtual event, we connect with hackers on a larger, global scale.',
     image: tv2021,
   },
   {
-    text: 'Our first hybrid event hosted at Wealthsimple. We love to interacting with hackers again.',
+    text: 'Our first hybrid event hosted at the Wealthsimple Toronto office, combining the best of both worlds.',
     image: tv2022,
   },
   {
-    text: 'We enthusiastically greeted hackers back to our traditional, fully in-person setup!',
+    text: 'We enthusiastically greeted hackers back to our traditional, fully in-person setup at the George Vari Centre.',
     image: tv2023,
   },
 ];
@@ -91,7 +91,7 @@ function Innovations() {
           textWeight="bold"
           as="h2"
         >
-          Decade of <Text textColor="warning-400">Innovation</Text>
+          A decade of <Text textColor="warning-400">innovation</Text>
         </Text>
         <Text
           className={styles.content}
@@ -100,8 +100,8 @@ function Innovations() {
           textType="paragraph-lg"
           textWeight="medium"
         >
-          Hack the 6ix is celebrating a decade of breakthroughs! Let&apos;s walk
-          down memory lane to revisit our past events. Each year, filled with
+          Hack the 6ix 2024 will be our 10th anniversay! Let&apos;s walk
+          down memory lane to revisit our past events, each filled with
           innovation, collaboration, and unforgettable moments.
         </Text>
         <div className={styles.tvGrid}>

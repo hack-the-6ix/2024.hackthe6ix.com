@@ -19,7 +19,7 @@ function Statistics() {
         as="h2"
         className={styles.header}
       >
-        Our previous year in <span className={styles.highlight}>numbers</span>
+        2023 in <span className={styles.highlight}>numbers</span>
         ...
       </Text>
       <Flex direction="row" className={styles.container}>

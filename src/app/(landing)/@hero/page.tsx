@@ -1,3 +1,4 @@
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Image from 'next/image';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
@@ -9,14 +10,9 @@ import mainAssetUrl from './_assets/tv-island.png';
 import Banner from './_components/Banner';
 import MailingListForm from './_components/MailingListForm';
 import styles from './page.module.scss';
+import "animate.css/animate.compat.css"
 
-const words = [
-  'network.',
-  'learn.',
-  'win.',
-  'create a project.',
-  'collaborate.',
-];
+const words = ['network.', 'learn.', 'create.', 'collaborate.', 'innovate.'];
 
 function Hero() {
   const range = new Intl.DateTimeFormat('en-CA', {
@@ -26,57 +22,64 @@ function Hero() {
   }).formatRange(config.startAt, config.endAt);
 
   return (
-    <Container innerProps={{ className: styles.content }} as="section">
-      <h1 className="hidden">Hack the 6ix 2024 landing page</h1>
-      <Flex direction="column" className={styles.container} gap="2x-big">
-        <Flex direction="column" gap="sm">
-          <Text textType="paragraph-lg" textColor="neutral-600" as="p">
-            {range.replace('–', ' – ').toUpperCase()} • In-person event
-          </Text>
-          <Flex direction="column">
-            <Text textType="display" textColor="secondary-900" as="p">
-              Hack the 6ix is Toronto&apos;s{' '}
-              <Text textColor="warning-400">largest</Text> summer hackathon,
-              where <Text textColor="warning-400">anyone</Text> can hack to
+    <AnimationOnScroll animateIn="animate__zoomIn animate__fast">
+      <Container
+        innerProps={{ className: styles.content }}
+        as="section"
+        id="hero"
+      >
+        <h1 className="hidden">Hack the 6ix 2024 landing page</h1>
+        <Flex direction="column" className={styles.container} gap="2x-big">
+          <Flex direction="column" gap="sm">
+            <Text textType="paragraph-lg" textColor="neutral-600" as="p">
+              {range.replace('–', ' – ').toUpperCase()} • In-person event
             </Text>
-            <Banner words={words} />
+            <Flex direction="column">
+              <Text textType="display" textColor="secondary-900" as="p">
+                Hack the 6ix is Toronto&apos;s{' '}
+                <Text textColor="warning-400">largest</Text> summer hackathon,
+                where <Text textColor="warning-400">anyone</Text> can hack to
+              </Text>
+              <Banner words={words} />
+            </Flex>
+          </Flex>
+          <Flex direction="column" gap="x-sm">
+            <Text
+              textType="paragraph-lg"
+              textColor="secondary-900"
+              textWeight="medium"
+              as="p"
+            >
+              Applications opening soon! Receive the latest updates in your
+              inbox.
+            </Text>
+            <MailingListForm />
+            <Flex gap="m">
+              {Object.entries(config.socials).map(([ref, social]) => (
+                <a
+                  href={social.link}
+                  className={styles.socialIcon}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={ref}
+                >
+                  <Icon icon={social.icon} size="sm" />
+                </a>
+              ))}
+            </Flex>
+          </Flex>
+          <Flex align="center" className={styles.mainAsset}>
+            <Image
+              src={mainAssetUrl}
+              alt="A cluster of islands with a TV showing 2022 HT6 website"
+            />
           </Flex>
         </Flex>
-        <Flex direction="column" gap="x-sm">
-          <Text
-            textType="paragraph-lg"
-            textColor="secondary-900"
-            textWeight="medium"
-            as="p"
-          >
-            Applications opening soon! Receive the latest updates in your inbox.
-          </Text>
-          <MailingListForm />
-          <Flex gap="m">
-            {Object.entries(config.socials).map(([ref, social]) => (
-              <a
-                href={social.link}
-                className={styles.socialIcon}
-                target="_blank"
-                rel="noreferrer"
-                key={ref}
-              >
-                <Icon icon={social.icon} size="sm" />
-              </a>
-            ))}
-          </Flex>
+        <Flex align="center" className={styles.footerAsset}>
+          <Image src={footerAssetUrl} alt="An island with two trees" />
         </Flex>
-        <Flex align="center" className={styles.mainAsset}>
-          <Image
-            src={mainAssetUrl}
-            alt="A cluster of islands with a TV showing 2022 HT6 website"
-          />
-        </Flex>
-      </Flex>
-      <Flex align="center" className={styles.footerAsset}>
-        <Image src={footerAssetUrl} alt="An island with two trees" />
-      </Flex>
-    </Container>
+      </Container>
+    </AnimationOnScroll>
   );
 }
 

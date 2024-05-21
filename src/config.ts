@@ -6,8 +6,8 @@ import {
 } from 'react-icons/fa6';
 
 export default {
-  startAt: new Date('2024-08-18T00:00:01.000-04:00'),
-  endAt: new Date('2024-08-20T23:59:59.000-04:00'),
+  startAt: new Date('2024-08-02T00:00:01.000-04:00'),
+  endAt: new Date('2024-08-04T23:59:59.000-04:00'),
   socials: {
     facebook: {
       link: 'https://facebook.com/HackThe6ix',
@@ -64,10 +64,6 @@ export default {
       {
         link: 'https://2023.hackthe6ix.com',
         text: '2023 Website',
-      },
-      {
-        link: 'https://google.com',
-        text: 'COVID-19 Safety',
       },
     ] as const,
   },
