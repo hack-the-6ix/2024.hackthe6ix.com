@@ -1,5 +1,5 @@
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 import Image from 'next/image';
+import Animate from '@/components/Animate';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Icon from '@/components/Icon';
@@ -10,7 +10,6 @@ import mainAssetUrl from './_assets/tv-island.png';
 import Banner from './_components/Banner';
 import MailingListForm from './_components/MailingListForm';
 import styles from './page.module.scss';
-import "animate.css/animate.compat.css"
 
 const words = ['network.', 'learn.', 'create.', 'collaborate.', 'innovate.'];
 
@@ -22,14 +21,17 @@ function Hero() {
   }).formatRange(config.startAt, config.endAt);
 
   return (
-    <AnimationOnScroll animateIn="animate__zoomIn animate__fast">
-      <Container
-        innerProps={{ className: styles.content }}
-        as="section"
-        id="hero"
-      >
-        <h1 className="hidden">Hack the 6ix 2024 landing page</h1>
-        <Flex direction="column" className={styles.container} gap="2x-big">
+    <Container
+      innerProps={{ className: styles.content }}
+      as="section"
+      id="hero"
+    >
+      <h1 className="hidden">Hack the 6ix 2024 landing page</h1>
+      <Flex direction="column" className={styles.container} gap="2x-big">
+
+        <Animate
+          duration={0.8}
+        >
           <Flex direction="column" gap="sm">
             <Text textType="paragraph-lg" textColor="neutral-600" as="p">
               {range.replace('–', ' – ').toUpperCase()} • In-person event
@@ -43,15 +45,20 @@ function Hero() {
               <Banner words={words} />
             </Flex>
           </Flex>
-          <Flex direction="column" gap="x-sm">
+        </Animate>
+
+        <Animate
+          duration={0.55}
+          delay={0.3}
+        >
+        <Flex direction="column" gap="x-sm">
             <Text
               textType="paragraph-lg"
               textColor="secondary-900"
               textWeight="medium"
               as="p"
             >
-              Applications opening soon! Receive the latest updates in your
-              inbox.
+              Applications opening soon! Receive the latest updates in your inbox.
             </Text>
             <MailingListForm />
             <Flex gap="m">
@@ -68,18 +75,32 @@ function Hero() {
               ))}
             </Flex>
           </Flex>
-          <Flex align="center" className={styles.mainAsset}>
+        </Animate>
+        <Flex align="center" className={styles.mainAsset}>
+          <Animate
+            initial={{ opacity: 0, marginBottom: 100 }}
+            animate={{ opacity: 1, marginBottom: 0 }}
+            duration={0.4}
+            delay={0.15}
+          >
             <Image
               src={mainAssetUrl}
               alt="A cluster of islands with a TV showing 2022 HT6 website"
             />
-          </Flex>
+          </Animate>
         </Flex>
-        <Flex align="center" className={styles.footerAsset}>
+      </Flex>
+      <Flex align="center" className={styles.footerAsset}>
+        <Animate
+          initial={{ opacity: 0, marginBottom: 100 }}
+          animate={{ opacity: 1, marginBottom: 0 }}
+          duration={0.25}
+          delay={0.05}
+        >
           <Image src={footerAssetUrl} alt="An island with two trees" />
-        </Flex>
-      </Container>
-    </AnimationOnScroll>
+        </Animate>
+      </Flex>
+    </Container>
   );
 }
 
