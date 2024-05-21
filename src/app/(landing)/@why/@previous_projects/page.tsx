@@ -29,8 +29,8 @@ function PreviousProjects() {
           textAlign="center"
           as="p"
         >
-          In 2023, <strong>51 teams</strong> brought outstanding projects to life,
-          showcasing their creativity and problem-solving skills.
+          In 2023, <strong>51 teams</strong> brought outstanding projects to
+          life, showcasing their creativity and problem-solving skills.
         </Text>
         <Button
           buttonColor="primary"

@@ -100,9 +100,9 @@ function Innovations() {
           textType="paragraph-lg"
           textWeight="medium"
         >
-          Hack the 6ix 2024 will be our 10th anniversay! Let&apos;s walk
-          down memory lane to revisit our past events, each filled with
-          innovation, collaboration, and unforgettable moments.
+          Hack the 6ix 2024 will be our 10th anniversay! Let&apos;s walk down
+          memory lane to revisit our past events, each filled with innovation,
+          collaboration, and unforgettable moments.
         </Text>
         <div className={styles.tvGrid}>
           {data.map((_, idx) => (

@@ -28,10 +28,7 @@ function Hero() {
     >
       <h1 className="hidden">Hack the 6ix 2024 landing page</h1>
       <Flex direction="column" className={styles.container} gap="2x-big">
-
-        <Animate
-          duration={0.8}
-        >
+        <Animate duration={0.8}>
           <Flex direction="column" gap="sm">
             <Text textType="paragraph-lg" textColor="neutral-600" as="p">
               {range.replace('–', ' – ').toUpperCase()} • In-person event
@@ -47,18 +44,16 @@ function Hero() {
           </Flex>
         </Animate>
 
-        <Animate
-          duration={0.55}
-          delay={0.3}
-        >
-        <Flex direction="column" gap="x-sm">
+        <Animate duration={0.55} delay={0.3}>
+          <Flex direction="column" gap="x-sm">
             <Text
               textType="paragraph-lg"
               textColor="secondary-900"
               textWeight="medium"
               as="p"
             >
-              Applications opening soon! Receive the latest updates in your inbox.
+              Applications opening soon! Receive the latest updates in your
+              inbox.
             </Text>
             <MailingListForm />
             <Flex gap="m">

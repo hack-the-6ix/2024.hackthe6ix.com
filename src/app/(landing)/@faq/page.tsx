@@ -6,7 +6,6 @@ import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
-import Accordion from '@/components/Accordion';
 import styles from './faq.module.scss';
 
 interface FaqQuestionSection {
@@ -41,11 +40,12 @@ const faqQuestions: FaqQuestionSection[] = [
         question: "What if my question isn't answered here?",
         answer: (
           <>
-            If you have any other questions, feel free to reach out to us {' '}
-            <Link href="#contact">here</Link>! Our team would be happy to help you out.
+            If you have any other questions, feel free to reach out to us{' '}
+            <Link href="#contact">here</Link>! Our team would be happy to help
+            you out.
           </>
-        )
-      }
+        ),
+      },
     ],
   },
   {
@@ -70,7 +70,7 @@ const faqQuestions: FaqQuestionSection[] = [
       {
         question: 'What if I don’t have a team or idea?',
         answer:
-        'Don\'t sweat it - we will be coordinating team formation and idea generation events leading up to, as well as during the event.',
+          "Don't sweat it - we will be coordinating team formation and idea generation events leading up to, as well as during the event.",
       },
     ],
   },
@@ -98,14 +98,18 @@ const faqQuestions: FaqQuestionSection[] = [
           'Absolutely nothing! Hack the 6ix is a completely free event run by a non-profit organization. All food, resources, and accommodations for hacking for the entire event will be provided free of charge. Information about travel reimbursement will be provided closer to the date of the event.',
       },
     ],
-  }
+  },
 ];
 
 function Faq() {
   const [active, setActive] = useState(0);
 
   return (
-    <Container as="section" innerProps={{ className: styles.container }} id="faq">
+    <Container
+      as="section"
+      innerProps={{ className: styles.container }}
+      id="faq"
+    >
       <Flex align="center" direction="column" gap="x-lg">
         <Text
           textColor="secondary-900"
