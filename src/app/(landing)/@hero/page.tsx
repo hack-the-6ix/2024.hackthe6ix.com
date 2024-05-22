@@ -14,12 +14,6 @@ import styles from './page.module.scss';
 const words = ['network.', 'learn.', 'create.', 'collaborate.', 'innovate.'];
 
 function Hero() {
-  const range = new Intl.DateTimeFormat('en-CA', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
-  }).formatRange(config.startAt, config.endAt);
-
   return (
     <Container
       innerProps={{ className: styles.content }}
@@ -31,7 +25,7 @@ function Hero() {
         <Animate duration={0.8}>
           <Flex direction="column" gap="sm">
             <Text textType="paragraph-lg" textColor="neutral-600" as="p">
-              {range.replace('–', ' – ').toUpperCase()} • In-person event
+              AUG 2-4, 2024 • In-person event
             </Text>
             <Flex direction="column">
               <Text textType="display" textColor="secondary-900" as="p">
