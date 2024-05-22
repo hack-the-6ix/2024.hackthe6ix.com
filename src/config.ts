@@ -36,10 +36,10 @@ export default {
         label: 'Why',
         hash: 'why',
       },
-      // {
-      //   label: 'Sponsors',
-      //   hash: 'sponsors',
-      // },
+      {
+        label: 'Sponsors',
+        hash: 'sponsors',
+      },
       {
         label: 'FAQ',
         hash: 'faq',
