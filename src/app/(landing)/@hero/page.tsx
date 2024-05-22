@@ -6,6 +6,7 @@ import Icon from '@/components/Icon';
 import Text from '@/components/Text';
 import footerAssetUrl from './_assets/lonely-island.png';
 import mainAssetUrl from './_assets/tv-island.png';
+import config from '@/config';
 import Banner from './_components/Banner';
 import MailingListForm from './_components/MailingListForm';
 import styles from './page.module.scss';
@@ -24,7 +25,7 @@ function Hero() {
         <Animate duration={0.8}>
           <Flex direction="column" gap="sm">
             <Text textType="paragraph-lg" textColor="neutral-600" as="p">
-             AUG 2-4, 2024 • In-person event
+              AUG 2-4, 2024 • In-person event
             </Text>
             <Flex direction="column">
               <Text textType="display" textColor="secondary-900" as="p">
