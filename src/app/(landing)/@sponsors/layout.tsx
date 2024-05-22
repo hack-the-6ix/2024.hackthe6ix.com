@@ -19,7 +19,11 @@ interface SponsorsLayoutProps {
 function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
   return (
     <>
-      <Container as="section" innerProps={{ className: styles.sponsors }} id="sponsors">
+      <Container
+        as="section"
+        innerProps={{ className: styles.sponsors }}
+        id="sponsors"
+      >
         <Flex direction="column" align="center" gap="2x-lg">
           <Flex
             direction="column"
