@@ -6,8 +6,6 @@ import {
 } from 'react-icons/fa6';
 
 export default {
-  startAt: new Date('2024-08-02T00:00:01.000-04:00'),
-  endAt: new Date('2024-08-04T23:59:59.000-04:00'),
   socials: {
     facebook: {
       link: 'https://facebook.com/HackThe6ix',
