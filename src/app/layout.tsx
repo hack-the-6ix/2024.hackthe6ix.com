@@ -7,7 +7,7 @@ import '@/styles/index.scss';
 
 export const metadata: Metadata = {
   title: 'Hack the 6ix',
-  description: 'owo',
+  description: 'Hack the 6ix is the largest summer student-run, not-for-profit hackathon now in its ninth iteration, based in Toronto. Join hundreds of students from diverse backgrounds, disciplines, and skill levels to work together on projects that have real-world impact.',
 };
 
 export default function RootLayout({
