@@ -22,6 +22,11 @@ export default function RootLayout({
         <Toaster />
       </body>
       <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_TAG!} />
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async
+        defer
+      />
       <Script strategy="lazyOnload" id="animate">
         {`
           window.setTimeout(() => {

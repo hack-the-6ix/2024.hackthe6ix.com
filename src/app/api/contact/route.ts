@@ -8,6 +8,12 @@ const schema = z.object({
     .string()
     .min(1, 'Please provide an email')
     .email('Please provide a valid email'),
+  name: z.string().min(1, 'Please provide a name'),
+  message: z
+    .string()
+    .min(1, 'Please provide a message')
+    .max(2056, 'Please limit the message to 2056 charaters'),
+  captchaToken: z.string().min(1, 'Missing Turnstile token'),
 });
 
 export type POSTRequest = z.infer<typeof schema>;
@@ -26,10 +32,13 @@ export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
     const payload = await schema.parseAsync({
+      captchaToken: formData.get('captchaToken'),
+      message: formData.get('message'),
       email: formData.get('email'),
+      name: formData.get('name'),
     });
 
-    const res = await fetch(`${process.env.API_URL}/api/subscribe`, {
+    const res = await fetch(`${process.env.API_URL}/api/contact`, {
       headers: {
         'content-type': 'application/json',
       },
@@ -45,7 +54,7 @@ export async function POST(request: NextRequest) {
           error: ZodError.create([
             {
               code: ZodIssueCode.custom,
-              path: ['email'],
+              path: ['message'],
               message: error,
             },
           ]).format(),
@@ -56,7 +65,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       status: 'success',
-      message: 'Email has been subscribed to updates.',
+      message: 'Message has been sent!',
     });
   } catch (err) {
     if (err instanceof ZodError) {
@@ -75,7 +84,7 @@ export async function POST(request: NextRequest) {
           error: ZodError.create([
             {
               code: ZodIssueCode.custom,
-              path: ['email'],
+              path: ['message'],
               message: 'Unknown error. Please try again later.',
             },
           ]).format(),
