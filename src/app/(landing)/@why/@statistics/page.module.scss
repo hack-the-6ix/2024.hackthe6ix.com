@@ -1,0 +1,111 @@
+@use '../../../../styles/colors';
+@use '../../../../styles/mixins';
+@use '../../../../styles/variables';
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+}
+
+// text
+.header {
+  // padding-left: 10%;
+  max-width: 100%;
+}
+
+.highlight_bold {
+  color: colors.getColor(warning, 400);
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.highlight {
+  color: colors.getColor(warning, 400);
+}
+
+.img_container {
+  position: relative;
+  text-align: center;
+}
+
+%stats {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+}
+
+.hackers {
+  @extend %stats;
+  top: 43%;
+  left: 37%;
+}
+
+.projects {
+  @extend %stats;
+  top: 55%;
+  left: 68.5%;
+}
+
+.mentors {
+  @extend %stats;
+  top: 37%;
+  left: 18.5%;
+}
+
+.prizes {
+  @extend %stats;
+  top: 34%;
+  left: 48%;
+  width: 9rem;
+}
+
+.schools {
+  @extend %stats;
+  top: 55%;
+  left: 78%;
+}
+
+// bubble images
+.top_bubble {
+  height: 6rem;
+  width: 6rem;
+  padding: 1rem 14%;
+}
+
+@include mixins.media(tablet) {
+  .bubbles_left,
+  .bubbles_right {
+    height: 18rem !important;
+    width: auto;
+  }
+  .highlight_bold {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .subtitle {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+}
+
+.bubbles_left,
+.bubbles_right {
+  height: 27rem;
+  width: auto;
+}
+
+.bubbles_bottom {
+  object-fit: cover;
+  height: 9.5rem;
+  width: 40rem;
+  align-self: center;
+}

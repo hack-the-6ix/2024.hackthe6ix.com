@@ -1,3 +1,4 @@
+@use '@/styles/mixins';
 @use 'sass:math';
 
 $fonts: (
@@ -47,7 +48,6 @@ $wgts: (
   $size: map-get($fonts, $type, size);
   $wgt: map-get($fonts, $type, wgt);
 
-  $usize: $size / ($size * 0 + 1);
   $height: $size * 1.25;
   $tracking: $size * -0.022;
 
@@ -59,6 +59,14 @@ $wgts: (
 
 @mixin init {
   font-size: 16px;
+
+  @include mixins.media(tablet) {
+    font-size: 14px;
+  }
+
+  @include mixins.media(mobile) {
+    font-size: 13px;
+  }
 
   @at-root {
     @each $tag in map-keys($fonts) {

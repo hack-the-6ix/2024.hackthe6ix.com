@@ -17,14 +17,14 @@ function Container<
   return (
     <Flex
       {...props}
-      className={cn(props.className, styles.container, fluid && styles.fluid)}
+      className={cn(styles.container, fluid && styles.fluid, props.className)}
       as={(as ?? 'div') as ElementType}
       direction="column"
       align="center"
     >
       <InnerElement
         {...innerProps}
-        className={cn(innerProps?.className, styles.content)}
+        className={cn(styles.content, innerProps?.className)}
       >
         {children}
       </InnerElement>

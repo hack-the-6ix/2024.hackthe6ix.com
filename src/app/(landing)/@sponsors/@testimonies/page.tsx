@@ -58,7 +58,7 @@ function Testimonies() {
   }, [active]);
 
   return (
-    <Flex align="center" gap="lg" className={styles.container}>
+    <Flex align="center" className={styles.container}>
       <IconButton
         icon="chevron_left"
         className={styles.control}
@@ -105,7 +105,7 @@ function Testimonies() {
                 </Text>
               </h3>
             </Flex>
-            <Flex gap="x-sm">
+            <Flex gap="x-sm" className={styles.quote}>
               <Text
                 textType="display"
                 textColor="warning-400"

@@ -10,10 +10,14 @@
   padding: mixins.spacing(lg) 0 mixins.spacing(3x-big);
 }
 
-.link {
-  padding: 0;
+.links {
+  row-gap: mixins.spacing(sm) !important;
 }
 
-.socials {
-  margin-left: -1 * mixins.spacing(x-sm);
+.link {
+  padding: 0 !important;
+}
+
+.social {
+  padding: 0 !important;
 }

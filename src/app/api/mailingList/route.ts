@@ -1,5 +1,5 @@
 import { NextResponse, NextRequest } from 'next/server';
-import z, { ZodError } from 'zod';
+import z, { ZodError, ZodIssueCode } from 'zod';
 
 export const runtime = 'edge';
 
@@ -29,9 +29,30 @@ export async function POST(request: NextRequest) {
       email: formData.get('email'),
     });
 
-    // TODO: Added logic for adding to mailing list
-    console.log(payload);
-    await new Promise((res) => setTimeout(() => res(''), 1000));
+    const res = await fetch(`${process.env.API_URL}/api/subscribe`, {
+      headers: {
+        'content-type': 'application/json',
+      },
+      method: 'POST',
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) {
+      const error = await res.text();
+      return NextResponse.json(
+        {
+          status: 'error',
+          error: ZodError.create([
+            {
+              code: ZodIssueCode.custom,
+              path: ['email'],
+              message: error,
+            },
+          ]).format(),
+        },
+        { status: 400, statusText: 'Subscription error' },
+      );
+    }
 
     return NextResponse.json({
       status: 'success',
@@ -51,7 +72,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           status: 'error',
-          error: 'Unknown error. Please try again later.',
+          error: ZodError.create([
+            {
+              code: ZodIssueCode.custom,
+              path: ['email'],
+              message: 'Unknown error. Please try again later.',
+            },
+          ]).format(),
         },
         {
           status: 500,

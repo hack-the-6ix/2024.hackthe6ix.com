@@ -20,7 +20,7 @@ function IconButton<T extends ElementType>({
   return (
     <Button
       {...props}
-      className={cn(props.className, styles.button)}
+      className={cn(styles.button, props.className)}
       as={as ?? 'button'}
     >
       <Icon icon={icon} />

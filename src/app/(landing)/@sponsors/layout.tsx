@@ -19,7 +19,11 @@ interface SponsorsLayoutProps {
 function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
   return (
     <>
-      <Container as="section" innerProps={{ className: styles.sponsors }}>
+      <Container
+        as="section"
+        innerProps={{ className: styles.sponsors }}
+        id="sponsors"
+      >
         <Flex direction="column" align="center" gap="2x-lg">
           <Flex
             direction="column"
@@ -57,7 +61,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
             <Button
               buttonColor="primary"
               buttonType="primary"
-              href={'https://go.hackthe6ix.com/sponsor'}
+              href={'mailto:sponsor@hackthe6ix.com'}
               as={Link}
               target="_blank"
               rel="noreferrer"
@@ -71,7 +75,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
               alt="submarine"
             />
           </Flex>
-          {companies}
+          {/* {companies} */}
         </Flex>
       </Container>
       <Container

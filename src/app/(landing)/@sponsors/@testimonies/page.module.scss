@@ -1,7 +1,21 @@
-@use '../../../../styles/colors';
+@use '@/styles/colors';
+@use '@/styles/variables';
+@use '@/styles/mixins';
 
 .container {
-  width: 60rem;
+  width: 50rem;
+}
+
+@include mixins.media(tablet) {
+  .container {
+    width: 100%;
+  }
+  .quote {
+    flex-direction: column !important;
+  }
+  .item {
+    flex-direction: column !important;
+  }
 }
 
 .list {
@@ -17,7 +31,7 @@
   aspect-ratio: unset;
   height: 12rem;
   display: flex;
-  padding: 0;
+  padding: 0 !important;
 
   span {
     font-size: 3rem;
@@ -26,6 +40,7 @@
 
 .item {
   min-width: 100%;
+  flex-direction: row;
 }
 
 .image {
@@ -41,6 +56,10 @@
 
 %quote {
   line-height: 1;
+}
+
+.quote {
+  flex-direction: row;
 }
 
 .quoteL {

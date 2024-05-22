@@ -1,16 +1,17 @@
 @use '@/styles/mixins';
 @use '@/styles/colors';
-@use '@/styles/fonts';
 
 .container {
-  @include mixins.transition(background-color);
-  position: sticky;
+  @include mixins.transition(background-color box-shadow);
+  position: fixed;
   z-index: 2;
   top: 0;
+  width: 100vw;
 }
 
 .scrolled {
-  background-color: colors.getColor(secondary, 50);
+  background-color: colors.getColor('primary', 50);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
 
 .nav {
@@ -37,7 +38,7 @@
 
     flex-direction: column;
     justify-content: center;
-    gap: mixins.spacing(m);
+    gap: mixins.spacing(m) !important;
     z-index: 3;
 
     padding: mixins.spacing(lg);
@@ -58,13 +59,13 @@
   }
 
   .content {
-    gap: mixins.spacing(big);
+    gap: mixins.spacing(big) !important;
   }
 }
 
 .menu {
-  display: none;
+  display: none !important;
   @include mixins.media(tablet) {
-    display: flex;
+    display: flex !important;
   }
 }

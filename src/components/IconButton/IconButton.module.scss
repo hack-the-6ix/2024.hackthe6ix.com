@@ -1,4 +1,4 @@
-@use '../../styles/mixins';
+@use '@/styles/mixins';
 
 .button {
   padding: mixins.spacing(x-sm);

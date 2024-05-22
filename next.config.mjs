@@ -9,6 +9,12 @@ if (process.env.NODE_ENV === 'development') {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  modularizeImports: {
+    'react-icons/?(((\\w*)?/?)*)': {
+      transform: '@react-icons/all-files/{{ matches.[1] }}/{{ member }}',
+      skipDefaultConversion: true,
+    },
+  },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>

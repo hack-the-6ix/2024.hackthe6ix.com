@@ -11,7 +11,7 @@ function Contact() {
       <Flex direction="column" align="start" gap="big" className={styles.form}>
         <Flex direction="column" align="start" gap="2x-sm">
           <Text
-            textColor="primary-600"
+            textColor="secondary-900"
             textType="heading-lg"
             textWeight="semi-bold"
             textAlign="start"
