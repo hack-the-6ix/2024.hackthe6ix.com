@@ -75,11 +75,11 @@ function Navigation() {
             <Icon icon="menu" size="md" />
           </Flex>
           <a
-            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=blue"
+            href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2025-season&utm_content=blue"
             className={styles.banner}
             target="_blank"
           >
-            <Image width="64" src={mlhBanner} alt="MLH 2024 season banner" />
+            <Image width="64" src={mlhBanner} alt="MLH 2025 season banner" />
           </a>
         </Flex>
       </Container>
