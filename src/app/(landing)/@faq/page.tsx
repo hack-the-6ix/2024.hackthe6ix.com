@@ -65,7 +65,7 @@ const faqQuestions: FaqQuestionSection[] = [
       {
         question: 'Am I eligible to participate?',
         answer:
-          'Any high-school students, post-secondary students or recent graduates (>1 years of graduating) are eligible to participate in Hack the 6ix.',
+          'Any high-school students, post-secondary students or recent graduates (<1 years of graduating) are eligible to participate in Hack the 6ix.',
       },
       {
         question: 'What if I don’t have a team or idea?',
