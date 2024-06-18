@@ -30,6 +30,13 @@
   width: auto;
 }
 
+.cs {
+  @extend %assets;
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+
 .shark {
   @extend %assets;
   height: auto;
