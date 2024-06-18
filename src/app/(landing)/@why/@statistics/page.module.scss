@@ -39,7 +39,6 @@
 
 %stats {
   position: absolute;
-  transform: translate(-50%, -50%);
   width: 10rem;
 }
 
@@ -47,18 +46,21 @@
   @extend %stats;
   top: 43%;
   left: 37%;
+  animation: bubbleLeftTextBob 9s infinite;
 }
 
 .projects {
   @extend %stats;
   top: 55%;
   left: 68.5%;
+  animation: bubbleLeftTextBob 9s infinite;
 }
 
 .mentors {
   @extend %stats;
   top: 37%;
   left: 18.5%;
+  animation: bubbleRightTextBob 9.5s infinite;
 }
 
 .prizes {
@@ -66,12 +68,14 @@
   top: 34%;
   left: 48%;
   width: 9rem;
+  animation: bubbleRightTextBob 9.5s infinite;
 }
 
 .schools {
   @extend %stats;
   top: 55%;
   left: 78%;
+  animation: bubbleRightTextBob 9.5s infinite;
 }
 
 // bubble images
@@ -79,7 +83,7 @@
   height: 6rem;
   width: 6rem;
   padding: 1rem 14%;
-  animation: bubbleBob 4s infinite;
+  animation: bubbleTopBob 4s infinite;
 }
 
 @include mixins.media(tablet) {
@@ -104,15 +108,23 @@
   width: auto;
 }
 
+.bubbles_left {
+  animation: bubbleLeftBob 9s infinite;
+}
+
+.bubbles_right {
+  animation: bubbleRightBob 9.5s infinite;
+}
+
 .bubbles_bottom {
   object-fit: cover;
   height: 9.5rem;
   width: 40rem;
   align-self: center;
-  animation: bubbleBob 7s infinite;
+  animation: bubbleBottomBob 7s infinite;
 }
 
-@keyframes bubbleBob {
+@keyframes bubbleTopBob {
   0%{
 		transform: translateY(0vw) rotate(0deg);
 	}
@@ -123,5 +135,75 @@
 
 	100%{
 		transform: translateY(0vw) rotate(0deg);
+	}
+}
+
+@keyframes bubbleBottomBob {
+  0%{
+		transform: translateY(0vw) rotate(0deg);
+	}
+
+	50%{
+		transform: translateY(1.5vw) rotate(-2deg);
+	}
+
+	100%{
+		transform: translateY(0vw) rotate(0deg);
+	}
+}
+
+@keyframes bubbleLeftBob {
+  0%{
+		transform: translateY(0.5vw) rotate(0deg);
+	}
+
+	50%{
+		transform: translateY(-0.8vw) rotate(-0.7deg);
+	}
+
+	100%{
+		transform: translateY(0.5vw) rotate(0deg);
+	}
+}
+
+@keyframes bubbleLeftTextBob {
+  0%{
+		transform: translateY(0.35vw) rotate(0deg) translate(-50%, -50%);
+	}
+
+	50%{
+		transform: translateY(-0.65vw) rotate(-0.4deg) translate(-50%, -50%);
+	}
+
+	100%{
+		transform: translateY(0.35vw) rotate(0deg) translate(-50%, -50%);
+	}
+}
+
+@keyframes bubbleRightBob {
+  0%{
+		transform: translateY(-1.4vw) rotate(0deg);
+	}
+
+	50%{
+		transform: translateY(1.2vw) rotate(0.5deg);
+	}
+
+	100%{
+		transform: translateY(-1.4vw) rotate(0deg);
+	}
+}
+
+@keyframes bubbleRightTextBob {
+  0%{
+		transform: translateY(-1.2vw) rotate(0deg) translate(-50%, -50%);
+	}
+
+	50%{
+		transform: translateY(1.0vw) rotate(0.2deg) translate(-50%, -50%);
+	}
+
+	100%{
+		transform: translateY(-1.2vw) rotate(0deg) translate(-50%, -50%);
 	}
 }
