@@ -53,3 +53,28 @@
     width: 40rem;
   }
 }
+
+.boat1 {
+  @extend %assetFrame;
+  z-index: 1;
+  top: 88%;
+
+  & img {
+    position: relative;
+    height: auto;
+    width: 7.5rem;
+    left: 50rem;
+  }
+}
+
+.boat2 {
+  @extend %assetFrame;
+  z-index: 1;
+  top: 114%;
+
+  & img {
+    position: relative;
+    height: auto;
+    width: 10.5rem;
+  }
+}

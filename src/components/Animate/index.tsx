@@ -8,6 +8,9 @@ interface AnimateProps {
   delay?: number;
   initial?: Object;
   animate?: Object;
+  repeat?: number;
+  repeatType?: 'loop' | 'mirror' | 'reverse';
+  repeatDelay?: number;
 }
 
 export default function Animate({
@@ -16,13 +19,22 @@ export default function Animate({
   delay = 0,
   initial = { opacity: 0 },
   animate = { opacity: 1 },
+  repeat = 0,
+  repeatType = 'loop',
+  repeatDelay = 0,
 }: AnimateProps) {
   return (
     <AnimatePresence>
       <motion.div
         initial={initial}
         animate={animate}
-        transition={{ duration, delay }}
+        transition={{
+          duration,
+          delay,
+          repeat,
+          repeatType,
+          repeatDelay,
+        }}
       >
         {children}
       </motion.div>

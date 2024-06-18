@@ -5,6 +5,7 @@
 .container {
   max-width: 60rem;
   margin-top: 10rem;
+  position: relative;
 }
 
 .buttons {
@@ -23,4 +24,65 @@
 
 .item {
   margin-bottom: 0.5rem;
+}
+
+%assets {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  margin: 0;
+}
+
+.fish1 {
+  @extend %assets;
+  height: auto;
+  width: 4rem;
+  top: 10rem;
+  left: -18rem;
+  animation: fishMove 39.1s infinite;
+}
+
+
+.fish2 {
+  @extend %assets;
+  height: auto;
+  width: 4rem;
+  top: 17rem;
+  left: -17rem;
+  animation: fishMove 39s infinite;
+}
+
+@keyframes fishMove {
+  0% {
+    transform: translateX(0vw);
+  }
+  49.99999999999999% {
+    transform: translateX(85vw);
+  }
+  50% {
+    transform: scaleX(-1) translateX(-85vw);
+  }
+  100% {
+    transform: scaleX(-1) translateX(0vw);
+  }
+}
+
+.fishWaddle {
+  @extend %assets;
+  animation: fishWaddle 2s infinite;
+}
+
+@keyframes fishWaddle {
+  0%{
+		transform: rotateY(0deg) rotateY(0deg);
+	}
+
+	50%{
+		transform: perspective(1000px) rotateY(2deg);
+	}
+
+	100%{
+		transform: rotateY(0deg) rotateY(0deg);
+	}
 }

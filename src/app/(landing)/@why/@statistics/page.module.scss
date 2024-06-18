@@ -79,6 +79,7 @@
   height: 6rem;
   width: 6rem;
   padding: 1rem 14%;
+  animation: bubbleBob 4s infinite;
 }
 
 @include mixins.media(tablet) {
@@ -108,4 +109,19 @@
   height: 9.5rem;
   width: 40rem;
   align-self: center;
+  animation: bubbleBob 7s infinite;
+}
+
+@keyframes bubbleBob {
+  0%{
+		transform: translateY(0vw) rotate(0deg);
+	}
+
+	50%{
+		transform: translateY(1.8vw) rotate(1deg);
+	}
+
+	100%{
+		transform: translateY(0vw) rotate(0deg);
+	}
 }
