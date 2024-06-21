@@ -46,21 +46,21 @@
   @extend %stats;
   top: 43%;
   left: 37%;
-  animation: bubbleLeftTextBob 9s infinite;
+  animation: bubbleLeftTextBob 5s infinite;
 }
 
 .projects {
   @extend %stats;
   top: 55%;
   left: 68.5%;
-  animation: bubbleLeftTextBob 9s infinite;
+  animation: bubbleLeftTextBob 5s infinite;
 }
 
 .mentors {
   @extend %stats;
   top: 37%;
   left: 18.5%;
-  animation: bubbleRightTextBob 9.5s infinite;
+  animation: bubbleRightTextBob 5.5s infinite;
 }
 
 .prizes {
@@ -68,14 +68,14 @@
   top: 34%;
   left: 48%;
   width: 9rem;
-  animation: bubbleRightTextBob 9.5s infinite;
+  animation: bubbleRightTextBob 5.5s infinite;
 }
 
 .schools {
   @extend %stats;
   top: 55%;
   left: 78%;
-  animation: bubbleRightTextBob 9.5s infinite;
+  animation: bubbleRightTextBob 5.5s infinite;
 }
 
 // bubble images
@@ -83,7 +83,7 @@
   height: 6rem;
   width: 6rem;
   padding: 1rem 14%;
-  animation: bubbleTopBob 4s infinite;
+  animation: bubbleTopBob 3s infinite;
 }
 
 @include mixins.media(tablet) {
@@ -109,11 +109,11 @@
 }
 
 .bubbles_left {
-  animation: bubbleLeftBob 9s infinite;
+  animation: bubbleLeftBob 5s infinite;
 }
 
 .bubbles_right {
-  animation: bubbleRightBob 9.5s infinite;
+  animation: bubbleRightBob 5.5s infinite;
 }
 
 .bubbles_bottom {
@@ -121,7 +121,7 @@
   height: 9.5rem;
   width: 40rem;
   align-self: center;
-  animation: bubbleBottomBob 7s infinite;
+  animation: bubbleBottomBob 3s infinite;
 }
 
 @keyframes bubbleTopBob {
@@ -154,7 +154,7 @@
 
 @keyframes bubbleLeftBob {
   0%{
-		transform: translateY(0.5vw) rotate(0deg);
+		transform: translateY(0.6vw) rotate(0deg);
 	}
 
 	50%{
@@ -162,13 +162,13 @@
 	}
 
 	100%{
-		transform: translateY(0.5vw) rotate(0deg);
+		transform: translateY(0.6vw) rotate(0deg);
 	}
 }
 
 @keyframes bubbleLeftTextBob {
   0%{
-		transform: translateY(0.35vw) rotate(0deg) translate(-50%, -50%);
+		transform: translateY(0.45vw) rotate(0deg) translate(-50%, -50%);
 	}
 
 	50%{
@@ -176,7 +176,7 @@
 	}
 
 	100%{
-		transform: translateY(0.35vw) rotate(0deg) translate(-50%, -50%);
+		transform: translateY(0.45vw) rotate(0deg) translate(-50%, -50%);
 	}
 }
 

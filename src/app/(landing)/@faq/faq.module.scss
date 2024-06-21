@@ -20,6 +20,14 @@
     border-radius: 1rem;
     padding: 0.5rem;
   }
+
+  .fish1, .fish2 {
+    animation: fishPhoneMove 15s infinite !important;
+  }
+
+  .fishWaddle {
+    animation: fishWaddle 0.5s infinite !important;
+  }
 }
 
 .item {
@@ -39,8 +47,8 @@
   height: auto;
   width: 4rem;
   top: 10rem;
-  left: -18rem;
-  animation: fishMove 39.1s infinite;
+  left: -8rem;
+  animation: fishMove 39.8s infinite;
 }
 
 
@@ -49,8 +57,23 @@
   height: auto;
   width: 4rem;
   top: 17rem;
-  left: -17rem;
+  left: -7rem;
   animation: fishMove 39s infinite;
+}
+
+@keyframes fishPhoneMove {
+  0% {
+    transform: translateX(0vw) translate(200%, 250%);
+  }
+  49.99999999999999% {
+    transform: translateX(70vw) translate(200%, 250%);
+  }
+  50% {
+    transform: scaleX(-1) translateX(-70vw) translate(-200%, 250%);
+  }
+  100% {
+    transform: scaleX(-1) translateX(0vw) translate(-200%, 250%);
+  }
 }
 
 @keyframes fishMove {
@@ -70,7 +93,7 @@
 
 .fishWaddle {
   @extend %assets;
-  animation: fishWaddle 2s infinite;
+  animation: fishWaddle 1s infinite;
 }
 
 @keyframes fishWaddle {
