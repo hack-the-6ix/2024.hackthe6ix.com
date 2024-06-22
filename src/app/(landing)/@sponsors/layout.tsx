@@ -145,7 +145,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
                   alt="cs sponsor"
                 />
                 <Image
-                  src={cs}
+                  src={fdm}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
@@ -153,19 +153,19 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
               </Flex>
               <Flex direction="row" gap="lg" className="row2">
                 <Image
-                  src={cs}
+                  src={bestbuy}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
                 />
                 <Image
-                  src={cs}
+                  src={rotman1}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
                 />
                 <Image
-                  src={cs}
+                  src={rotman2}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
@@ -174,31 +174,31 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
 
               <Flex direction="row" gap="lg" className="row3">
                 <Image
-                  src={cs}
+                  src={blue}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
                 />
                 <Image
-                  src={cs}
+                  src={xyz}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
                 />
                 <Image
-                  src={cs}
+                  src={echo}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
                 />
                 <Image
-                  src={cs}
+                  src={taskade}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
                 />
                 <Image
-                  src={cs}
+                  src={voiceflow}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
@@ -207,25 +207,25 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
 
               <Flex direction="row" gap="lg" className="row4">
                 <Image
-                  src={cs}
+                  src={nordpass}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
                 />
                 <Image
-                  src={cs}
+                  src={incogni}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
                 />
                 <Image
-                  src={cs}
+                  src={nordvpn}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
                 />
                 <Image
-                  src={cs}
+                  src={balsamiq}
                   className={styles.cs}
                   height="400"
                   alt="cs sponsor"
