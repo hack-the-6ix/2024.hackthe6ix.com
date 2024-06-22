@@ -118,6 +118,107 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
               </div>
             </Flex>
           </Container>
+          {/* Logos
+          - lg=40px=2.5rem*/}
+
+          <Container as="section" innerProps={{ className: styles.imageGrid }}>
+            <Flex direction="column" align="center" gap="lg">
+              <Flex direction="row" gap="lg" className="row1">
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+              </Flex>
+              <Flex direction="row" gap="lg" className="row2">
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+              </Flex>
+
+              <Flex direction="row" gap="lg" className="row3">
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+              </Flex>
+
+              <Flex direction="row" gap="lg" className="row4">
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+                <Image
+                  src={cs}
+                  className={styles.cs}
+                  height="400"
+                  alt="cs sponsor"
+                />
+              </Flex>
+            </Flex>
+          </Container>
         </Flex>
       </Container>
       <Container
