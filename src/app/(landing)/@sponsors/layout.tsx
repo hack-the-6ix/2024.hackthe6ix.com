@@ -6,10 +6,24 @@ import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
+import altura from './_assets/altura.png';
+import balsamiq from './_assets/balsamiq.png';
+import bestbuy from './_assets/bestbuy.png';
+import blue from './_assets/blue.png';
 import cs from './_assets/cs.png';
+import echo from './_assets/echo.png';
+import fdm from './_assets/fdm.png';
+import incogni from './_assets/incogni.png';
+import nordpass from './_assets/nordpass.png';
+import nordvpn from './_assets/nordvpn.png';
+import rotman1 from './_assets/rotman1.png';
+import rotman2 from './_assets/rotman2.png';
 import shark from './_assets/shark.png';
 import submarine from './_assets/submarine.png';
+import taskade from './_assets/taskade.png';
 import turtle from './_assets/turtle.png';
+import voiceflow from './_assets/voiceflow.png';
+import xyz from './_assets/xyz.png';
 import styles from './layout.module.scss';
 
 interface SponsorsLayoutProps {
@@ -125,9 +139,9 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
             <Flex direction="column" align="center" gap="lg">
               <Flex direction="row" gap="lg" className="row1">
                 <Image
-                  src={cs}
+                  src={altura}
                   className={styles.cs}
-                  height="400"
+                  height="300"
                   alt="cs sponsor"
                 />
                 <Image
