@@ -271,12 +271,14 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
           </Flex>
           {testimonies}
           <Image width="200" src={shark} alt="shark" className={styles.shark} />
-          <Image
-            width="200"
-            src={turtle}
-            alt="turtle"
-            className={styles.turtle}
-          />
+          <Flex className={styles.turtleBob}>
+            <Image
+              width="200"
+              src={turtle}
+              alt="turtle"
+              className={styles.turtle}
+            />
+          </Flex>
         </Flex>
       </Container>
     </>

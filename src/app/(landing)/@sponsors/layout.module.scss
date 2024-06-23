@@ -43,10 +43,61 @@
   width: 22rem;
   top: -10rem;
   left: -18rem;
+  animation: sharkMove 30s infinite;
+}
+
+@keyframes sharkMove {
+  0% {
+    transform: translateX(0vw);
+  }
+  49.99999999999999% {
+    transform: translateX(80vw);
+  }
+  50% {
+    transform: scaleX(-1) translateX(-80vw);
+  }
+  100% {
+    transform: scaleX(-1) translateX(0vw);
+  }
 }
 
 .turtle {
   @extend %assets;
   margin: auto -15rem 0 auto;
   left: 7.5rem;
+  animation: turtleMove 120s infinite;
+}
+
+@keyframes turtleMove {
+  0% {
+    transform: translateX(0vw);
+  }
+  49.99999999999999% {
+    transform: translateX(-80vw);
+  }
+  50% {
+    transform: scaleX(-1) translateX(80vw);
+  }
+  100% {
+    transform: scaleX(-1) translateX(0vw);
+  }
+}
+
+.turtleBob {
+  @extend %assets;
+  animation: turtleBob 8s infinite;
+}
+
+@keyframes turtleBob {
+  0%{
+		transform: rotate(3deg);
+	}
+
+	50%{
+		transform: rotate(-2deg);
+	}
+
+	100%{
+		transform: rotate(3deg);
+	}
 }
