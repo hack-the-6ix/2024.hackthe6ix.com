@@ -5,7 +5,9 @@ import Flex from '@/components/Flex';
 import Icon from '@/components/Icon';
 import Text from '@/components/Text';
 import config from '@/config';
+import boat2 from './_assets/green-boat.png';
 import footerAssetUrl from './_assets/lonely-island.png';
+import boat1 from './_assets/orange-boat.png';
 import mainAssetUrl from './_assets/tv-island.png';
 import Banner from './_components/Banner';
 import MailingListForm from './_components/MailingListForm';
@@ -78,6 +80,34 @@ function Hero() {
             />
           </Animate>
         </Flex>
+        <Flex align="center" className={styles.boat1}>
+          <Animate
+            initial={{ x: 0 }}
+            animate={{ x: -500 }}
+            duration={50}
+            delay={1}
+            repeat={Infinity}
+            repeatType="reverse"
+            repeatDelay={2}
+          >
+            <Animate
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 0.2 }}
+              duration={2}
+              repeat={Infinity}
+              repeatType="reverse"
+            >
+              <Animate
+                initial={{ opacity: 0, marginBottom: 100 }}
+                animate={{ opacity: 1, marginBottom: 0 }}
+                duration={0.75}
+                delay={0.05}
+              >
+                <Image src={boat1} alt="A tall green boat" />
+              </Animate>
+            </Animate>
+          </Animate>
+        </Flex>
       </Flex>
       <Flex align="center" className={styles.footerAsset}>
         <Animate
@@ -87,6 +117,34 @@ function Hero() {
           delay={0.05}
         >
           <Image src={footerAssetUrl} alt="An island with two trees" />
+        </Animate>
+      </Flex>
+      <Flex align="center" className={styles.boat2}>
+        <Animate
+          initial={{ x: 0 }}
+          animate={{ x: 1300 }}
+          duration={30}
+          delay={1}
+          repeat={Infinity}
+          repeatType="reverse"
+          repeatDelay={2}
+        >
+          <Animate
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 2 }}
+            duration={2}
+            repeat={Infinity}
+            repeatType="reverse"
+          >
+            <Animate
+              initial={{ opacity: 0, marginBottom: 100 }}
+              animate={{ opacity: 1, marginBottom: 0 }}
+              duration={0.75}
+              delay={0.05}
+            >
+              <Image src={boat2} alt="A tall green boat" />
+            </Animate>
+          </Animate>
         </Animate>
       </Flex>
     </Container>

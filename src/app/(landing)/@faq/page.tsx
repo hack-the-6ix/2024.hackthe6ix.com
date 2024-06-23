@@ -1,11 +1,14 @@
 'use client';
 
 import { useState, ReactNode } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
+import fish1 from './_assets/chonky-fish.png';
+import fish2 from './_assets/triangle-fish.png';
 import styles from './faq.module.scss';
 
 interface FaqQuestionSection {
@@ -167,6 +170,20 @@ function Faq() {
             </Flex>
           ))}
         </Flex>
+      </Flex>
+      <Image
+        width="100"
+        src={fish1}
+        alt="Round Fish"
+        className={styles.fish1}
+      />
+      <Flex className={styles.fishWaddle}>
+        <Image
+          width="100"
+          src={fish2}
+          alt="Triangle Fish"
+          className={styles.fish2}
+        />
       </Flex>
     </Container>
   );
