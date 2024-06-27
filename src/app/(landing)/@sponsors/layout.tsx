@@ -147,7 +147,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
                 <Image
                   src={fdm}
                   className={styles.cs}
-                  height="400"
+                  height="300"
                   alt="cs sponsor"
                 />
               </Flex>
