@@ -110,3 +110,30 @@
   z-index: 1;
 }
 
+.flex-container {
+  display: flex;
+  gap: 3rem; 
+  align-items: center; /* Adjust alignment as needed */
+}
+
+.cs {
+  max-width: 50%; 
+}
+
+.text {
+  max-width: 50%; 
+}
+
+@media screen and (max-width: 768px) {
+  .flex-container {
+    flex-direction: column; 
+  }
+
+  .cs,
+  .text {
+    max-width: 100%; 
+  }
+}
+
+
+

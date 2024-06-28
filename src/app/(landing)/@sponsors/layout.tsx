@@ -107,6 +107,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
                 textWeight="medium"
                 textAlign="start"
                 as="p"
+                className={styles.text}
               >
                 Intact Insurance is Canada&apos;s largest home, auto and
                 business insurance company, the choice of more than four million
