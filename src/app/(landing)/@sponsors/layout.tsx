@@ -92,46 +92,47 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
           </Flex>
 
           {/* {companies} */}
-          <Container>
-            <Flex align="start" gap="2x-big" style={{ display: 'flex' }}>
-              <div style={{ flex: '1', marginRight: '2rem' }}>
-                <Image
-                  src={cs}
-                  className={styles.cs}
-                  height="400"
-                  alt="cs sponsor"
-                />
-              </div>
-              <div style={{ flex: '1' }}>
-                <Text
-                  textColor="secondary-900"
-                  textType="paragraph-lg"
-                  textWeight="medium"
-                  textAlign="start"
-                  as="p"
+          <Container className={styles.container}>
+            <Flex gap="2x-big" align="start">
+              <Image
+                src={cs}
+                className={styles.cs}
+                height="400"
+                alt="cs sponsor"
+              />
+
+              <Text
+                textColor="secondary-900"
+                textType="paragraph-lg"
+                textWeight="medium"
+                textAlign="start"
+                as="p"
+              >
+                Intact Insurance is Canada&apos;s largest home, auto and
+                business insurance company, the choice of more than four million
+                consumers. Its coast-to-coast presence and its strong
+                relationship with insurance brokers mean the company can provide
+                the outstanding service, comfort and continuity customers
+                deserve.
+                <br />
+                <br />
+                Intact Insurance is a member company of Intact Financial
+                Corporation (TSX: IFC), the largest provider of property and
+                casualty insurance in Canada and a leading provider of specialty
+                insurance in North America.
+                <br />
+                <br />
+                For news on Intact,{' '}
+                <a
+                  href="https://www.torontomu.ca/cs/"
+                  style={{ color: 'inherit', textDecoration: 'none' }}
                 >
-                  Intact Insurance is Canada&apos;s largest home, auto and
-                  business insurance company, the choice of more than four
-                  million consumers. Its coast-to-coast presence and its strong
-                  relationship with insurance brokers mean the company can
-                  provide the outstanding service, comfort and continuity
-                  customers deserve.
-                  <br />
-                  <br />
-                  Intact Insurance is a member company of Intact Financial
-                  Corporation (TSX: IFC), the largest provider of property and
-                  casualty insurance in Canada and a leading provider of
-                  specialty insurance in North America.
-                  <br />
-                  <br />
-                  For news on Intact,{' '}
-                  <a href="https://www.torontomu.ca/cs/">
-                    https://www.torontomu.ca/cs/.
-                  </a>
-                </Text>
-              </div>
+                  https://www.torontomu.ca/cs/.
+                </a>
+              </Text>
             </Flex>
           </Container>
+
           {/* Logos
           - lg=40px=2.5rem*/}
 
