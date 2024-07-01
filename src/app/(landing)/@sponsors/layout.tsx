@@ -134,9 +134,6 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
             </Flex>
           </Container>
 
-          {/* Logos
-          - lg=40px=2.5rem*/}
-
           <Container as="section" innerProps={{ className: styles.imageGrid }}>
             <Flex direction="column" align="center" gap="lg">
               <Flex direction="row" gap="lg" className="row1">
