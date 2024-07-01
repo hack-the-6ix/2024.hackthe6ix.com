@@ -1,4 +1,6 @@
-import { ReactNode } from 'react';
+'use client';
+
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import cn from 'classnames';
@@ -32,6 +34,26 @@ interface SponsorsLayoutProps {
 }
 
 function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
+  const [containerWidth, setContainerWidth] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const imageSize = containerWidth / 2;
+
   return (
     <>
       <Container
@@ -93,14 +115,13 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
 
           {/* {companies} */}
           <Container className={styles.container}>
-            <Flex gap="2x-big" align="start">
+            <Flex gap="2x-big" align="start" justify="between" direction="row">
               <Image
                 src={cs}
                 className={styles.cs}
-                height="400"
+                height={imageSize}
                 alt="cs sponsor"
               />
-
               <Text
                 textColor="secondary-900"
                 textType="paragraph-lg"
@@ -108,6 +129,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
                 textAlign="start"
                 as="p"
                 className={styles.text}
+                style={{ width: '50%' }}
               >
                 Intact Insurance is Canada&apos;s largest home, auto and
                 business insurance company, the choice of more than four million
@@ -141,13 +163,13 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
                   src={altura}
                   className={styles.cs}
                   height="300"
-                  alt="cs sponsor"
+                  alt="altura sponsor"
                 />
                 <Image
                   src={fdm}
                   className={styles.cs}
                   height="300"
-                  alt="cs sponsor"
+                  alt="fdm sponsor"
                 />
               </Flex>
               <Flex direction="row" gap="lg" className="row2">
@@ -155,79 +177,77 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
                   src={bestbuy}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="bestbuy sponsor"
                 />
                 <Image
                   src={rotman1}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="rotman1 sponsor"
                 />
                 <Image
                   src={rotman2}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="rotman2 sponsor"
                 />
               </Flex>
-
               <Flex direction="row" gap="lg" className="row3">
                 <Image
                   src={blue}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="blue logo sponsor"
                 />
                 <Image
                   src={xyz}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="xyz sponsor"
                 />
                 <Image
                   src={echo}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="echo sponsor"
                 />
                 <Image
                   src={taskade}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="taskade sponsor"
                 />
                 <Image
                   src={voiceflow}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="voiceflow sponsor"
                 />
               </Flex>
-
               <Flex direction="row" gap="lg" className="row4">
                 <Image
                   src={nordpass}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="nordpass sponsor"
                 />
                 <Image
                   src={incogni}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="incogni sponsor"
                 />
                 <Image
                   src={nordvpn}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="nordvpn sponsor"
                 />
                 <Image
                   src={balsamiq}
                   className={styles.cs}
                   height="400"
-                  alt="cs sponsor"
+                  alt="balsamiq sponsor"
                 />
               </Flex>
             </Flex>
