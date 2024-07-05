@@ -18,6 +18,10 @@
   color: colors.getColor('primary', 800);
 }
 
+.button{
+  align-self: flex-start;
+}
+
 %assetFrame {
   position: absolute;
   overflow: visible;

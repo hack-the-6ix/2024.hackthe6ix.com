@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Animate from '@/components/Animate';
+import Button from '@/components/Button';
 import Container from '@/components/Container';
 import Flex from '@/components/Flex';
 import Icon from '@/components/Icon';
@@ -10,7 +11,6 @@ import footerAssetUrl from './_assets/lonely-island.png';
 import boat1 from './_assets/orange-boat.png';
 import mainAssetUrl from './_assets/tv-island.png';
 import Banner from './_components/Banner';
-import MailingListForm from './_components/MailingListForm';
 import styles from './page.module.scss';
 
 const words = ['network.', 'learn.', 'create.', 'collaborate.', 'innovate.'];
@@ -48,10 +48,20 @@ function Hero() {
               textWeight="medium"
               as="p"
             >
-              Applications opening soon! Receive the latest updates in your
-              inbox.
+              Hacker applications are now open! Submission closes July 17th,
+              2024 @ 11:59 PM.
             </Text>
-            <MailingListForm />
+            <Button
+              className={styles.button}
+              buttonColor="primary"
+              buttonType="primary"
+              type="submit"
+              as="a"
+              href="https://dash.hackthe6ix.com/"
+              target="_blank"
+            >
+              Apply now
+            </Button>
             <Flex gap="m">
               {Object.entries(config.socials).map(([ref, social]) => (
                 <a
