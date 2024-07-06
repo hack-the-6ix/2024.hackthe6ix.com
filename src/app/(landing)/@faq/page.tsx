@@ -58,9 +58,8 @@ const faqQuestions: FaqQuestionSection[] = [
         question: 'When do hacker applications open?',
         answer: (
           <>
-            Hack the 6ix applications for 2024 will open soon! Subscribe{' '}
-            <Link href="#s">here</Link> if you’d like us to notify you when
-            applications are out next year!
+            Hack the 6ix applications for 2024 are open now! Apply{' '}
+            <Link href="https://dash.hackthe6ix.com/">here!</Link>
           </>
         ),
       },
