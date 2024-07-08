@@ -1,0 +1,16 @@
+.sponsor {
+  @extend %assets;
+  width: auto;
+  height: 100%;
+  position: relative;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  .sponsor {
+    max-width: 100%;
+  }
+}
