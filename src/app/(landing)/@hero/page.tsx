@@ -48,7 +48,7 @@ function Hero() {
               textWeight="medium"
               as="p"
             >
-              Hacker applications are now open! Submission closes July 17th,
+              Hacker applications are now open! Submission closes July 18th,
               2024 @ 11:59 PM.
             </Text>
             <Button
