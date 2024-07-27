@@ -24,7 +24,13 @@ $_triangle-size: 32rem;
   }
 }
 
+.round {
+  border-radius: 1rem;
+}
 .logo {
+  padding: 0.5rem;
+  border-radius: 1rem;
+
   &,
   img {
     height: inherit;
@@ -33,6 +39,10 @@ $_triangle-size: 32rem;
   img {
     width: auto;
   }
+  &.white {
+    background-color: white;
+  }
+  background-color: black;
 }
 
 .footer {
