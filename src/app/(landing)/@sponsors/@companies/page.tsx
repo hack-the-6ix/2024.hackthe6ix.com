@@ -52,7 +52,7 @@ const sponsors: Sponsor[] = [
   {
     logo: logos.fgf,
     name: 'F&GF',
-    url: 'https://www.fgf.ca/',
+    url: 'https://www.fgfbrands.com/',
   },
   {
     logo: logos.balsamiq,
@@ -72,7 +72,7 @@ const sponsors: Sponsor[] = [
   {
     logo: logos.sukha,
     name: 'Sukha',
-    url: 'https://www.sukha.ca/',
+    url: 'https://www.thesukha.co/',
   },
 ];
 
