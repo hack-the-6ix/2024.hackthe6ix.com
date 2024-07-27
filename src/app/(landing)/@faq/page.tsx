@@ -58,7 +58,8 @@ const faqQuestions: FaqQuestionSection[] = [
         question: 'When do hacker applications open?',
         answer: (
           <>
-            Hacker applications for Hack the 6ix 2024 are now closed. Check your inboxes for updates!
+            Hacker applications for Hack the 6ix 2024 are now closed. Check your
+            inboxes for updates!
           </>
         ),
       },

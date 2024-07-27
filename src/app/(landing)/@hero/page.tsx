@@ -48,7 +48,8 @@ function Hero() {
               textWeight="medium"
               as="p"
             >
-              Hacker applications are now closed! Check your inboxes for updates.
+              Hacker applications are now closed! Check your inboxes for
+              updates.
             </Text>
             <Flex gap="m">
               {Object.entries(config.socials).map(([ref, social]) => (
