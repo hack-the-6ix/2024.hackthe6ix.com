@@ -2,13 +2,13 @@
 
 import { CSSProperties, useMemo } from 'react';
 import Image, { StaticImageData } from 'next/image';
+import cn from 'classnames';
 import * as R from 'ramda';
 import Flex from '@/components/Flex';
 import Text from '@/components/Text';
 import treasureChest from '../_assets/treasure.png';
 import * as logos from './_assets';
 import styles from './page.module.scss';
-import cn from 'classnames';
 
 type Sponsor = {
   logo: StaticImageData;
@@ -22,49 +22,59 @@ const sponsors: Sponsor[] = [
     logo: logos.rockstar,
     name: 'Rockstar Energy',
     url: 'https://rockstarenergy.com/',
-  }, {
+  },
+  {
     logo: logos.cssu,
     name: 'CSSU',
     url: 'https://cssu.ca/',
-    black: true
-  }, {
+    black: true,
+  },
+  {
     logo: logos.janestreet,
     name: 'Jane Street',
     url: 'https://www.janestreet.com/',
-  }, {
+  },
+  {
     logo: logos.uoftcs,
     name: 'UofT CS',
     url: 'https://web.cs.toronto.edu/',
-  }, {
+  },
+  {
     logo: logos.warp,
     name: 'Warp',
     url: 'https://warp.dev/',
-  }, {
+  },
+  {
     logo: logos.bestbuy,
     name: 'Best Buy',
     url: 'https://www.bestbuy.ca/',
-  }, {
+  },
+  {
     logo: logos.fgf,
     name: 'F&GF',
     url: 'https://www.fgf.ca/',
-  }, {
+  },
+  {
     logo: logos.balsamiq,
     name: 'Balsamiq',
     url: 'https://balsamiq.com/',
-  }, {
+  },
+  {
     logo: logos.taskade,
     name: 'Taskade',
     url: 'https://www.taskade.com/',
-  }, {
+  },
+  {
     logo: logos.awesomefoundation,
     name: 'Awesome Foundation',
     url: 'https://www.awesomefoundation.org/',
-  }, {
+  },
+  {
     logo: logos.sukha,
     name: 'Sukha',
     url: 'https://www.sukha.ca/',
-  }
-]
+  },
+];
 
 const getTriangleWidth = (adjacent: number, angle: number) => {
   const opposite = adjacent * Math.tan(angle);
@@ -152,7 +162,7 @@ function Companies() {
             <Flex
               key={i}
               as="a"
-              className={cn(styles.logo, (item.black ? "" : styles.white))}
+              className={cn(styles.logo, item.black ? '' : styles.white)}
               href={item.url}
               target="_blank"
               rel="noreferrer noopener"

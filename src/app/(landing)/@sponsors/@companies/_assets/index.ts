@@ -10,7 +10,7 @@ import taskade from './taskade.webp';
 import uoftcs from './uoftcs.png';
 import warp from './warp.png';
 
-export { 
+export {
   awesomefoundation,
   bestbuy,
   balsamiq,
