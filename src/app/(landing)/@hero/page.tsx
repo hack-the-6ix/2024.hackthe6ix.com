@@ -48,20 +48,8 @@ function Hero() {
               textWeight="medium"
               as="p"
             >
-              Hacker applications are now open! Submission closes July 18th,
-              2024 @ 11:59 PM.
+              Hacker applications are now closed! Check your inboxes for updates.
             </Text>
-            <Button
-              className={styles.button}
-              buttonColor="primary"
-              buttonType="primary"
-              type="submit"
-              as="a"
-              href="https://dash.hackthe6ix.com/"
-              target="_blank"
-            >
-              Apply now
-            </Button>
             <Flex gap="m">
               {Object.entries(config.socials).map(([ref, social]) => (
                 <a

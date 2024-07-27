@@ -58,8 +58,7 @@ const faqQuestions: FaqQuestionSection[] = [
         question: 'When do hacker applications open?',
         answer: (
           <>
-            Hack the 6ix applications for 2024 are open now! Apply{' '}
-            <Link href="https://dash.hackthe6ix.com/">here!</Link>
+            Hacker applications for Hack the 6ix 2024 are now closed. Check your inboxes for updates!
           </>
         ),
       },
@@ -89,11 +88,11 @@ const faqQuestions: FaqQuestionSection[] = [
         answer:
           'Make sure to bring your laptop (or desktop) and a piece of valid student ID or government ID! You can also bring a pillow and blanket if you want to get comfy. Everything else will be provided for you!',
       },
-      {
-        question: 'Will there be hardware provided at the event?',
-        answer:
-          'We have a variety of hardware that can be borrowed at our hardware station for free, including Raspberry Pi’s, Arduinos, sensors, and breadboards. Due to limited quantity, hardware will be lent out on a first come, first serve basis. If you are unsure whether or not we have a certain piece of hardware that you will need for your hack, bring your own to the event!',
-      },
+      // {
+      //   question: 'Will there be hardware provided at the event?',
+      //   answer:
+      //     'We have a variety of hardware that can be borrowed at our hardware station for free, including Raspberry Pi’s, Arduinos, sensors, and breadboards. Due to limited quantity, hardware will be lent out on a first come, first serve basis. If you are unsure whether or not we have a certain piece of hardware that you will need for your hack, bring your own to the event!',
+      // },
       {
         question: 'How much does it cost to attend?',
         answer:
