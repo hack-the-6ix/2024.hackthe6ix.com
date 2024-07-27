@@ -75,7 +75,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
               alt="submarine"
             />
           </Flex>
-          {/* {companies} */}
+          {companies}
         </Flex>
       </Container>
       <Container

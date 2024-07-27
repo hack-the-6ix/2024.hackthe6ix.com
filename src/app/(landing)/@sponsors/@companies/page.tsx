@@ -8,30 +8,72 @@ import Text from '@/components/Text';
 import treasureChest from '../_assets/treasure.png';
 import * as logos from './_assets';
 import styles from './page.module.scss';
+import cn from 'classnames';
 
 type Sponsor = {
   logo: StaticImageData;
   name: string;
   url: string;
+  black?: boolean;
 };
 
-const sponsors: Sponsor[] = R.repeat(
+const sponsors: Sponsor[] = [
   {
-    logo: logos.bmoLogo,
-    url: 'https://www.bmo.com',
-    name: 'Bank of Montreal',
-  },
-  8,
-);
+    logo: logos.rockstar,
+    name: 'Rockstar Energy',
+    url: 'https://rockstarenergy.com/',
+  }, {
+    logo: logos.cssu,
+    name: 'CSSU',
+    url: 'https://cssu.ca/',
+    black: true
+  }, {
+    logo: logos.janestreet,
+    name: 'Jane Street',
+    url: 'https://www.janestreet.com/',
+  }, {
+    logo: logos.uoftcs,
+    name: 'UofT CS',
+    url: 'https://web.cs.toronto.edu/',
+  }, {
+    logo: logos.warp,
+    name: 'Warp',
+    url: 'https://warp.dev/',
+  }, {
+    logo: logos.bestbuy,
+    name: 'Best Buy',
+    url: 'https://www.bestbuy.ca/',
+  }, {
+    logo: logos.fgf,
+    name: 'F&GF',
+    url: 'https://www.fgf.ca/',
+  }, {
+    logo: logos.balsamiq,
+    name: 'Balsamiq',
+    url: 'https://balsamiq.com/',
+  }, {
+    logo: logos.taskade,
+    name: 'Taskade',
+    url: 'https://www.taskade.com/',
+  }, {
+    logo: logos.awesomefoundation,
+    name: 'Awesome Foundation',
+    url: 'https://www.awesomefoundation.org/',
+  }, {
+    logo: logos.sukha,
+    name: 'Sukha',
+    url: 'https://www.sukha.ca/',
+  }
+]
 
 const getTriangleWidth = (adjacent: number, angle: number) => {
   const opposite = adjacent * Math.tan(angle);
   return opposite * 2;
 };
 
-const rowHeights = [7, 6, 5, 4];
-const height = 40;
-const angle = 42 * (Math.PI / 180);
+const rowHeights = [6, 5, 4, 4];
+const height = 35;
+const angle = 48 * (Math.PI / 180);
 const gap = 2;
 
 const rowWidths = rowHeights.map((_, i) => {
@@ -110,13 +152,13 @@ function Companies() {
             <Flex
               key={i}
               as="a"
-              className={styles.logo}
+              className={cn(styles.logo, (item.black ? "" : styles.white))}
               href={item.url}
               target="_blank"
               rel="noreferrer noopener"
             >
               <Image
-                className={styles.logo}
+                className={styles.round}
                 alt={`${item.name} logo`}
                 src={item.logo}
                 height={100}
@@ -126,13 +168,13 @@ function Companies() {
           ))}
         </Flex>
       ))}
-      <Flex className={styles.footer} direction="column" gap="m">
+      <Flex className={styles.footer} direction="column" gap="m" align="center">
         <Text
           textType="paragraph-lg"
           textWeight="medium"
           textColor="secondary-900"
         >
-          ...and more to come
+          Thank you to our sponsors!
         </Text>
         <Image src={treasureChest} width="100" alt="treasure chest" />
       </Flex>
