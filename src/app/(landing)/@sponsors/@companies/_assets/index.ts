@@ -1,3 +1,4 @@
+import awake from './awake.png';
 import awesomefoundation from './awesomefoundation.jpg';
 import balsamiq from './balsamiq.png';
 import bestbuy from './bestbuy.jpg';
@@ -22,4 +23,5 @@ export {
   taskade,
   uoftcs,
   warp,
+  awake,
 };
