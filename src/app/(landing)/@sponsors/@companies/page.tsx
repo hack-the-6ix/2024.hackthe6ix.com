@@ -86,7 +86,7 @@ const getTriangleWidth = (adjacent: number, angle: number) => {
 };
 
 const rowHeights = [6, 5, 4, 4];
-const height = 37;
+const height = 40;
 const angle = 48 * (Math.PI / 180);
 const gap = 2;
 
