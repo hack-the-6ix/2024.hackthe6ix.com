@@ -78,6 +78,21 @@ const sponsors: Sponsor[] = [
     name: 'Sukha',
     url: 'https://www.thesukha.co/',
   },
+  {
+    logo: logos.incogni,
+    name: 'Incogni',
+    url: 'https://incogni.io/',
+  },
+  {
+    logo: logos.nordvpn,
+    name: 'NordVPN',
+    url: 'https://nordvpn.com/',
+  },
+  {
+    logo: logos.nordpass,
+    name: 'NordPass',
+    url: 'https://nordpass.com/',
+  },
 ];
 
 const getTriangleWidth = (adjacent: number, angle: number) => {
@@ -86,8 +101,8 @@ const getTriangleWidth = (adjacent: number, angle: number) => {
 };
 
 const rowHeights = [6, 5, 4, 4];
-const height = 40;
-const angle = 48 * (Math.PI / 180);
+const height = 43;
+const angle = 50 * (Math.PI / 180);
 const gap = 2;
 
 const rowWidths = rowHeights.map((_, i) => {

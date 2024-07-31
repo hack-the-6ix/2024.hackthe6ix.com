@@ -10,6 +10,9 @@ import sukha from './sukha.png';
 import taskade from './taskade.webp';
 import uoftcs from './uoftcs.png';
 import warp from './warp.png';
+import incogni from './incogni.png';
+import nordpass from './nordpass.png';
+import nordvpn from './nordvpn.png';
 
 export {
   awesomefoundation,
@@ -24,4 +27,7 @@ export {
   uoftcs,
   warp,
   awake,
+  incogni,
+  nordpass,
+  nordvpn,
 };
