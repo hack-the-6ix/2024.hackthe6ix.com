@@ -13,10 +13,15 @@ import styles from './layout.module.scss';
 
 interface SponsorsLayoutProps {
   companies: ReactNode;
+  rockstar: ReactNode;
   testimonies: ReactNode;
 }
 
-function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
+function SponsorsLayout({
+  companies,
+  rockstar,
+  testimonies,
+}: SponsorsLayoutProps) {
   return (
     <>
       <Container
@@ -75,6 +80,7 @@ function SponsorsLayout({ companies, testimonies }: SponsorsLayoutProps) {
               alt="submarine"
             />
           </Flex>
+          {rockstar}
           {companies}
         </Flex>
       </Container>
