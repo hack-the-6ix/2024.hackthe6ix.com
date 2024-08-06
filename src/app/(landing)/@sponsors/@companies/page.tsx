@@ -19,11 +19,6 @@ type Sponsor = {
 
 const sponsors: Sponsor[] = [
   {
-    logo: logos.rockstar,
-    name: 'Rockstar Energy',
-    url: 'https://rockstarenergy.com/',
-  },
-  {
     logo: logos.cssu,
     name: 'CSSU',
     url: 'https://cssu.ca/',
