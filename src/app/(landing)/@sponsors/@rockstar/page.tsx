@@ -38,8 +38,8 @@ function Rockstar() {
           textWeight="medium"
           as="p"
         >
-          With Rockstar Energy headlining Hack the 6ix, we're here to let you
-          know that you can own ANY moment. With its delicious flavours and
+          With Rockstar Energy headlining Hack the 6ix, we&apos;re here to let
+          you know that you can own ANY moment. With its delicious flavours and
           unmistakable energy boost, Rockstar sustains Mind-Body Energy for all
           active lifestyles, including those hacking late into the night.
         </Text>
@@ -49,8 +49,8 @@ function Rockstar() {
           textWeight="medium"
           as="p"
         >
-          To learn more about what we're all about, check us out on social media
-          @rockstarenergy
+          To learn more about what we&apos;re all about, check us out on social
+          media @rockstarenergy
         </Text>
       </Flex>
     </Flex>
