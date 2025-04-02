@@ -27,7 +27,7 @@ function Hero() {
         <Animate duration={0.8}>
           <Flex direction="column" gap="sm">
             <Text textType="paragraph-lg" textColor="neutral-600" as="p">
-              AUG 2-4, 2024 • In-person event
+              JUL 18-20, 2025 • In-person event
             </Text>
             <Flex direction="column">
               <Text textType="display" textColor="secondary-900" as="p">
@@ -48,7 +48,7 @@ function Hero() {
               textWeight="medium"
               as="p"
             >
-              Hacker applications are now closed! Check your inboxes for
+              Hacker applications for 2025 are opening soon! Keep an eye out for
               updates.
             </Text>
             <Flex gap="m">
